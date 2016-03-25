@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>
+<!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/map/src/main/res/menu/activity_map.xml --><!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/map/build/intermediates/bundles/debug/res/menu/activity_map.xml -->
