@@ -204,7 +204,7 @@ public class Home extends Activity {
                 .commit();
 
         mDrawerList.setItemChecked(possition, true);
-        //setTitle(dataList.get(possition).getItemName());
+        setTitle(dataList.get(possition).getItemName());
         mDrawerLayout.closeDrawer(mDrawerList);
 
     }

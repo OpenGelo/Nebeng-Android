@@ -11,35 +11,36 @@ import android.widget.TextView;
 
 public class About extends Fragment {
 
-	ImageView ivIcon;
-	TextView tvItemName;
-	
-	Context layout;
-	
-	//private String regid,et;
-	
-	public static final String IMAGE_RESOURCE_ID = "iconResourceID";
-	public static final String ITEM_NAME = "itemName";
+    ImageView ivIcon;
+    TextView tvItemName;
 
-	public About() {
-		//this.et=user;
-		//this.regid=reg;
-	}
+    Context layout;
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+    //private String regid,et;
 
-		View view = inflater.inflate(R.layout.about, container,
-				false);
+    public static final String IMAGE_RESOURCE_ID = "iconResourceID";
+    public static final String ITEM_NAME = "itemName";
 
-		ivIcon = (ImageView) view.findViewById(R.id.frag3_icon);
-		tvItemName = (TextView) view.findViewById(R.id.frag3_text);
-		
-		//tvItemName.setText(getArguments().getString(ITEM_NAME));
-		/*ivIcon.setImageDrawable(view.getResources().getDrawable(
+    public About() {
+        //this.et=user;
+        //this.regid=reg;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View view = inflater.inflate(R.layout.about, container,
+                false);
+
+        ivIcon = (ImageView) view.findViewById(R.id.frag3_icon);
+        tvItemName = (TextView) view.findViewById(R.id.frag3_text);
+
+        //tvItemName.setText(getArguments().getString(ITEM_NAME));
+        /*ivIcon.setImageDrawable(view.getResources().getDrawable(
 				getArguments().getInt(IMAGE_RESOURCE_ID)));
-		*/return view;
-	}
+		*/
+        return view;
+    }
 
 }

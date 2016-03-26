@@ -14,6 +14,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -329,9 +330,10 @@ public class MainActivity extends Activity {
     }
 
     void cek() {
+        String response = "default";
         try {
             httpclient = new DefaultHttpClient();
-            httppost = new HttpPost("http://green.ui.ac.id/nebeng/checkaja.php");
+            httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/user_check_only.php");
             //add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
             // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>, 
@@ -340,8 +342,11 @@ public class MainActivity extends Activity {
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             //Execute HTTP Post Request
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
-            final String response = httpclient.execute(httppost, responseHandler);
-            System.out.println("Response : " + response);
+            String httpResponse = httpclient.execute(httppost, responseHandler).trim();
+            JSONObject jsonObject = new JSONObject(httpResponse);
+            if (jsonObject.has("result")) {
+                response = jsonObject.optString("result");
+            }
             //dialog.dismiss();
             runOnUiThread(new Runnable() {
                 public void run() {
@@ -351,7 +356,7 @@ public class MainActivity extends Activity {
 
             //cek apakah mahasiswa aktif atau tidak
             if (response.equalsIgnoreCase("User Found")) {
-            	/*
+                /*
             	runOnUiThread(new Runnable() {
                      public void run() {
             			Toast.makeText(MainActivity.this,"Login Sukses", Toast.LENGTH_LONG).show();

@@ -82,7 +82,7 @@ public class LoginPage extends Activity {
     void login() {
         try {
             httpclient = new DefaultHttpClient();
-            httppost = new HttpPost("http://green.ui.ac.id/nebeng/check.php");
+            httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/user_check_login.php");
             //add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
             // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>, 
@@ -97,7 +97,6 @@ public class LoginPage extends Activity {
             if (jsonObject.has("result")) {
                 response = jsonObject.optString("result");
             }
-            Log.e("response", response);
 
             //dialog.dismiss();
             runOnUiThread(new Runnable() {

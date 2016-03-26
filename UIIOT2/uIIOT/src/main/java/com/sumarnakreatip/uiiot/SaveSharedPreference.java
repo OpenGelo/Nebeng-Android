@@ -6,28 +6,26 @@ import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 
 public class SaveSharedPreference {
-	 
-	static final String PREF_USER_NAME= "username";
 
-	    static SharedPreferences getSharedPreferences(Context ctx) {
-	        return PreferenceManager.getDefaultSharedPreferences(ctx);
-	    }
+    static final String PREF_USER_NAME = "username";
 
-	    public static void setUserName(Context ctx, String userName) 
-	    {
-	        Editor editor = getSharedPreferences(ctx).edit();
-	        editor.putString(PREF_USER_NAME, userName);
-	        editor.commit();
-	    }
+    static SharedPreferences getSharedPreferences(Context ctx) {
+        return PreferenceManager.getDefaultSharedPreferences(ctx);
+    }
 
-	    public static String getUserName(Context ctx)
-	    {
-	        return getSharedPreferences(ctx).getString(PREF_USER_NAME, "");
-	    }
-	    public static void clearUserName(Context ctx) 
-	    {
-	        Editor editor = getSharedPreferences(ctx).edit();
-	        editor.clear(); //clear all stored data
-	        editor.commit();
-	    }
+    public static void setUserName(Context ctx, String userName) {
+        Editor editor = getSharedPreferences(ctx).edit();
+        editor.putString(PREF_USER_NAME, userName);
+        editor.commit();
+    }
+
+    public static String getUserName(Context ctx) {
+        return getSharedPreferences(ctx).getString(PREF_USER_NAME, "");
+    }
+
+    public static void clearUserName(Context ctx) {
+        Editor editor = getSharedPreferences(ctx).edit();
+        editor.clear(); //clear all stored data
+        editor.commit();
+    }
 }
