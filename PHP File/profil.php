@@ -2,10 +2,10 @@
 require_once("koneksi.php");
 // array for JSON response
 
- 
+
 // connecting to db
 //$db = new DB_CONNECT();
- 
+
 $username = $_POST['username'];
 $result = mysql_query("SELECT npm,nama,role FROM nebeng_user where username = '".$username."'");
 // check for empty result
@@ -13,7 +13,7 @@ if ($result) {
     // looping through all results
     // products node
     $response["result"] = array();
- 
+    
     while ($row = mysql_fetch_array($result)) {
         // temp user array
         $user = array();
@@ -32,13 +32,13 @@ if ($result) {
     }
     // success
     $response["success"] = 1;
- 
+    
 } else {
     // no products found
     $response["success"] = 0;
     $response["message"] = mysql_error();
- 
+    
 }
 
-    echo json_encode($response);
+echo json_encode($response);
 ?>

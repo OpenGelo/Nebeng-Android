@@ -16,13 +16,13 @@ if($update=='reset'){
 	$cek_cek = mysql_fetch_row($cek);
 	if($cek_cek[0] !== NULL){
 			//echo $cek2;
-			$result = mysql_query("Delete from nebeng_nebeng WHERE id_tebengan = '".$user_id."'");
-			$result = mysql_query("Delete from nebeng_beri_tebengan WHERE user_id = '".$user_id."'");
-				echo "Postingan nebeng berhasil dihapus";
-		}
+		$result = mysql_query("Delete from nebeng_nebeng WHERE id_tebengan = '".$user_id."'");
+		$result = mysql_query("Delete from nebeng_beri_tebengan WHERE user_id = '".$user_id."'");
+		echo "Postingan nebeng berhasil dihapus";
+	}
 	else{
-			echo"anda tidak sedang memberi tebengan";
-		}
+		echo"anda tidak sedang memberi tebengan";
+	}
 	
 }
 
@@ -39,22 +39,22 @@ else if ($update2=='batal') {
 		$values = mysql_fetch_row($query_sisa_kapasitas);
 		$values1 = mysql_fetch_row($query_kapasitas);
 		if ($values[0] == $values1[0]){
-				echo "Maaf, Anda tidak dapat membatalkan tebengan ini";
-			}
+			echo "Maaf, Anda tidak dapat membatalkan tebengan ini";
+		}
 		else{
 				// $result = mysql_query("UPDATE nebeng_beri_tebengan SET sisa_kapasitas=sisa_kapasitas+1 WHERE id_tebengan = '".$id_tebengan."'"		);
-				$result = mysql_query("UPDATE nebeng_beri_tebengan SET sisa_kapasitas=sisa_kapasitas+1 WHERE user_id = '".$id_tebengan."'"		);
-				$result = mysql_query("Delete from nebeng_nebeng WHERE id_penebeng = '".$user_id."'");
-				echo "Tebengan berhasil dibatalkan";
-			}
+			$result = mysql_query("UPDATE nebeng_beri_tebengan SET sisa_kapasitas=sisa_kapasitas+1 WHERE user_id = '".$id_tebengan."'"		);
+			$result = mysql_query("Delete from nebeng_nebeng WHERE id_penebeng = '".$user_id."'");
+			echo "Tebengan berhasil dibatalkan";
+		}
 	}
-    else 
-		{
-			echo "anda tidak sedang menebeng";
-    	}
+	else 
+	{
+		echo "anda tidak sedang menebeng";
+	}
 }	
 else{
 	echo "Maaf ada kesalahan";
-	}	
+}	
 
 ?>
