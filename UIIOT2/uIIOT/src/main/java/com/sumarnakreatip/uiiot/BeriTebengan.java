@@ -1,19 +1,5 @@
 package com.sumarnakreatip.uiiot;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.Fragment;
@@ -34,12 +20,24 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
 
 @SuppressLint("Instantiatable")
 public final class BeriTebengan extends Fragment {
-
-    ImageView ivIcon;
-    TextView tvItemName;
 
     Context layout;
 
@@ -84,7 +82,6 @@ public final class BeriTebengan extends Fragment {
         this.regid = reg;
     }
 
-
     //@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -99,8 +96,6 @@ public final class BeriTebengan extends Fragment {
         btnChangeTime = (Button) view.findViewById(R.id.button2);
         keterangan = (EditText) view.findViewById(R.id.j_k);
 
-        //tv = (TextView)view.findViewById(R.id.tv);
-        //tv.setText(et);
         setCurrentTimeOnView(setbefore);
         if (setbefore) {
             asal.setText(gotAddresses1);
@@ -174,14 +169,6 @@ public final class BeriTebengan extends Fragment {
             }
         });
 
-
-//        
-//        if(asal!=null){
-//		Bundle gotBasket1 = getActivity().getIntent().getExtras();
-//		gotAddresses1 = gotBasket1.getString("key1");
-//		asal.setText(gotAddresses1);
-//        }
-
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -215,7 +202,6 @@ public final class BeriTebengan extends Fragment {
                     loggin asyncRate = new loggin();
                     asyncRate.execute();
                 }
-
             }
         });
 
@@ -224,10 +210,11 @@ public final class BeriTebengan extends Fragment {
 
 
     String login() {
+        String response = "default";
         try {
 
             httpclient = new DefaultHttpClient();
-            httppost = new HttpPost("http://green.ui.ac.id/nebeng/beri_tebengan.php");
+            httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/create_tebengan.php");
             //add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
             // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>, 
@@ -238,14 +225,15 @@ public final class BeriTebengan extends Fragment {
             nameValuePairs.add(new BasicNameValuePair("waktu_berangkat", w_b.toString().trim()));
             nameValuePairs.add(new BasicNameValuePair("keterangan", k.toString().trim()));
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-            //Execute HTTP Post Request
-            // edited by James from coderzheaven.. <span id="IL_AD6" class="IL_AD">from here</span>....
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
-            final String response = httpclient.execute(httppost, responseHandler);
-            System.out.println("Response : " + response);
+            String httpResponse = httpclient.execute(httppost, responseHandler).trim();
+            JSONObject jsonObject = new JSONObject(httpResponse);
+            if (jsonObject.has("result")) {
+                response = jsonObject.optString("result");
+            }
             return response;
         } catch (Exception e) {
-            String response = "Catch";
+            response = "Catch";
             System.out.println("Exception : " + e.getMessage());
             return response;
         }
@@ -299,8 +287,6 @@ public final class BeriTebengan extends Fragment {
     // display current time
     public void setCurrentTimeOnView(boolean a) {
 
-        //tvDisplayTime = (TextView) findViewById(R.id.tvTime);
-        //timePicker1 = (TimePicker) findViewById(R.id.timePicker1);
         if (a) {
             tv.setText(waktu);
             w_b = waktu;
@@ -309,15 +295,11 @@ public final class BeriTebengan extends Fragment {
             hour = c.get(Calendar.HOUR_OF_DAY);
             minute = c.get(Calendar.MINUTE);
 
-            // set current time into textview
             tv.setText(
                     new StringBuilder().append(pad(hour))
                             .append(":").append(pad(minute)));
             wb = new StringBuilder().append(pad(hour)).append(".").append(pad(minute));
             w_b = wb.toString();
-                /* set current time into timepicker
-                timePicker1.setCurrentHour(hour);
-				timePicker1.setCurrentMinute(minute);*/
         }
     }
 
@@ -343,9 +325,6 @@ public final class BeriTebengan extends Fragment {
                             .append(":").append(pad(minute)));
                     wb = new StringBuilder().append(pad(hour)).append(".").append(pad(minute));
                     w_b = wb.toString();
-				/* set current time into timepicker
-				timePicker1.setCurrentHour(hour);
-				timePicker1.setCurrentMinute(minute);*/
 
                 }
             };
@@ -356,5 +335,4 @@ public final class BeriTebengan extends Fragment {
         else
             return "0" + String.valueOf(c);
     }
-
 }

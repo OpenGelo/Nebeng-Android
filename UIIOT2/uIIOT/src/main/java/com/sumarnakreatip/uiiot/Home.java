@@ -1,20 +1,5 @@
 package com.sumarnakreatip.uiiot;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-
-import com.sumarnakreatip.uiiot.BeriTebengan.loggin;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -24,9 +9,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -37,6 +20,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Home extends Activity {
 
@@ -54,7 +45,7 @@ public class Home extends Activity {
     private CharSequence mTitle;
     CustomDrawerAdapter adapter;
 
-    public String user, asal, tujuan, kapasitas, w_b, k, regid;
+    public String user, id_tebengan, asal, tujuan, kapasitas, w_b, k, regid;
     int maps = 0;
     private String kuota = "";
     boolean map = false, segarkan = false;
@@ -69,17 +60,12 @@ public class Home extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
-
         // Initializing
         user = getIntent().getExtras().getString("username");
         regid = getIntent().getExtras().getString("regid");
         kuota = getIntent().getExtras().getString("Kuota");
         maps = getIntent().getExtras().getInt("Map");
         segarkan = getIntent().getExtras().getBoolean("segar");
-
-        //pemberitahuan asyncRate = new pemberitahuan();
-        //asyncRate.execute();
-
 
         dataList = new ArrayList<DrawerItem>();
         mTitle = mDrawerTitle = getTitle();
@@ -133,6 +119,7 @@ public class Home extends Activity {
                 map = true;
                 asal = getIntent().getExtras().getString("mulai");
                 tujuan = getIntent().getExtras().getString("akhir");
+                id_tebengan = getIntent().getExtras().getString("id_tebengan");
                 kapasitas = getIntent().getExtras().getString("kapasitas");
                 w_b = getIntent().getExtras().getString("waktu_berangkat");
                 k = getIntent().getExtras().getString("keterangan");
@@ -262,6 +249,7 @@ public class Home extends Activity {
                     Intent intent = new Intent(this, Home.class);
                     intent.putExtra("username", user);
                     intent.putExtra("regid", regid);
+                    intent.putExtra("id_tebengan", id_tebengan);
                     intent.putExtra("Map", value);
                     intent.putExtra("segar", true);
                     intent.putExtra("mulai", "");
@@ -291,87 +279,8 @@ public class Home extends Activity {
         }
     }
 
-    /**
-     * public void onPause() {
-     * <p/>
-     * }
-     * <p/>
-     * <p/>
-     * Call this on resume.
-     * <p/>
-     * public void onResume() {
-     * <p/>
-     * }
-     */
     public void onDestroy() {
         super.onDestroy();
-    }
-        /*
-        @Override
-    	public void onBackPressed() {
-    	}*/
-
-    private class pemberitahuan extends AsyncTask<Void, String, String> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //dialog = ProgressDialog.show(layout, "","Proccessing...", true);
-        }
-
-        protected String doInBackground(Void... params) {
-            int a = 0;
-            String finish = "";
-            while (a <= 1080) {
-                new CountDownTimer(10000, 1000) {
-
-                    public void onTick(long millisUntilFinished) {
-
-                    }
-
-                    public void onFinish() {
-                    }
-                }.start();
-                finish = ceknotif();
-                if (finish.equalsIgnoreCase("kurang")) {
-                    displayNotification(1);
-                } else if (finish.equalsIgnoreCase("tambah")) {
-                    displayNotification(2);
-                } else {
-
-                }
-                a++;
-            }
-            return "selesai";
-        }
-
-        protected void onPostExecute(String rate) {
-
-        }
-
-    }
-
-    String ceknotif() {
-        try {
-
-            httpclient = new DefaultHttpClient();
-            httppost = new HttpPost("http://green.ui.ac.id/nebeng/batal.php");
-            //add your data
-            nameValuePairs = new ArrayList<NameValuePair>(2);
-            // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>,
-            nameValuePairs.add(new BasicNameValuePair("username", user));  // $Edittext_value = $_POST['Edittext_value'];
-            nameValuePairs.add(new BasicNameValuePair("kapasitas", kuota));
-            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-            //Execute HTTP Post Request
-            // edited by James from coderzheaven.. <span id="IL_AD6" class="IL_AD">from here</span>....
-            ResponseHandler<String> responseHandler = new BasicResponseHandler();
-            final String response = httpclient.execute(httppost, responseHandler);
-            System.out.println("Response : " + response);
-            return response;
-        } catch (Exception e) {
-            String response = "Catch";
-            System.out.println("Exception : " + e.getMessage());
-            return response;
-        }
     }
 
     @SuppressWarnings("deprecation")
@@ -405,15 +314,10 @@ public class Home extends Activity {
         notification = builder.setContentIntent(resultPendingIntent)
                 .setAutoCancel(true).setContentTitle("Pesan Baru")
                 .setContentText(pesan).build();
-        //notification.setLatestEventInfo(this, "Pesan Baru", pesan, resultPendingIntent);
-
-
-        //notification.flags |= Notification.FLAG_AUTO_CANCEL;
 
         mNotificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
-              /*notificationID allows you to update the notification later on.*/
         mNotificationManager.notify(notificationID, notification);
     }
 }

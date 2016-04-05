@@ -1,109 +1,119 @@
 package com.sumarnakreatip.uiiot;
 
 public class User {
-	String user_id;
-	String npm;
-	String nama;
-	String asal;
-	String tujuan;
-	String kapasitas;
-	String waktu_berangkat;
-	String jam_berangkat;
-	String keterangan;
+    String user_id;
+    String id_tebengan;
+    String npm;
+    String nama;
+    String asal;
+    String tujuan;
+    String kapasitas;
+    String waktu_berangkat;
+    String jam_berangkat;
+    String keterangan;
 
-	public String getuser_id() {
-		return user_id;
-	}
+    public String getuser_id() {
+        return user_id;
+    }
 
-	public void setuser_id(String user_id) {
-		this.user_id = user_id;
-	}
+    public String getid_tebengan() {
+        return id_tebengan;
+    }
 
-	public String getnpm() {
-		return npm;
-	}
+    public void setid_tebengan(String id_tebengan) {
+        this.id_tebengan = id_tebengan;
+    }
 
-	public void setnpm(String npm) {
-		this.npm = npm;
-	}
+    public void setuser_id(String user_id) {
+        this.user_id = user_id;
+    }
 
-	public String getnama() {
-		return nama;
-	}
+    public String getnpm() {
+        return npm;
+    }
 
-	public void setnama(String nama) {
-		this.nama = nama;
-	}
+    public void setnpm(String npm) {
+        this.npm = npm;
+    }
 
-	public String getasal() {
-		return asal;
-	}
+    public String getnama() {
+        return nama;
+    }
 
-	public void setasal(String asal) {
-		this.asal = asal;
-	}
+    public void setnama(String nama) {
+        this.nama = nama;
+    }
 
-	public String gettujuan() {
-		return tujuan;
-	}
+    public String getasal() {
+        return asal;
+    }
 
-	public void settujuan(String tujuan) {
-		this.tujuan = tujuan;
-	}
+    public void setasal(String asal) {
+        this.asal = asal;
+    }
 
-	public String getkapasitas() {
-		return kapasitas;
-	}
+    public String gettujuan() {
+        return tujuan;
+    }
 
-	public void setkapasitas(String kapasitas) {
-		this.kapasitas = kapasitas;
-	}
+    public void settujuan(String tujuan) {
+        this.tujuan = tujuan;
+    }
 
-	public String getwaktu_berangkat() {
-		return waktu_berangkat;
-	}
+    public String getkapasitas() {
+        return kapasitas;
+    }
 
-	public void setwaktu_berangkat(String waktu_berangkat) {
-		this.waktu_berangkat = waktu_berangkat;
-	}
+    public void setkapasitas(String kapasitas) {
+        this.kapasitas = kapasitas;
+    }
 
-	public String getjam_berangkat() {
-		return jam_berangkat;
-	}
+    public String getwaktu_berangkat() {
+        return waktu_berangkat;
+    }
 
-	public void setjam_berangkat(String jam_berangkat) {
-		this.jam_berangkat = jam_berangkat;
-	}
-	
-	public String getketerangan() {
-		return keterangan;
-	}
+    public void setwaktu_berangkat(String waktu_berangkat) {
+        this.waktu_berangkat = waktu_berangkat;
+    }
 
-	public void setketerangan(String keterangan) {
-		this.keterangan = keterangan;
-	}
+    public String getjam_berangkat() {
+        return jam_berangkat;
+    }
 
-	public User(String user_id, String npm, String nama, String asal,
-			String tujuan, String kapasitas, String waktu_berangkat,
-			String jam_berangkat, String keterangan) {
-		super();
-		this.user_id = user_id;
-		this.npm = npm;
-		this.nama = nama;
-		this.asal = asal;
-		this.tujuan = tujuan;
-		this.kapasitas = kapasitas;
-		this.waktu_berangkat = waktu_berangkat;
-		this.jam_berangkat = jam_berangkat;
-		this.keterangan = keterangan;
-	}
+    public void setjam_berangkat(String jam_berangkat) {
+        this.jam_berangkat = jam_berangkat;
+    }
 
-	@Override
-	public String toString() {
-		return "User [user_id=" + user_id + ", npm=" + npm + ", nama=" + nama
-				+ ", asal=" + asal + ", tujuan=" + tujuan + ", kapasitas="
-				+ kapasitas + ", waktu_berangkat=" + waktu_berangkat
-				+ ", jam_berangkat=" + jam_berangkat + ", keterangan="+keterangan+"]";
-	}
+    public String getketerangan() {
+        return keterangan;
+    }
+
+    public void setketerangan(String keterangan) {
+        this.keterangan = keterangan;
+    }
+
+    public User(String user_id, String id_tebengan, String npm, String nama, String asal,
+                String tujuan, String kapasitas, String waktu_berangkat,
+                String jam_berangkat, String keterangan) {
+        super();
+        this.user_id = user_id;
+        this.id_tebengan = id_tebengan;
+        this.npm = npm;
+        this.nama = nama;
+        this.asal = asal;
+        this.tujuan = tujuan;
+        this.kapasitas = kapasitas;
+        this.waktu_berangkat = waktu_berangkat;
+        this.jam_berangkat = jam_berangkat;
+        this.keterangan = keterangan;
+    }
+
+    @Override
+    public String toString() {
+        return "User [user_id=" + user_id + ", id_tebengan=" + id_tebengan + ", npm=" + npm + ", nama=" + nama
+                + ", asal=" + asal + ", tujuan=" + tujuan + ", kapasitas="
+                + kapasitas + ", waktu_berangkat=" + waktu_berangkat
+                + ", jam_berangkat=" + jam_berangkat + ", keterangan=" + keterangan + "]";
+    }
 
 }

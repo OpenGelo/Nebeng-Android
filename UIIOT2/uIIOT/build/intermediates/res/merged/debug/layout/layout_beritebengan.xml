@@ -1,159 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <TableLayout
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-	>
-		
-    	
-    	
-    	<TableRow>
-		
-			<TextView
-				android:text="@string/jasal"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-			/>
-
-			<EditText
-			    android:id="@+id/asal"
-			    android:layout_width="match_parent"
-			    android:layout_height="wrap_content"
-			    android:ems="5"
-			    android:hint="@string/casal"
-			    android:inputType="text" >
-
-			</EditText>
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
 
-		</TableRow>
+        <TableRow>
 
-    	
-		<TableRow>
-			
-			<TextView
-				android:text="@string/jtujuan"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-			/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jasal" />
 
-			<EditText
-			    android:id="@+id/tujuan" 
-				android:layout_height="wrap_content" 
-				android:layout_width="match_parent"
-				android:layout_gravity="center_vertical"
-				android:inputType="text"
-				android:hint="@string/ctujuan"
-			>
-			</EditText>
-		</TableRow>
-		
-		<TableRow>
-    	    <Button
-		            android:id="@+id/button4"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:text="@string/gmaps" />
-    	    
-		</TableRow>
-		<TableRow>
+            <EditText
+                android:id="@+id/asal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:hint="@string/casal"
+                android:inputType="text">
 
-		    <TextView
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="@string/jkapasitas" />
+            </EditText>
 
-		    <RadioGroup android:id="@+id/kuota" >
 
-		        <RadioButton
-		            android:id="@+id/no_1"
-		            android:text="@string/no_1" />
+        </TableRow>
 
-		        <RadioButton
-		            android:id="@+id/no_2"
-		            android:text="@string/no_2" />
 
-		        <RadioButton
-		            android:id="@+id/no_3"
-		            android:text="@string/no_3" />
+        <TableRow>
 
-		        <RadioButton
-		            android:id="@+id/no_4"
-		            android:text="@string/no_4" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jtujuan" />
 
-		        <RadioButton
-		            android:id="@+id/no_5"
-		            android:text="@string/no_5" />
+            <EditText
+                android:id="@+id/tujuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:hint="@string/ctujuan"
+                android:inputType="text"></EditText>
+        </TableRow>
 
-		        <RadioButton
-		            android:id="@+id/no_6"
-		            android:text="@string/no_6" />
+        <TableRow>
 
-		        
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gmaps" />
 
-		    </RadioGroup>
-		</TableRow>
+        </TableRow>
 
-		<TableRow>
-			
-			<TextView
-				android:text="@string/w_b"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-			/>
+        <TableRow>
 
-			
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jkapasitas" />
 
-		</TableRow>
-		<TableRow>
-			<TextView
-			    android:id="@+id/w_b"
-			    android:layout_width="match_parent"
-			    android:layout_height="wrap_content"
-			    android:text="@string/w_s" />
+            <RadioGroup android:id="@+id/kuota">
 
-			<Button
-			    android:id="@+id/button2"
-			    style="?android:attr/buttonStyleSmall"
-			    android:layout_width="wrap_content"
-			    android:layout_height="wrap_content"
-			    android:text="@string/setting" />
-		</TableRow>
-		<TableRow>
-			
-			<TextView
-				android:text="@string/j_k"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-			/>
+                <RadioButton
+                    android:id="@+id/no_1"
+                    android:text="@string/no_1" />
 
-			<EditText
-			    android:id="@+id/j_k" 
-				android:layout_height="wrap_content" 
-				android:layout_width="match_parent"
-				android:layout_gravity="center_vertical"
-				android:inputType="text"
-			>
-			</EditText>
-		</TableRow>
-		<TextView 
-    		android:id="@+id/tv" 
-    		android:layout_width="fill_parent"
-    		android:layout_height="wrap_content"
-    		android:text=""
-    	/>
+                <RadioButton
+                    android:id="@+id/no_2"
+                    android:text="@string/no_2" />
 
-		<Button
-		    android:id="@+id/button1"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="@string/submit"
-		/>
-   	</TableLayout>
-    
+                <RadioButton
+                    android:id="@+id/no_3"
+                    android:text="@string/no_3" />
+
+                <RadioButton
+                    android:id="@+id/no_4"
+                    android:text="@string/no_4" />
+
+                <RadioButton
+                    android:id="@+id/no_5"
+                    android:text="@string/no_5" />
+
+                <RadioButton
+                    android:id="@+id/no_6"
+                    android:text="@string/no_6" />
+
+
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/w_b" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/w_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/w_s" />
+
+            <Button
+                android:id="@+id/button2"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/setting" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/j_k" />
+
+            <EditText
+                android:id="@+id/j_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:inputType="text"></EditText>
+        </TableRow>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit" />
+    </TableLayout>
+
 
 </ScrollView>
 <!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/uIIOT/src/main/res/layout/layout_beritebengan.xml -->

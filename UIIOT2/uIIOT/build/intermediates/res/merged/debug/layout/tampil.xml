@@ -2,12 +2,12 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/bg"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_marginEnd="10dp"
     android:layout_marginRight="10dp"
-    tools:context=".Nebeng" >
+    android:background="@drawable/bg"
+    tools:context=".Nebeng">
 
     <TextView
         android:id="@+id/jnama"
@@ -167,7 +167,7 @@
         android:layout_toRightOf="@id/jw_b"
         android:textIsSelectable="true"
         android:textSize="12sp" />
-    
+
     <TextView
         android:id="@+id/j_k"
         android:layout_width="wrap_content"

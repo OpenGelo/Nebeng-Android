@@ -5,7 +5,7 @@
  * Menyeleksi tebengan yang kadaluarsa. Tebengan yang sudah kadaluarsa tidak diambil dari database
  * Melakukan join antar dua tabel
  * 
- * @version 27 Maret 2016
+ * @version 05 April 2016
  * @author I Made Sanadhi Sutandi // 1206202394
  */
 
@@ -22,10 +22,10 @@ $time_expired         = date_create(date('H:i:s'));
 $timeExpiredToString  = $time_expired->format('H:i:s');
 
     //ambil data dari tabel nebeng_user dan nebeng_beri_tebengan menggunakan join, ambil yang waktu kadaluarsanya sehabis waktu sekarang
-    $query_join = mysql_query("SELECT user_id, nebeng_user.nama, nebeng_user.npm, asal, tujuan, sisa_kapasitas,waktu_berangkat, jam_berangkat, jam_kadaluarsa,keterangan
+    $query_join = mysql_query("SELECT user_id, id_tebengan, nebeng_user.nama, nebeng_user.npm, nebeng_user.username, asal, tujuan, sisa_kapasitas,waktu_berangkat, jam_berangkat, jam_kadaluarsa,keterangan
     				      FROM nebeng_beri_tebengan 
     				      INNER JOIN nebeng_user ON nebeng_beri_tebengan.user_id = nebeng_user.id 
-                  WHERE (waktu_berangkat >= '$dateExpiredToString' AND jam_kadaluarsa >= '$timeExpiredToString')
+                  		  WHERE (waktu_berangkat >= '$dateExpiredToString' AND jam_kadaluarsa >= '$timeExpiredToString')
     				      ORDER BY waktu_berangkat, jam_berangkat; 
     				      ") or die(mysql_error());
 	
@@ -38,14 +38,16 @@ $timeExpiredToString  = $time_expired->format('H:i:s');
            while ($row = mysql_fetch_array($query_join)) { //loop untuk record per barisnya
               
     		      $beri_tebengan["user_id"]         = $row["user_id"];
+    		      $beri_tebengan["id_tebengan"]     = $row["id_tebengan"];
               $beri_tebengan["npm"]             = $row["npm"];
               $beri_tebengan["nama"]            = $row["nama"];
+              $beri_tebengan["username"]        = $row["username"];
               $beri_tebengan["asal"]            = $row["asal"];
               $beri_tebengan["tujuan"]          = $row["tujuan"];
               $beri_tebengan["kapasitas"]       = $row["sisa_kapasitas"];
               $beri_tebengan["waktu_berangkat"] = $row["waktu_berangkat"];
-    		      $beri_tebengan["jam_berangkat"]   = $row["jam_berangkat"];
-              $beri_tebengan["keterangan"]      = $row["keterangan"];
+  		        $beri_tebengan["jam_berangkat"]   = $row["jam_berangkat"];
+            	$beri_tebengan["keterangan"]      = $row["keterangan"];
      
               // push satu array per baris untuk tiap loop ke array response akhir
               array_push($response["result"], $beri_tebengan);

@@ -1,18 +1,5 @@
 package com.sumarnakreatip.uiiot;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.ProgressDialog;
@@ -33,6 +20,19 @@ import android.widget.Toast;
 
 import com.sumarnakreatip.uiiot.ProfilHttpClient.Function;
 import com.sumarnakreatip.uiiot.ProfilHttpClient.Product;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 @SuppressLint("InflateParams")
@@ -70,7 +70,7 @@ public class Profil extends Fragment {
         this.layout = ctx;
         this.et = user;
         this.n = new ProfilHttpClient(et);
-        this.m = new StatusHttpClient(et);
+        this.m = new StatusHttpClient(et, reg);
         this.regid = reg;
     }
 
@@ -81,9 +81,6 @@ public class Profil extends Fragment {
 
         view = inflater.inflate(R.layout.layout_profil, container,
                 false);
-        //profil asyncRateprofil = new profil();
-        //asyncRateprofil.execute();
-        //final LinearLayout rows = (LinearLayout) view.findViewById(R.id.rows);
         tvItemName = (TextView) view.findViewById(R.id.idreg);
         //tvItemName.setText(regid);
 
@@ -196,15 +193,13 @@ public class Profil extends Fragment {
         try {
 
             httpclient = new DefaultHttpClient();
-            httppost = new HttpPost("http://green.ui.ac.id/nebeng/batal.php");
+            httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/nebeng_cancel.php");
             //add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
             // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>, 
             nameValuePairs.add(new BasicNameValuePair("username", et.toString().trim()));  // $Edittext_value = $_POST['Edittext_value'];
             nameValuePairs.add(new BasicNameValuePair("update", update.toString().trim()));
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
-            //Execute HTTP Post Request
-            // edited by James from coderzheaven.. <span id="IL_AD6" class="IL_AD">from here</span>....
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
             final String response = httpclient.execute(httppost, responseHandler);
             System.out.println("Response : " + response);
