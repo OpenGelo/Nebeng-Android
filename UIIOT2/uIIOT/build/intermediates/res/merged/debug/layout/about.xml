@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
+    android:background="#fff"
     android:orientation="vertical">
 
 
@@ -55,4 +56,3 @@
         android:text="@string/about3" />
 
 </LinearLayout>
-<!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/uIIOT/src/main/res/layout/about.xml -->

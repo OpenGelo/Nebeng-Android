@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\UIIOT2\map\unspecified\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="576e7a19aedd43e2d59b45a84989f1498282caba">
-        <dex dex="C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\pre-dexed\debug\classes-85dec8db98691381105d90d969227c8c4543c3c7.jar" />
-    </item>
-
-</items>

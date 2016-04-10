@@ -16,4 +16,4 @@
         android:layout_marginLeft="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-</LinearLayout><!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/uIIOT/src/main/res/layout/fragment_layout_two.xml -->
+</LinearLayout>

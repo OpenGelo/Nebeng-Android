@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -89,6 +88,7 @@ public class Room extends Fragment {
                                 (p.id_tebengan).trim(),
                                 (p.npm).trim(),
                                 (p.nama).trim(),
+                                (p.username).trim(),
                                 (p.asal).trim(),
                                 (p.tujuan).trim(),
                                 (p.kapasitas).trim(),

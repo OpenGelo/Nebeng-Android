@@ -1,31 +1,37 @@
 package com.sumarnakreatip.uiiot;
 
+import android.app.ActionBar;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +51,7 @@ public class Home extends Activity {
     private CharSequence mTitle;
     CustomDrawerAdapter adapter;
 
-    public String user, id_tebengan, asal, tujuan, kapasitas, w_b, k, regid;
+    public String user,npm, id_tebengan, asal, tujuan, kapasitas, w_b, k, regid;
     int maps = 0;
     private String kuota = "";
     boolean map = false, segarkan = false;
@@ -56,15 +62,62 @@ public class Home extends Activity {
 
     List<DrawerItem> dataList;
 
+    private MFPPush push; // Push client
+    private MFPPushNotificationListener notificationListener; // Notification listener to handle a push sent to the phone
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR); // Add action bar again
         setContentView(R.layout.home);
+
+        user    = SaveSharedPreference.getUserName(Home.this);
+        regid   = SaveSharedPreference.getUserID(Home.this);
+        npm     = SaveSharedPreference.getNPM(Home.this);
+
+        ActionBar actionBar = getActionBar();
+        actionBar.show();
+        actionBar.setCustomView(R.layout.actionbar_custom_view_home);
+        actionBar.setDisplayShowCustomEnabled(true);
+
+        try {
+            // initialize SDK with IBM Bluemix application ID and route
+            // You can find your backendRoute and backendGUID in the Mobile Options section on top of your Bluemix application dashboard
+            // TODO: Please replace <APPLICATION_ROUTE> with a valid ApplicationRoute and <APPLICATION_ID> with a valid ApplicationId
+            BMSClient.getInstance().initialize(this, "http://nebeng-app.mybluemix.net", "ff11fc50-a005-4c05-838b-74df51da0768");
+        } catch (MalformedURLException mue) {
+            Log.i("Initialize", "Fails");
+        }
+
+        // Initialize Push client
+        MFPPush.getInstance().initialize(this);
+
+        // Create notification listener and enable pop up notification when a message is received
+        notificationListener = new MFPPushNotificationListener() {
+            @Override
+            public void onReceive(final MFPSimplePushNotification message) {
+                Log.i("ReceivePush", "Received a Push Notification: " + message.toString());
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        new AlertDialog.Builder(Home.this)
+                                .setTitle("Received a Push Notification")
+                                .setMessage(message.getAlert())
+                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                    }
+                                })
+                                .show();
+                    }
+                });
+            }
+        };
+
+        // Grabs push client sdk instance
+        push = MFPPush.getInstance();
+        push.listen(notificationListener);
+
         // Initializing
-        user = getIntent().getExtras().getString("username");
-        regid = getIntent().getExtras().getString("regid");
         kuota = getIntent().getExtras().getString("Kuota");
-        maps = getIntent().getExtras().getInt("Map");
         segarkan = getIntent().getExtras().getBoolean("segar");
 
         dataList = new ArrayList<DrawerItem>();
@@ -76,11 +129,11 @@ public class Home extends Activity {
                 GravityCompat.START);
 
         // Add Drawer Item to dataList
-        dataList.add(new DrawerItem("Room", R.drawable.ic_action_cloud));
-        dataList.add(new DrawerItem("Profil", R.drawable.ic_action_group));
-        dataList.add(new DrawerItem("Beri Tebengan", R.drawable.ic_action_good));
+        dataList.add(new DrawerItem("Home", R.drawable.ic_action_home));
+        dataList.add(new DrawerItem("Profil", R.drawable.ic_action_profile));
+        dataList.add(new DrawerItem("Beri Tebengan", R.drawable.ic_action_create));
         dataList.add(new DrawerItem("Tentang", R.drawable.ic_action_about));
-        dataList.add(new DrawerItem("Log Out", R.drawable.ic_action_import_export));
+        dataList.add(new DrawerItem("Log Out", R.drawable.ic_action_logout));
 
         adapter = new CustomDrawerAdapter(this, R.layout.custom_drawer_item,
                 dataList);
@@ -110,30 +163,27 @@ public class Home extends Activity {
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-        if (maps == 0) {
-            SelectItem(0);
-        } else if (maps == 1) {
-            SelectItem(1);
-        } else if (maps == 2) {
-            if (!segarkan) {
-                map = true;
-                asal = getIntent().getExtras().getString("mulai");
-                tujuan = getIntent().getExtras().getString("akhir");
-                id_tebengan = getIntent().getExtras().getString("id_tebengan");
-                kapasitas = getIntent().getExtras().getString("kapasitas");
-                w_b = getIntent().getExtras().getString("waktu_berangkat");
-                k = getIntent().getExtras().getString("keterangan");
-            } else {
-                segarkan = false;
-            }
-
-            SelectItem(2);
-        } else if (savedInstanceState == null) {
-            SelectItem(0);
-        }
-
+        SelectItem(0);
     }
 
+    // If the device has been registered previously, hold push notifications when the app is paused
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if (push != null) {
+            push.hold();
+        }
+    }
+
+    // If the device has been registered previously, ensure the client sdk is still using the notification listener from onCreate when app is resumed
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (push != null) {
+            push.listen(notificationListener);
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -155,7 +205,7 @@ public class Home extends Activity {
                         .getImgResID());
                 break;
             case 1:
-                fragment = new Profil(Home.this, user, regid);
+                fragment = new Profil();
                 args.putString(Profil.ITEM_NAME, dataList.get(possition)
                         .getItemName());
                 args.putInt(Profil.IMAGE_RESOURCE_ID, dataList.get(possition)
@@ -175,7 +225,7 @@ public class Home extends Activity {
 
             case 4:
                 fragment = new LogOut();
-                SaveSharedPreference.clearUserName(Home.this);
+                SaveSharedPreference.clearUserData(Home.this);
                 Intent intent = new Intent(this, LoginPage.class);
                 intent.putExtra("regid", regid);
                 startActivity(intent);
@@ -281,43 +331,5 @@ public class Home extends Activity {
 
     public void onDestroy() {
         super.onDestroy();
-    }
-
-    @SuppressWarnings("deprecation")
-    protected void displayNotification(int a) {
-        Log.i("Start", "notification");
-        String pesan;
-              /* Creates an explicit intent for an Activity in your app */
-        Intent resultIntent = new Intent(this, MainActivity.class);
-        resultIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-                | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        // Creates the PendingIntent
-        PendingIntent resultPendingIntent =
-                PendingIntent.getActivity(
-                        this,
-                        0,
-                        resultIntent,
-                        PendingIntent.FLAG_UPDATE_CURRENT
-                );
-
-        if (a == 1) {
-            pesan = "Ada yang menebeng, silahkan cek profil anda.";
-        } else if (a == 2) {
-            pesan = "Ada yang batal menebeng, silahkan cek profil anda.";
-        } else {
-            pesan = "";
-        }
-
-        Notification notification = new Notification(R.drawable.ic_launcher, "PEMBERITAHUAN!", ++numMessages);
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(
-                this);
-        notification = builder.setContentIntent(resultPendingIntent)
-                .setAutoCancel(true).setContentTitle("Pesan Baru")
-                .setContentText(pesan).build();
-
-        mNotificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-        mNotificationManager.notify(notificationID, notification);
     }
 }

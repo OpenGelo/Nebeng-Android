@@ -29,13 +29,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-//import java.util.List;
-//import org.apache.http.HttpResponse;
-//import org.apache.http.NameValuePair;
-//import org.apache.http.client.HttpClient;
-//import org.apache.http.client.methods.HttpPost;
-//import android.app.ProgressDialog;
-
 public class UserCustomAdapter extends ArrayAdapter<User> {
 
     HttpPost httppost;
@@ -44,7 +37,7 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
     HttpClient httpclient;
     List<NameValuePair> nameValuePairs;
     ProgressDialog dialog = null;
-    String usernametujuan, x, y, z, s;
+    String usernameTujuan, x, y, z, s;
     CharSequence text;
     int w;
     Context context;
@@ -60,12 +53,13 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
         this.a = a;
     }
 
-    public void addUser(String username, String user_id, String id_tebengan, String npm, String nama, String asal,
+    public void addUser(String username, String user_id, String id_tebengan, String npm, String nama,
+                        String usernameTujuan, String asal,
                         String tujuan, String kapasitas, String waktu_berangkat,
                         String jam_berangkat, String keterangan, String reg) {
         this.et = username;
         this.regid = reg;
-        a.add(new User(user_id, id_tebengan, npm, nama, asal, tujuan, kapasitas,
+        a.add(new User(user_id, id_tebengan, npm, nama, username, asal, tujuan, kapasitas,
                 waktu_berangkat, jam_berangkat, keterangan));
         notifyDataSetChanged();
     }
@@ -112,11 +106,11 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
                 //Log.d("MyDebug", "Row Click " + position);
                 id = a.get(position).user_id;
                 id_tebengan = a.get(position).id_tebengan;
+                usernameTujuan = a.get(position).username;
                 AlertDialog.Builder alert = new AlertDialog.Builder(context);
                 alert.setTitle("Detail Tebengan");
                 alert.setMessage("Nama: " + a.get(position).nama
                         + "\nNPM: " + a.get(position).npm
-                        + "\ncoba: " + a.get(position).id_tebengan
                         + "\nAsal: " + a.get(position).asal
                         + "\nTujuan: " + a.get(position).tujuan
                         + "\nKuota: " + a.get(position).kapasitas
@@ -181,6 +175,8 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
                 //setstatus(1);
                 Toast.makeText(context, "Nebeng Sukses", Toast.LENGTH_LONG).show();
                 int value = 0;
+                PostRequest sendNotif = new PostRequest("send_push_notification_basedOn_username.php");
+                sendNotif.executePost();
                 Intent intent = new Intent(context, Home.class);
                 intent.putExtra("username", et);
                 intent.putExtra("Map", value);
@@ -205,14 +201,10 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
         try {
 
             httpclient = new DefaultHttpClient();
-            // sure the <span id="IL_AD9" class="IL_AD">url</span> is correct.
             httppost = new HttpPost(
                     "http://green.ui.ac.id/nebeng/back-system/request_nebeng.php");
             // add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
-            // Always use the same variable name for posting i.e the android
-            // side variable name and php side variable name should be <span
-            // id="IL_AD8" class="IL_AD">similar</span>,
             nameValuePairs.add(new BasicNameValuePair("username", et.toString().trim()));
             nameValuePairs.add(new BasicNameValuePair("id_tebengan", id_tebengan.toString().trim()));
             nameValuePairs.add(new BasicNameValuePair("id_pengguna", id.toString().trim()));

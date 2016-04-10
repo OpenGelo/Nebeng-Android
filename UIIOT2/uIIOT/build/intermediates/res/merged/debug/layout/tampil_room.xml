@@ -78,4 +78,4 @@
         android:background="@color/titlebackgroundcolor"
         android:text="@string/spasi" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/uIIOT/src/main/res/layout/tampil_room.xml -->
+</RelativeLayout>

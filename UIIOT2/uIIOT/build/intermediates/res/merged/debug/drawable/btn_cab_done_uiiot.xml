@@ -25,4 +25,3 @@
     <item android:state_enabled="true"
         android:drawable="@drawable/btn_cab_done_default_uiiot" />
 </selector>
-<!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/uIIOT/src/main/res/drawable/btn_cab_done_uiiot.xml -->

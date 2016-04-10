@@ -1,5 +1,11 @@
 package com.sumarnakreatip.uiiot;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.os.Handler;
+import android.util.Log;
+import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -10,7 +16,7 @@ import org.apache.http.Header;
 import java.util.Arrays;
 import java.util.List;
 
-public class RoomHttpClient {
+public class RoomHttpClient extends Activity {
 
     private static final String HOST = "green.ui.ac.id";
     private final AsyncHttpClient client = new AsyncHttpClient();
@@ -21,6 +27,7 @@ public class RoomHttpClient {
         public String id_tebengan;
         public String npm;
         public String nama;
+        public String username;
         public String asal;
         public String tujuan;
         public String kapasitas;
@@ -46,7 +53,11 @@ public class RoomHttpClient {
         System.out.println("masuk");
         RequestParams params = new RequestParams("kode", "1");
         client.post("http://" + HOST + "/nebeng/back-system/get_all_tebengan.php", params, new AsyncHttpResponseHandler() {
-            @Override
+
+//            public void onProgress(int bytesWritten, int totalSize) {
+//                Toast.makeText(getApplicationContext(), "Requested resource not found", Toast.LENGTH_LONG).show();
+//            }
+
             public void onSuccess(String response) {
                 Gson g = new Gson();
                 final GetAllProducts r = g.fromJson(response, GetAllProducts.class);

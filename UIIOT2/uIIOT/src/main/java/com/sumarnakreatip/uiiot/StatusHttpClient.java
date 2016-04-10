@@ -1,6 +1,7 @@
 package com.sumarnakreatip.uiiot;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
@@ -13,11 +14,9 @@ import java.util.List;
 @SuppressLint("Instantiatable")
 public class StatusHttpClient {
     String et;
-    String userId;
 
-    public StatusHttpClient(String s, String id) {
+    public StatusHttpClient(String s) {
         et = s.toString();
-        userId = id.toString();
     }
 
     private static final String HOST = "green.ui.ac.id";
@@ -44,7 +43,6 @@ public class StatusHttpClient {
         System.out.println("masuk");
         RequestParams params = new RequestParams();
         params.put("username", et);
-        params.put("user_id", userId);
         client.post("http://" + HOST + "/nebeng/back-system/nebeng_status.php", params, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(String response) {

@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -14,6 +16,11 @@ import android.widget.Toast;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushException;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
+import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushResponseListener;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -25,6 +32,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +41,16 @@ public class LoginPage extends Activity {
     //variabel layout
     Button b, c;
     EditText et, pass;
+
+    String id = "";
+    String npm = "";
+    String username = "";
+    String nama="";
+    String role="";
+
+    private MFPPush push; // Push client
+    private MFPPushNotificationListener notificationListener; // Notification listener to handle a push sent to the phone
+    private String device_id;
 
     //variabel koneksi
     HttpPost httppost;
@@ -52,7 +70,44 @@ public class LoginPage extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        regid = getIntent().getExtras().getString("regid");
+        try {
+            // initialize SDK with IBM Bluemix application ID and route
+            // You can find your backendRoute and backendGUID in the Mobile Options section on top of your Bluemix application dashboard
+            // TODO: Please replace <APPLICATION_ROUTE> with a valid ApplicationRoute and <APPLICATION_ID> with a valid ApplicationId
+            BMSClient.getInstance().initialize(this, "http://nebeng-app.mybluemix.net", "ff11fc50-a005-4c05-838b-74df51da0768");
+        } catch (MalformedURLException mue) {
+            Log.i("Initialize", "Fails");
+        }
+
+        // Initialize Push client
+        MFPPush.getInstance().initialize(this);
+
+        // Grabs push client sdk instance
+        push = MFPPush.getInstance();
+
+        Log.i("Start Register", "Registering for notifications");
+
+        // Creates response listener to handle the response when a device is registered.
+        MFPPushResponseListener registrationResponselistener = new MFPPushResponseListener<String>() {
+            @Override
+            public void onSuccess(String s) {
+                Log.i("Success", "Successfully registered for push notifications");
+                String[] split = s.split("\"deviceId\":\"");
+                String[] split1 = split[1].split("\"");
+                device_id = split1[0];
+                Log.e("Device Id", device_id);
+            }
+
+            @Override
+            public void onFailure(MFPPushException e) {
+                Log.e("Fails", e.getErrorMessage());
+                push = null;
+            }
+        };
+
+        // Attempt to register device using response listener created above
+        push.register(registrationResponselistener);
+
         b = (Button) findViewById(R.id.button1);
         et = (EditText) findViewById(R.id.username);
         pass = (EditText) findViewById(R.id.password);
@@ -84,20 +139,39 @@ public class LoginPage extends Activity {
             // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>, 
             nameValuePairs.add(new BasicNameValuePair("username", et.getText().toString().trim()));
             nameValuePairs.add(new BasicNameValuePair("password", pass.getText().toString().trim()));
-            nameValuePairs.add(new BasicNameValuePair("regid", regid));
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             //Execute HTTP Post Request
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
             final String httpResponse = httpclient.execute(httppost, responseHandler).trim();
             JSONObject jsonObject = new JSONObject(httpResponse);
+            Log.i("JsonRespon", httpResponse);
             if (jsonObject.has("result")) {
-                response = jsonObject.optString("result");
+                response = jsonObject.getString("result");
+            }
+            if (jsonObject.has("id")) {
+                id = jsonObject.getString("id");
+                SaveSharedPreference.setUserID(LoginPage.this, id.toString().trim());
+            }
+            if (jsonObject.has("npm")) {
+                npm = jsonObject.getString("npm");
+                SaveSharedPreference.setNpm(LoginPage.this, npm.toString().trim());
+            }
+            if (jsonObject.has("username")) {
+                username = jsonObject.getString("username");
+                SaveSharedPreference.setUserName(LoginPage.this, username.toString().trim());
+            }
+            if (jsonObject.has("role")) {
+                role = jsonObject.getString("role");
+                SaveSharedPreference.setRole(LoginPage.this, role.toString().trim());
+            }
+            if (jsonObject.has("nama")) {
+                nama = jsonObject.getString("nama");
+                SaveSharedPreference.setNama(LoginPage.this, nama.toString().trim());
             }
 
             //dialog.dismiss();
             runOnUiThread(new Runnable() {
                 public void run() {
-
                     dialog.dismiss();
                 }
             });
@@ -109,10 +183,10 @@ public class LoginPage extends Activity {
                         Toast.makeText(LoginPage.this, "Login Sukses", Toast.LENGTH_LONG).show();
                     }
                 });
-                SaveSharedPreference.setUserName(LoginPage.this, et.getText().toString().trim());
+                updateUserRegistration asyncRate = new updateUserRegistration();
+                asyncRate.execute();
                 Intent datalogin = new Intent(LoginPage.this, Home.class);
                 datalogin.putExtra("username", et.getText().toString().trim());
-                datalogin.putExtra("regid", regid);
                 startActivity(datalogin);
                 finish();
             } else if (response.equalsIgnoreCase("User New")) {
@@ -121,10 +195,10 @@ public class LoginPage extends Activity {
                         Toast.makeText(LoginPage.this, "Login Sukses", Toast.LENGTH_LONG).show();
                     }
                 });
-                SaveSharedPreference.setUserName(LoginPage.this, et.getText().toString().trim());
+                updateUserRegistration asyncRate = new updateUserRegistration();
+                asyncRate.execute();
                 Intent datalogin = new Intent(LoginPage.this, Kontak.class);
                 datalogin.putExtra("username", et.getText().toString().trim());
-                datalogin.putExtra("regid", regid);
                 startActivity(datalogin);
                 finish();
             } else {
@@ -137,6 +211,55 @@ public class LoginPage extends Activity {
 
         } catch (Exception e) {
             dialog.dismiss();
+            Toast.makeText(LoginPage.this, "Exception : " + e.getMessage(), Toast.LENGTH_LONG).show();
+            System.out.println("Exception : " + e.getMessage());
+        }
+    }
+
+    //koneksi tuk cek gcm
+    private class updateUserRegistration extends AsyncTask<Void, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            String msg = "";
+            updateDeviceUser();
+            return msg;
+        }
+
+        @Override
+        protected void onPostExecute(String rate) {
+
+        }
+
+    }
+
+    void updateDeviceUser() {
+        try {
+            httpclient = new DefaultHttpClient();
+            httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/update_push_userId.php");
+            //add your data
+            nameValuePairs = new ArrayList<NameValuePair>(2);
+            // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>,
+            nameValuePairs.add(new BasicNameValuePair("username", username.toLowerCase().trim()));
+            nameValuePairs.add(new BasicNameValuePair("device_id", device_id));
+            //nameValuePairs.add(new BasicNameValuePair("regid",  regid.toString().trim()));
+            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+            //Execute HTTP Post Request
+            ResponseHandler<String> responseHandler = new BasicResponseHandler();
+            String httpResponse = httpclient.execute(httppost, responseHandler).trim();
+            Log.e("updateResponse", httpResponse);
+            //dialog.dismiss();
+            runOnUiThread(new Runnable() {
+                public void run() {
+                }
+            });
+
+        } catch (Exception e) {
             Toast.makeText(LoginPage.this, "Exception : " + e.getMessage(), Toast.LENGTH_LONG).show();
             System.out.println("Exception : " + e.getMessage());
         }

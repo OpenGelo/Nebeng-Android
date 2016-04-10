@@ -19,6 +19,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,9 +80,12 @@ public class Kontak extends Activity {
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             //Execute HTTP Post Request
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
-            final String response = httpclient.execute(httppost, responseHandler);
-            System.out.println("Response : " + response);
-            //dialog.dismiss();
+            String response = httpclient.execute(httppost, responseHandler);
+            String httpResponse = httpclient.execute(httppost, responseHandler).trim();
+            JSONObject jsonObject = new JSONObject(httpResponse);
+            if (jsonObject.has("result")) {
+                response = jsonObject.optString("result");
+            }
             runOnUiThread(new Runnable() {
                 public void run() {
 

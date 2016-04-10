@@ -24,4 +24,3 @@
     <item android:state_focused="true"                                                             android:drawable="@drawable/apptheme_list_focused_holo" />
     <item                                                                                          android:drawable="@android:color/transparent" />
 </selector>
-<!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/uIIOT/src/main/res/drawable/apptheme_item_background_holo_light.xml -->

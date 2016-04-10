@@ -1,10 +1,11 @@
 package com.sumarnakreatip.uiiot;
 
-public class User {
+public class User{
     String user_id;
     String id_tebengan;
     String npm;
     String nama;
+    String username;
     String asal;
     String tujuan;
     String kapasitas;
@@ -92,7 +93,7 @@ public class User {
         this.keterangan = keterangan;
     }
 
-    public User(String user_id, String id_tebengan, String npm, String nama, String asal,
+    public User(String user_id, String id_tebengan, String npm, String nama, String username, String asal,
                 String tujuan, String kapasitas, String waktu_berangkat,
                 String jam_berangkat, String keterangan) {
         super();
@@ -100,6 +101,7 @@ public class User {
         this.id_tebengan = id_tebengan;
         this.npm = npm;
         this.nama = nama;
+        this.username= username;
         this.asal = asal;
         this.tujuan = tujuan;
         this.kapasitas = kapasitas;

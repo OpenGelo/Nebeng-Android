@@ -26,4 +26,3 @@
         android:drawable="@drawable/spinner_ab_focused_uiiot" />
     <item android:drawable="@drawable/spinner_ab_default_uiiot" />
 </selector>
-<!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/uIIOT/src/main/res/drawable/spinner_background_ab_uiiot.xml -->

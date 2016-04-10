@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.sumarnakreatip.uiiot"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 21
     }
 
@@ -20,8 +20,14 @@ android {
 
 dependencies {
     compile project(':map')
-    compile 'com.android.support:appcompat-v7:23.1.0'
     compile files('libs/org.apache.http.legacy.jar')
     compile files('org.apache.http.legacy.jar')
+    compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile 'com.ibm.mobilefirstplatform.clientsdk.android:push:1.+'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-identity:8.4.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.android.support:design:23.1.1'
 }

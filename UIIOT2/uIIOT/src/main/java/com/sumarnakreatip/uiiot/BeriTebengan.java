@@ -9,12 +9,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -234,7 +234,7 @@ public final class BeriTebengan extends Fragment {
             return response;
         } catch (Exception e) {
             response = "Catch";
-            System.out.println("Exception : " + e.getMessage());
+            Log.e("Exception : ", e.getMessage());
             return response;
         }
     }

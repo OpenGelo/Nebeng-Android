@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -38,75 +39,53 @@ import java.util.List;
 @SuppressLint("InflateParams")
 public class Profil extends Fragment {
 
-    ImageView ivIcon;
     TextView tvItemName;
 
     ImageButton b, c;
-    EditText asal, tujuan, kota, w_b;
-    RadioGroup jl;
-    String type, et, update;
 
     Context layout;
 
-    private String respon, regid;
+    private String respon, username, update;
     //private TextView tv;
 
     HttpPost httppost;
-    StringBuffer buffer;
     HttpResponse response;
     HttpClient httpclient;
     List<NameValuePair> nameValuePairs;
     ProgressDialog dialog = null;
 
-    final ProfilHttpClient n;
-    final StatusHttpClient m;
+    StatusHttpClient m;
     View view;
 
     public static final String IMAGE_RESOURCE_ID = "iconResourceID";
     public static final String ITEM_NAME = "itemName";
 
-
-    public Profil(Context ctx, String user, String reg) {
-        this.layout = ctx;
-        this.et = user;
-        this.n = new ProfilHttpClient(et);
-        this.m = new StatusHttpClient(et, reg);
-        this.regid = reg;
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.layout_profil, container,
+        view = inflater.inflate(R.layout.profil, container,
                 false);
         tvItemName = (TextView) view.findViewById(R.id.idreg);
-        //tvItemName.setText(regid);
 
-        n.get_all_products(new Function<List<Product>, Void>() {
+        String npm = SaveSharedPreference.getNPM(getActivity());
+        String nama = SaveSharedPreference.getNama(getActivity());
+        String role = SaveSharedPreference.getRole(getActivity());
+        username = SaveSharedPreference.getUserName(getActivity());
 
-            @Override
-            public Void call(List<Product> input) {
-                LinearLayout rows = (LinearLayout) view.findViewById(R.id.rows);
-                for (Product p : input) {
-                    final View row = LayoutInflater.from(layout).inflate(R.layout.tampilprofil, null);
-                    ((TextView) row.findViewById(R.id.npm)).setText(p.npm);
-                    ((TextView) row.findViewById(R.id.nama)).setText(p.nama);
-                    ((TextView) row.findViewById(R.id.role)).setText(p.role);
+        ((TextView) view.findViewById(R.id.npm)).setText(npm);
+        ((TextView) view.findViewById(R.id.nama)).setText(nama);
+        ((TextView) view.findViewById(R.id.role)).setText(role);
 
-                    rows.addView(row);
-                }
-                return null;
-            }
-        });
+        this.layout = getActivity();
+
+        m = new StatusHttpClient(username);
         m.get_all_products(new StatusHttpClient.Function<List<StatusHttpClient.Product>, Void>() {
 
             @Override
             public Void call(List<StatusHttpClient.Product> input) {
                 LinearLayout rows = (LinearLayout) view.findViewById(R.id.rowd);
                 for (StatusHttpClient.Product p : input) {
-                    //final View row = LayoutInflater.from(layout).inflate(R.layout.tampilprofil, null);
                     final View row = LayoutInflater.from(layout).inflate(R.layout.tampilstatus, null);
                     ((TextView) row.findViewById(R.id.nama)).setText(p.nama);
                     ((TextView) row.findViewById(R.id.no_hp)).setText(p.no_hp);
@@ -182,9 +161,8 @@ public class Profil extends Fragment {
     void segarkan() {
         int value = 1;
         Intent intent = new Intent(getActivity(), Home.class);
-        intent.putExtra("username", et.toString().trim());
+        intent.putExtra("username", username.toString().trim());
         intent.putExtra("Map", value);
-        intent.putExtra("regid", regid);
         startActivity(intent);
         getActivity().finish();
     }
@@ -197,7 +175,7 @@ public class Profil extends Fragment {
             //add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
             // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>, 
-            nameValuePairs.add(new BasicNameValuePair("username", et.toString().trim()));  // $Edittext_value = $_POST['Edittext_value'];
+            nameValuePairs.add(new BasicNameValuePair("username", username));  // $Edittext_value = $_POST['Edittext_value'];
             nameValuePairs.add(new BasicNameValuePair("update", update.toString().trim()));
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             ResponseHandler<String> responseHandler = new BasicResponseHandler();

@@ -22,4 +22,4 @@
     <item android:state_pressed="false" android:state_focused="true" android:drawable="@drawable/list_focused_uiiot" />
     <item android:state_pressed="true" android:drawable="@drawable/list_pressed_uiiot" />
     <item android:drawable="@android:color/transparent" />
-</selector><!-- From: file:/C:/Users/Sanadhi/Desktop/Skripsi/UIIOT2/uIIOT/src/main/res/drawable/selectable_background_uiiot.xml -->
+</selector>
