@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sumarnakreatip.uiiot.RoomHttpClient.Function;
 import com.sumarnakreatip.uiiot.RoomHttpClient.Product;
@@ -19,7 +21,13 @@ import com.sumarnakreatip.uiiot.RoomHttpClient.Product;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +74,14 @@ public class Room extends Fragment {
 
         final ListView lv = (ListView) view.findViewById(R.id.list_root);
         note = (TextView) view.findViewById(R.id.ket);
+        Button btnPush = (Button) view.findViewById(R.id.button_push);
+        btnPush.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendThePush asyncRate = new sendThePush();
+                asyncRate.execute();
+            }
+        });
 
         //adapter untuk menampilkan data
         userAdapter = new UserCustomAdapter(layout, R.layout.room_tampil, a);
@@ -105,5 +121,52 @@ public class Room extends Fragment {
         lv.setItemsCanFocus(false);
         lv.setAdapter(userAdapter);
         return view;
+    }
+
+    String sendPush() {
+        String response = "Gagal"; //default
+        String username = SaveSharedPreference.getUserName(layout);
+
+        try {
+            httpclient = new DefaultHttpClient();
+            httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/send_push_notification_basedOn_username.php");
+            //add your data
+            nameValuePairs = new ArrayList<NameValuePair>(2);
+            // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>,
+            nameValuePairs.add(new BasicNameValuePair("username", username.toString().trim()));
+            nameValuePairs.add(new BasicNameValuePair("message", "unit test"));
+            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+            ResponseHandler<String> responseHandler = new BasicResponseHandler();
+            String httpResponse = httpclient.execute(httppost, responseHandler).trim();
+            JSONObject jsonObject = new JSONObject(httpResponse);
+            if (jsonObject.has("result")) {
+                response = jsonObject.optString("result");
+            }
+            return response;
+        } catch (Exception e) {
+            response = "Gagal";
+            return response;
+        }
+    }
+
+
+    public class sendThePush extends AsyncTask<Void, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dialog = ProgressDialog.show(layout, "", "Proccessing...", true);
+        }
+
+        @Override
+        protected String doInBackground(Void... params) {
+            String response = sendPush();
+            return "";
+        }
+
+        @Override
+        protected void onPostExecute(String response) {
+            dialog.dismiss();
+        }
     }
 }

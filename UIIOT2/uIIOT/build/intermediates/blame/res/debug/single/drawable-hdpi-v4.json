@@ -196,12 +196,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-hdpi\\common_google_signin_btn_text_light_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-hdpi\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_refresh.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-hdpi\\ic_action_refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-hdpi\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_setting_dark.png",
