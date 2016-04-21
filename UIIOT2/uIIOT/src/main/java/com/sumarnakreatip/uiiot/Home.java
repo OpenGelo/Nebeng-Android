@@ -41,24 +41,12 @@ public class Home extends Activity {
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
 
-    HttpPost httppost;
-    StringBuffer buffer;
-    HttpResponse response;
-    HttpClient httpclient;
-    List<NameValuePair> nameValuePairs;
-
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
     CustomDrawerAdapter adapter;
 
-    public String user,npm, id_tebengan, asal, tujuan, kapasitas, w_b, k, regid;
-    int maps = 0;
-    private String kuota = "";
-    boolean map = false, segarkan = false;
-
-    private NotificationManager mNotificationManager;
-    private int notificationID = 100;
-    private int numMessages = 0;
+    public String user,npm, id_tebengan, asal, tujuan, regid;
+    boolean map = false;
 
     List<DrawerItem> dataList;
 
@@ -100,7 +88,8 @@ public class Home extends Activity {
                 runOnUiThread(new Runnable() {
                     public void run() {
                         new AlertDialog.Builder(Home.this)
-                                .setTitle("Received a Push Notification")
+                                .setTitle("Nebengers Notification")
+                                .setIcon(R.drawable.nebeng_icon_notif)
                                 .setMessage(message.getAlert())
                                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int whichButton) {
@@ -115,10 +104,6 @@ public class Home extends Activity {
         // Grabs push client sdk instance
         push = MFPPush.getInstance();
         push.listen(notificationListener);
-
-        // Initializing
-        kuota = getIntent().getExtras().getString("Kuota");
-        segarkan = getIntent().getExtras().getBoolean("segar");
 
         dataList = new ArrayList<DrawerItem>();
         mTitle = mDrawerTitle = getTitle();
@@ -188,7 +173,7 @@ public class Home extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.layout.menu_option, menu);
+        getMenuInflater().inflate(R.menu.menu_option, menu);
         return true;
     }
 
@@ -198,7 +183,7 @@ public class Home extends Activity {
         Bundle args = new Bundle();
         switch (possition) {
             case 0:
-                fragment = new Room(Home.this, user, regid);
+                fragment = new Room();
                 args.putString(Room.ITEM_NAME, dataList.get(possition)
                         .getItemName());
                 args.putInt(Room.IMAGE_RESOURCE_ID, dataList.get(possition)
@@ -212,11 +197,7 @@ public class Home extends Activity {
                         .getImgResID());
                 break;
             case 2:
-                fragment = new BeriTebengan(Home.this, user, asal, tujuan, kapasitas, w_b, k, map, regid);
-                args.putString(BeriTebengan.ITEM_NAME, dataList.get(possition)
-                        .getItemName());
-                args.putInt(BeriTebengan.IMAGE_RESOURCE_ID, dataList.get(possition)
-                        .getImgResID());
+                fragment = new BeriTebengan();
                 map = false;
                 break;
             case 3:
@@ -283,7 +264,6 @@ public class Home extends Activity {
                     intent.putExtra("username", user);
                     intent.putExtra("Map", value);
                     intent.putExtra("regid", regid);
-                    intent.putExtra("Kuota", kuota);
                     startActivity(intent);
                     finish();
                 } else if (mDrawerList.getCheckedItemPosition() == 1) {

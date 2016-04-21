@@ -20,7 +20,7 @@
     <!-- Login n startup theme. -->
     <style name="LogTheme">
 		<item name="android:windowTitleBackgroundStyle">@style/title_background</item>
-		<item name="android:windowBackground">@drawable/bg</item>
+		<item name="android:windowBackground">@drawable/splash_screen</item>
 	</style>
      
     <style name="title_background">

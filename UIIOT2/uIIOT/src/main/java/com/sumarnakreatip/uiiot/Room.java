@@ -37,7 +37,7 @@ public class Room extends Fragment {
     private String et, regid;
 
     //variabel class koneksi
-    final RoomHttpClient n;
+    RoomHttpClient n;
 
     TextView note;
 
@@ -54,18 +54,15 @@ public class Room extends Fragment {
     ListView userList;
     UserCustomAdapter userAdapter;
 
-    public Room(Context ctx, String user, String reg) {
-        this.layout = ctx;
-        this.et = user;
-        this.regid = reg;
-        this.n = new RoomHttpClient();
-    }
-
     @SuppressLint("InflateParams")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.nebeng, container, false);
+
+        layout = getActivity();
+        et    = SaveSharedPreference.getUserName(getActivity());
+        regid   = SaveSharedPreference.getUserID(getActivity());
 
         final ListView lv = (ListView) view.findViewById(R.id.list_root);
         note = (TextView) view.findViewById(R.id.ket);
@@ -73,6 +70,7 @@ public class Room extends Fragment {
         //adapter untuk menampilkan data
         userAdapter = new UserCustomAdapter(layout, R.layout.room_tampil, a);
 
+        n = new RoomHttpClient();
         //proses untuk mengambil data
         n.get_all_products(new Function<List<Product>, String, Void>() {
 

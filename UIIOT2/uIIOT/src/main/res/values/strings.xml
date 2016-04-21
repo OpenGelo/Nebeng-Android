@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">IOT</string>
+    <string name="app_name">Nebengers</string>
     <string name="user">Username</string>
     <string name="pass">Password</string>
     <string name="signin">SIGN IN</string>
@@ -10,9 +10,9 @@
     <string name="login2">Silahkan masukkan data kontak anda</string>
     <string name="gmaps">GM</string>
     
-    <string name="about1">Version 0.2</string>
-    <string name="about4">Irit Ongkos Transport</string>
-    <string name="about2">Copyright @2014 IOT Developer Team</string>
+    <string name="about1">Version 0.3</string>
+    <string name="about4">Universitas Indonesia - Vehicle Sharing Platform</string>
+    <string name="about2">Copyright @2016 IOT Developer Team</string>
     <string name="about3">All right reserved</string>
     
     <string name="drawer_open">Open drawer</string>

@@ -40,7 +40,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcheri"
+        android:icon="@drawable/nebeng"
         android:label="@string/app_name"
         android:theme="@style/CustomTheme"
         tools:replace="android:icon,android:theme">
@@ -76,7 +76,7 @@
 
         <activity
             android:name=".Home"
-            android:icon="@drawable/ic_launcheri"
+            android:icon="@drawable/nebeng"
             android:label="@string/app_name">
             <!--Notification Intent -->
             <intent-filter>

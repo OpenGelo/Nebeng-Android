@@ -175,12 +175,12 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
                 //setstatus(1);
                 Toast.makeText(context, "Nebeng Sukses", Toast.LENGTH_LONG).show();
                 int value = 0;
+                String nama = SaveSharedPreference.getNama(context);
                 PostRequest sendNotif = new PostRequest("send_push_notification_basedOn_username.php");
+                sendNotif.setPostValues("username", usernameTujuan);
+                sendNotif.setPostValues("message", nama + " hendak menebeng");
                 sendNotif.executePost();
                 Intent intent = new Intent(context, Home.class);
-                intent.putExtra("username", et);
-                intent.putExtra("Map", value);
-                intent.putExtra("regid", regid);
                 context.startActivity(intent);
                 ((Activity) context).finish();
             } else if (respon

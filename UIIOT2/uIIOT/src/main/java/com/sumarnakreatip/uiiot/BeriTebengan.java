@@ -1,6 +1,5 @@
 package com.sumarnakreatip.uiiot;
 
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.app.ProgressDialog;
@@ -9,7 +8,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,24 +33,20 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-
-@SuppressLint("Instantiatable")
 public final class BeriTebengan extends Fragment {
 
     Context layout;
 
     Button submit, gmaps;
-    EditText asal, tujuan, kota, keterangan;
+    EditText asal, tujuan, keterangan;
     RadioGroup jl;
-    String type, et, k, gotAddresses1, gotAddresses2, kuota, waktu, w_b, regid;
+    String type, ket, username, kuota, waktu, w_b, regid;
     StringBuilder wb;
     private boolean setbefore = false;
 
-    private String respon;
     private TextView tv;
 
     HttpPost httppost;
-    StringBuffer buffer;
     HttpResponse response;
     HttpClient httpclient;
     List<NameValuePair> nameValuePairs;
@@ -66,28 +60,15 @@ public final class BeriTebengan extends Fragment {
 
     static final int TIME_DIALOG_ID = 999;
 
-    public static final String IMAGE_RESOURCE_ID = "iconResourceID";
-    public static final String ITEM_NAME = "itemName";
-
-
-    public BeriTebengan(Context ctx, String user, String a, String b, String c, String d, String e, boolean f, String reg) {
-        this.layout = ctx;
-        this.et = user;
-        this.gotAddresses1 = a;
-        this.gotAddresses2 = b;
-        this.kuota = c;
-        this.waktu = d;
-        this.k = e;
-        this.setbefore = f;
-        this.regid = reg;
-    }
-
     //@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.beritebengan_layout, container,
                 false);
+        layout = getActivity();
+
+        username = SaveSharedPreference.getUserName(getActivity());
 
         asal = (EditText) view.findViewById(R.id.asal);
         tujuan = (EditText) view.findViewById(R.id.tujuan);
@@ -98,11 +79,7 @@ public final class BeriTebengan extends Fragment {
 
         setCurrentTimeOnView(setbefore);
         if (setbefore) {
-            asal.setText(gotAddresses1);
-            tujuan.setText(gotAddresses2);
-            keterangan.setText(k);
             setbefore = false;
-
             if (kuota.equalsIgnoreCase("1")) {
                 jl.check(R.id.no_1);
             } else if (kuota.equalsIgnoreCase("2")) {
@@ -153,16 +130,16 @@ public final class BeriTebengan extends Fragment {
                     type = "";
                 }
                 if (keterangan.getText().toString().trim().equalsIgnoreCase("")) {
-                    k = " ";
+                    ket = " ";
                 } else {
-                    k = keterangan.getText().toString().trim();
+                    ket = keterangan.getText().toString().trim();
                 }
 
                 Intent gmaps = new Intent(getActivity(), MapActivity.class);
-                gmaps.putExtra("username", et.toString().trim());
+                gmaps.putExtra("username", username.toString().trim());
                 gmaps.putExtra("kapasitas", type.toString().trim());
                 gmaps.putExtra("waktu_berangkat", w_b.toString().trim());
-                gmaps.putExtra("keterangan", k.toString().trim());
+                gmaps.putExtra("keterangan", ket.toString().trim());
                 gmaps.putExtra("regid", regid);
                 startActivity(gmaps);
                 getActivity().finish();
@@ -189,9 +166,9 @@ public final class BeriTebengan extends Fragment {
                     type = "";
                 }
                 if (keterangan.getText().toString().trim().equalsIgnoreCase("")) {
-                    k = " ";
+                    ket = " ";
                 } else {
-                    k = keterangan.getText().toString().trim();
+                    ket = keterangan.getText().toString().trim();
                 }
 
                 if (asal.getText().toString().trim().equalsIgnoreCase("") &&
@@ -209,21 +186,20 @@ public final class BeriTebengan extends Fragment {
     }
 
 
-    String login() {
-        String response = "default";
+    String createTebengan() {
+        String response = "Gagal"; //default
         try {
-
             httpclient = new DefaultHttpClient();
             httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/create_tebengan.php");
             //add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
             // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>, 
-            nameValuePairs.add(new BasicNameValuePair("username", et.toString().trim()));
+            nameValuePairs.add(new BasicNameValuePair("username", username.toString().trim()));
             nameValuePairs.add(new BasicNameValuePair("asal", asal.getText().toString().trim()));  // $Edittext_value = $_POST['Edittext_value'];
             nameValuePairs.add(new BasicNameValuePair("tujuan", tujuan.getText().toString().trim()));
             nameValuePairs.add(new BasicNameValuePair("kapasitas", type.toString().trim()));
             nameValuePairs.add(new BasicNameValuePair("waktu_berangkat", w_b.toString().trim()));
-            nameValuePairs.add(new BasicNameValuePair("keterangan", k.toString().trim()));
+            nameValuePairs.add(new BasicNameValuePair("keterangan", ket.toString().trim()));
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
             String httpResponse = httpclient.execute(httppost, responseHandler).trim();
@@ -233,8 +209,7 @@ public final class BeriTebengan extends Fragment {
             }
             return response;
         } catch (Exception e) {
-            response = "Catch";
-            Log.e("Exception : ", e.getMessage());
+            response = "Gagal";
             return response;
         }
     }
@@ -250,43 +225,31 @@ public final class BeriTebengan extends Fragment {
 
         @Override
         protected String doInBackground(Void... params) {
-
-            String respo = login();
-
-            return respo;
+            String response = createTebengan();
+            return response;
         }
 
         @Override
-        protected void onPostExecute(String rate) {
-            // Do whatever you need with the string, you can update your UI from here
-            respon = rate;
+        protected void onPostExecute(String response) {
+            String responseCheck = response;
             dialog.dismiss();
-            if (respon.equalsIgnoreCase("Sukses")) {
+            if (responseCheck.equalsIgnoreCase("Sukses")) {
                 Toast.makeText(layout, "Sukses Dimasukkan", Toast.LENGTH_LONG).show();
-                segarkan();
-            } else if (respon.equalsIgnoreCase("Catch")) {
+                refresh();
+            } else if (responseCheck.equalsIgnoreCase("Gagal")) {
                 Toast.makeText(layout, "Gagal Dimasukkan", Toast.LENGTH_LONG).show();
-            } else {
-                Toast.makeText(layout, rate, Toast.LENGTH_LONG).show();
             }
-
         }
     }
 
-    void segarkan() {
-        int value = 0;
+    void refresh() {
         Intent intent = new Intent(getActivity(), Home.class);
-        intent.putExtra("username", et.toString().trim());
-        intent.putExtra("Map", value);
-        intent.putExtra("regid", regid);
-        intent.putExtra("Kuota", type.toString().trim());
         startActivity(intent);
         getActivity().finish();
     }
 
     // display current time
     public void setCurrentTimeOnView(boolean a) {
-
         if (a) {
             tv.setText(waktu);
             w_b = waktu;
@@ -308,7 +271,6 @@ public final class BeriTebengan extends Fragment {
             case TIME_DIALOG_ID:
                 // set time picker as current time
                 return new TimePickerDialog(layout, timePickerListener, hour, minute, false);
-
         }
         return null;
     }
