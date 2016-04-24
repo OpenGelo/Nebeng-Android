@@ -12,10 +12,13 @@
         android:name="com.sumarnakreatip.uiiot.maps.googlev2.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
-    <!-- Necessary Permissions for Receiving Push Notifications -->
+    <!-- Necessary Permissions for Receiving GCM Push Notifications -->
+    <permission
+        android:name="com.sumarnakreatip.uiiot.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.sumarnakreatip.uiiot.permission.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.ibm.clientsdk.android.app.permission.C2D_MESSAGE" />
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
@@ -37,6 +40,9 @@
         android:glEsVersion="0x00020000"
         android:required="true" />
 
+    <!-- Permissions required for GCM -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/nebeng"
@@ -52,12 +58,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <!-- Notification Intent -->
-            <intent-filter>
-                <action android:name="com.sumarnakreatip.uiiot.IBMPushNotification" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -101,30 +101,42 @@
             android:name="com.sumarnakreatip.uiiot.MapActivity"
             android:screenOrientation="landscape" />
 
-        <!-- Add GCM Intent Service and intent-filters for RECEIVE and REGISTRATION of notifications -->
-        <service android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService" />
-
+        <!-- [START gcm_receiver] -->
         <receiver
-            android:name="com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver"
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-
-                <category android:name="com.ibm.mobilefirstplatform.clientsdk.android.app" />
+                <category android:name="gcm.play.android.samples.com.gcmquickstart" />
             </intent-filter>
         </receiver>
-        <!--
-             ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
-        -->
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+        <!-- [END gcm_receiver] -->
+
+
+        <!-- [START gcm_listener] -->
+        <service
+            android:name="com.sumarnakreatip.uiiot.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener] -->
+        <!-- [START instanceId_listener] -->
+        <service
+            android:name="com.sumarnakreatip.uiiot.MyInstanceIDListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener] -->
+        <service
+            android:name="com.sumarnakreatip.uiiot.RegistrationIntentService"
+            android:exported="false" >
+        </service>
 
         <activity
             android:name="com.directions.android.Map"
@@ -143,6 +155,11 @@
         <activity
             android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
             android:theme="@style/Theme.IAPTheme" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name="com.google.android.gms.appinvite.PreviewActivity"
             android:exported="true"

@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\places_ic_clear.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xhdpi\\places_ic_clear.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_disabled.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xhdpi\\common_google_signin_btn_icon_dark_disabled.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\places_ic_clear.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\drawable-xhdpi\\places_ic_clear.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\start_purple.png",
@@ -416,12 +416,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-xhdpi\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-xhdpi\\abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-xhdpi\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\drawable-xhdpi\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\map\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_plusone_medium_off_client.png",

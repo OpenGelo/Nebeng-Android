@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:2:1-137:12
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:2:1-143:12
 	xmlns:tools
 		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:3:5-51
 	xmlns:android
@@ -416,6 +416,9 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skr
 MERGED from [com.android.support:recyclerview-v7:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:10:9-38
 		INJECTED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml
@@ -430,8 +433,18 @@ ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifes
 		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:14:9-44
 	android:name
 		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:13:9-86
+permission#com.sumarnakreatip.uiiot.permission.C2D_MESSAGE
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:17:5-18:47
+	android:protectionLevel
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:18:9-44
+	android:name
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:17:17-79
+uses-permission#com.sumarnakreatip.uiiot.permission.C2D_MESSAGE
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:19:5-87
+	android:name
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:19:22-84
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:17:5-67
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:21:5-67
 MERGED from [UIIOT2:map:unspecified] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\UIIOT2\map\unspecified\AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\AndroidManifest.xml:21:5-67
@@ -466,22 +479,12 @@ MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\D
 MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:20:5-66
 MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:21:5-67
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:21:5-67
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:17:22-64
-uses-permission#com.ibm.clientsdk.android.app.permission.C2D_MESSAGE
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:18:5-92
-	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:18:22-89
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:19:5-82
-MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:5-82
-MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:5-82
-MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:5-82
-MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:5-82
-	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:19:22-79
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:21:22-64
 uses-permission#android.permission.WAKE_LOCK
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:20:5-68
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:22:5-68
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:24:5-67
@@ -490,22 +493,22 @@ MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sa
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:20:22-65
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:22:22-65
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:21:5-71
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:23:5-71
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:21:22-68
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:23:22-68
 uses-permission#android.permission.USE_CREDENTIALS
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:22:5-74
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:24:5-74
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:22:22-71
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:24:22-71
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:23:5-76
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:25:5-76
 MERGED from [com.ibm.mobilefirstplatform.clientsdk.android:core:1.1.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.ibm.mobilefirstplatform.clientsdk.android\core\1.1.0\AndroidManifest.xml:11:5-76
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:23:22-73
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:25:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:26:5-79
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:28:5-79
 MERGED from [UIIOT2:map:unspecified] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\UIIOT2\map\unspecified\AndroidManifest.xml:12:5-79
 MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-analytics:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.4.0\AndroidManifest.xml:22:5-79
@@ -536,26 +539,27 @@ MERGED from [com.google.android.gms:play-services-nearby:8.4.0] C:\Users\Sanadhi
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:20:5-78
 MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:21:5-78
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:26:22-76
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:28:22-76
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:27:5-98
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:29:5-98
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:27:22-95
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:29:22-95
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:30:5-81
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:32:5-81
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:30:22-78
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:32:22-78
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:33:5-81
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:35:5-81
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:33:22-78
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:35:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:34:5-79
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:36:5-79
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:34:22-76
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:36:22-76
 uses-feature#0x00020000
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:37:5-39:35
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:39:5-41:35
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
@@ -569,11 +573,11 @@ MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\D
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
 MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\AndroidManifest.xml:22:5-24:33
 	android:required
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:39:9-32
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:41:9-32
 	android:glEsVersion
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:38:9-41
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:40:9-41
 application
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:41:5-135:19
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:43:5-141:19
 MERGED from [UIIOT2:map:unspecified] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\UIIOT2\map\unspecified\AndroidManifest.xml:14:5-27:19
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
@@ -886,230 +890,147 @@ MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Sanadhi\Desktop\S
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:26:5-46:19
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:44:9-41
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:46:9-41
 	android:allowBackup
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:42:9-35
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:44:9-35
 	android:icon
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:43:9-40
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:45:9-40
 		REJECTED from [UIIOT2:map:unspecified] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\UIIOT2\map\unspecified\AndroidManifest.xml:15:9-45
 	android:theme
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:45:9-43
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:47:9-43
 		REJECTED from [UIIOT2:map:unspecified] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\UIIOT2\map\unspecified\AndroidManifest.xml:17:9-40
 	tools:replace
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:46:9-51
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:48:9-51
 activity#com.sumarnakreatip.uiiot.MainActivity
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:49:9-63:20
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:51:9-59:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:51:13-45
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:53:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:50:13-41
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:52:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:52:13-56:29
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:54:13-58:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:53:17-69
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:55:17-69
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:53:25-66
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:55:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:55:17-77
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:57:17-77
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:55:27-74
-intent-filter#android.intent.category.DEFAULT+com.sumarnakreatip.uiiot.IBMPushNotification
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:58:13-62:29
-action#com.sumarnakreatip.uiiot.IBMPushNotification
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:59:17-87
-	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:59:25-84
-category#android.intent.category.DEFAULT
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:61:17-76
-	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:61:27-73
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:57:27-74
 activity#com.sumarnakreatip.uiiot.LoginPage
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:65:9-69:20
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:61:9-65:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:67:13-45
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:63:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:66:13-38
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:62:13-38
 activity#com.sumarnakreatip.uiiot.Kontak
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:71:9-75:20
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:67:9-71:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:73:13-45
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:69:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:72:13-35
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:68:13-35
 activity#com.sumarnakreatip.uiiot.Home
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:77:9-86:20
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:73:9-82:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:80:13-45
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:76:13-45
 	android:icon
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:79:13-44
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:75:13-44
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:78:13-33
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:74:13-33
+intent-filter#android.intent.category.DEFAULT+com.sumarnakreatip.uiiot.IBMPushNotification
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:78:13-81:29
+action#com.sumarnakreatip.uiiot.IBMPushNotification
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:79:17-87
+	android:name
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:79:25-84
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:80:17-76
+	android:name
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:80:27-73
 activity#com.sumarnakreatip.uiiot.RoomHttpClient
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:84:9-86:57
+	android:label
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:86:13-45
+	android:name
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:85:13-43
+activity#com.sumarnakreatip.uiiot.BeriTebengan
 ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:88:9-90:57
 	android:label
 		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:90:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:89:13-43
-activity#com.sumarnakreatip.uiiot.BeriTebengan
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:92:9-94:57
-	android:label
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:94:13-45
-	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:93:13-41
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:89:13-41
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:97:9-99:71
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:93:9-95:71
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:98:13-62
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:94:13-62
 	android:value
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:99:13-68
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:95:13-68
 activity#com.sumarnakreatip.uiiot.ProfilHttpClient
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:101:9-103:57
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:97:9-99:57
 	android:label
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:103:13-45
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:99:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:102:13-45
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:98:13-45
 activity#com.sumarnakreatip.uiiot.StatusHttpClient
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:104:9-106:57
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:100:9-102:57
 	android:label
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:106:13-45
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:102:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:105:13-45
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:101:13-45
 activity#com.sumarnakreatip.uiiot.MapActivity
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:107:9-109:62
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:103:9-105:62
 	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:109:13-50
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:105:13-50
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:108:13-40
-service#com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushIntentService
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:112:9-111
-	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:112:18-108
-receiver#com.ibm.mobilefirstplatform.clientsdk.android.push.internal.MFPPushBroadcastReceiver
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:114:9-127:20
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:104:13-40
+receiver#com.google.android.gms.gcm.GcmReceiver
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:108:9-116:20
+	android:exported
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:110:13-36
 	android:permission
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:116:13-73
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:111:13-73
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:115:13-112
-intent-filter#com.google.android.c2dm.intent.RECEIVE+com.ibm.mobilefirstplatform.clientsdk.android.app
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:117:13-121:29
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:109:13-66
+intent-filter#com.google.android.c2dm.intent.RECEIVE+gcm.play.android.samples.com.gcmquickstart
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:112:13-115:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:118:17-81
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:113:17-81
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:118:25-78
-category#com.ibm.mobilefirstplatform.clientsdk.android.app
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:120:17-94
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:113:25-78
+category#gcm.play.android.samples.com.gcmquickstart
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:114:17-87
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:120:27-91
-intent-filter#android.intent.action.BOOT_COMPLETED+com.ibm.mobilefirstplatform.clientsdk.android.app
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:122:13-126:29
-action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:123:17-79
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:114:27-84
+service#com.sumarnakreatip.uiiot.MyGcmListenerService
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:120:9-126:19
+	android:exported
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:122:13-37
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:123:25-76
-meta-data#com.google.android.gms.version
-ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:130:9-132:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
-MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:121:13-49
+intent-filter#com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:123:13-125:29
+service#com.sumarnakreatip.uiiot.MyInstanceIDListenerService
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:129:9-135:19
+	android:exported
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:131:13-37
 	android:name
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:131:13-58
-	android:value
-		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:132:13-66
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:130:13-56
+intent-filter#com.google.android.gms.iid.InstanceID
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:132:13-134:29
+action#com.google.android.gms.iid.InstanceID
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:133:17-79
+	android:name
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:133:25-77
+service#com.sumarnakreatip.uiiot.RegistrationIntentService
+ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:137:9-140:19
+	android:exported
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:139:13-37
+	android:name
+		ADDED from C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\src\main\AndroidManifest.xml:138:13-54
 activity#com.directions.android.Map
 ADDED from [UIIOT2:map:unspecified] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\UIIOT2\map\unspecified\AndroidManifest.xml:18:9-26:20
 	android:label
@@ -1136,6 +1057,110 @@ MERGED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Sanadhi\De
 		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:31:13-50
 	android:name
 		ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:30:19-91
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:22:13-58
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:23:13-66
 activity#com.google.android.gms.appinvite.PreviewActivity
 ADDED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\AndroidManifest.xml:21:9-29:20
 MERGED from [com.google.android.gms:play-services-appinvite:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.4.0\AndroidManifest.xml:21:9-29:20
@@ -1174,8 +1199,16 @@ MERGED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\Sanadhi\D
 		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:31:13-107
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.4.0\AndroidManifest.xml:29:13-62
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:5-82
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:5-82
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:5-82
+MERGED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:5-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.4.0\AndroidManifest.xml:21:22-79
 provider#com.google.android.gms.measurement.AppMeasurementContentProvider
 ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:28:7-31:37
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:28:7-31:37
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:28:7-31:37
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:28:7-31:37
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:28:7-31:37
@@ -1196,6 +1229,7 @@ MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sa
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:33:7-39:18
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:33:7-39:18
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:33:7-39:18
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:33:7-39:18
 	android:enabled
 		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:35:11-33
 	android:name
@@ -1208,6 +1242,7 @@ ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\San
 		ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:37:19-75
 service#com.google.android.gms.measurement.AppMeasurementService
 ADDED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:41:7-44:37
+MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:41:7-44:37
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:41:7-44:37
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:41:7-44:37
 MERGED from [com.google.android.gms:play-services-measurement:8.4.0] C:\Users\Sanadhi\Desktop\Skripsi\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.4.0\AndroidManifest.xml:41:7-44:37

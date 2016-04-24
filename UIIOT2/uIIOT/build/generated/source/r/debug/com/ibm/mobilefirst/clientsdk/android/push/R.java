@@ -534,19 +534,19 @@ public final class R {
 		public static final int ic_plusone_tall_off_client = 0x7f0200b8;
 		public static final int ic_setting_dark = 0x7f0200b9;
 		public static final int ic_setting_light = 0x7f0200ba;
-		public static final int mr_ic_media_route_connecting_mono_dark = 0x7f0200c0;
-		public static final int mr_ic_media_route_connecting_mono_light = 0x7f0200c1;
-		public static final int mr_ic_media_route_mono_dark = 0x7f0200c2;
-		public static final int mr_ic_media_route_mono_light = 0x7f0200c3;
-		public static final int mr_ic_pause_dark = 0x7f0200c4;
-		public static final int mr_ic_pause_light = 0x7f0200c5;
-		public static final int mr_ic_play_dark = 0x7f0200c6;
-		public static final int mr_ic_play_light = 0x7f0200c7;
-		public static final int mr_ic_settings_dark = 0x7f0200c8;
-		public static final int mr_ic_settings_light = 0x7f0200c9;
-		public static final int notification_template_icon_bg = 0x7f0200ef;
-		public static final int powered_by_google_dark = 0x7f0200ce;
-		public static final int powered_by_google_light = 0x7f0200cf;
+		public static final int mr_ic_media_route_connecting_mono_dark = 0x7f0200c1;
+		public static final int mr_ic_media_route_connecting_mono_light = 0x7f0200c2;
+		public static final int mr_ic_media_route_mono_dark = 0x7f0200c3;
+		public static final int mr_ic_media_route_mono_light = 0x7f0200c4;
+		public static final int mr_ic_pause_dark = 0x7f0200c5;
+		public static final int mr_ic_pause_light = 0x7f0200c6;
+		public static final int mr_ic_play_dark = 0x7f0200c7;
+		public static final int mr_ic_play_light = 0x7f0200c8;
+		public static final int mr_ic_settings_dark = 0x7f0200c9;
+		public static final int mr_ic_settings_light = 0x7f0200ca;
+		public static final int notification_template_icon_bg = 0x7f0200f0;
+		public static final int powered_by_google_dark = 0x7f0200cf;
+		public static final int powered_by_google_light = 0x7f0200d0;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f0c00d5;
@@ -753,13 +753,13 @@ public final class R {
 		public static final int abc_shareactionprovider_share_with = 0x7f060010;
 		public static final int abc_shareactionprovider_share_with_application = 0x7f060011;
 		public static final int abc_toolbar_collapse_description = 0x7f060012;
-		public static final int accept = 0x7f060045;
-		public static final int app_name = 0x7f060048;
-		public static final int auth_google_play_services_client_facebook_display_name = 0x7f06004a;
-		public static final int auth_google_play_services_client_google_display_name = 0x7f06004b;
-		public static final int cast_notification_connected_message = 0x7f06004f;
-		public static final int cast_notification_connecting_message = 0x7f060050;
-		public static final int cast_notification_disconnect = 0x7f060051;
+		public static final int accept = 0x7f060043;
+		public static final int app_name = 0x7f060045;
+		public static final int auth_google_play_services_client_facebook_display_name = 0x7f060047;
+		public static final int auth_google_play_services_client_google_display_name = 0x7f060048;
+		public static final int cast_notification_connected_message = 0x7f06004c;
+		public static final int cast_notification_connecting_message = 0x7f06004d;
+		public static final int cast_notification_disconnect = 0x7f06004e;
 		public static final int common_google_play_services_api_unavailable_text = 0x7f060013;
 		public static final int common_google_play_services_enable_button = 0x7f060014;
 		public static final int common_google_play_services_enable_text = 0x7f060015;
@@ -786,9 +786,9 @@ public final class R {
 		public static final int common_open_on_phone = 0x7f06002d;
 		public static final int common_signin_button_text = 0x7f06002e;
 		public static final int common_signin_button_text_long = 0x7f06002f;
-		public static final int create_calendar_message = 0x7f060053;
-		public static final int create_calendar_title = 0x7f060054;
-		public static final int decline = 0x7f060056;
+		public static final int create_calendar_message = 0x7f060050;
+		public static final int create_calendar_title = 0x7f060051;
+		public static final int decline = 0x7f060053;
 		public static final int mr_media_route_button_content_description = 0x7f060030;
 		public static final int mr_media_route_chooser_searching = 0x7f060031;
 		public static final int mr_media_route_chooser_title = 0x7f060032;
@@ -800,8 +800,8 @@ public final class R {
 		public static final int mr_system_route_name = 0x7f060039;
 		public static final int mr_user_route_category_name = 0x7f06003a;
 		public static final int status_bar_notification_info_overflow = 0x7f06003d;
-		public static final int store_picture_message = 0x7f060080;
-		public static final int store_picture_title = 0x7f060081;
+		public static final int store_picture_message = 0x7f060081;
+		public static final int store_picture_title = 0x7f060082;
 		public static final int wallet_buy_button_place_holder = 0x7f06003e;
 	}
 	public static final class style {

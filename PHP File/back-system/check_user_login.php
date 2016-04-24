@@ -4,7 +4,7 @@
  * Mengecek apakah pengguna terdaftar atau tidak di LDAP UI
  * Mendaftarkan credentials pengguna dari LDAP UI ke serveng nebeng
  * 
- * @version 04 April 2016
+ * @version 24 April 2016
  * @author I Made Sanadhi Sutandi // 1206202394
  */
 
@@ -14,7 +14,6 @@ require_once("ldap.php");		//load modul autentikasi SSO ke ldap UI
 	//inisialisasi variabel
 	$username	= trim($_POST['username']);
 	$password 	= $_POST['password'];
-	$reg_id		= $_POST['regid'];
 	$response 	= array();					//variable respon
 
 	if(empty($username) && empty($password)){								//pengecekan kosong atau tidaknya input nama dan password pengguna
@@ -55,8 +54,8 @@ require_once("ldap.php");		//load modul autentikasi SSO ke ldap UI
 
 			else{					//lainnya, daftarkan pengguna jika pengguna ybs belum terdaftar
 				$query_add  		= "insert into nebeng_user 
-							 			(nama,npm,username,role,email, reg_id) values 
-							 			('$nama_user','$npm','$username','$role','$email','$reg_id')
+							 			(nama,npm,username,role,email) values 
+							 			('$nama_user','$npm','$username','$role','$email')
 							 		  ";
 				$query_exec 		= mysql_query($query_add) or die(mysql_error());
 				$response["result"] = "User New";
@@ -68,7 +67,9 @@ require_once("ldap.php");		//load modul autentikasi SSO ke ldap UI
 			$id 			= $result[0];
 			$response['id'] 		= $id;
 			$response['npm']		= $npm;
-			$response['username']	= $userid;				
+			$response['username']	= $userid;
+			$response['role']		= $role;
+			$response['nama']		= $nama_user;				
 		}
 
 		else{	//jika user dengan username dan password tidak ditemukan di server LDAP		

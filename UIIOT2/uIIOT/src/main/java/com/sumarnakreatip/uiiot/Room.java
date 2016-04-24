@@ -129,7 +129,7 @@ public class Room extends Fragment {
 
         try {
             httpclient = new DefaultHttpClient();
-            httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/send_push_notification_basedOn_username.php");
+            httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/gcm/sendGCMPush.php");
             //add your data
             nameValuePairs = new ArrayList<NameValuePair>(2);
             // Always use the same variable name for posting i.e the android side variable name and php side variable name should be <span id="IL_AD8" class="IL_AD">similar</span>,

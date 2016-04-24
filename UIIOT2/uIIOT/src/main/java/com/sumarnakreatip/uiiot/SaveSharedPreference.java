@@ -12,6 +12,8 @@ public class SaveSharedPreference {
     static final String PREF_USER_ID = "user_id";
     static final String PREF_NAMA = "nama";
     static final String PREF_ROLE = "role";
+    public static final String SENT_TOKEN_TO_SERVER = "sentTokenToServer";
+    public static final String REGISTRATION_COMPLETE = "registrationComplete";
 
     static SharedPreferences getSharedPreferences(Context ctx) {
         return PreferenceManager.getDefaultSharedPreferences(ctx);
