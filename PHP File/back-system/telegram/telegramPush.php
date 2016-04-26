@@ -1,38 +1,40 @@
 <?php
 /**
  * Endpoint push
- * Mengirim push ke android target dengan device berdasar token
- * Push sistem menggunakan GCM
+ * Mengirim push ke android target dengan device berdasar id chat
+ * Push sistem menggunakan Telegram Bot
  * 
- * @version 24 April 2016
+ * @version 26 April 2016
  * @author I Made Sanadhi Sutandi // 1206202394
  */
 
 //koneksi ke database
 require_once("../db_connect.php");
 
-$curlHandle; //menggunakan PHP-Curl request untuk melakukan request push API dari GCM
+$curlHandle; //menggunakan PHP-Curl request untuk melakukan request push API dari Telegram Bot
 
 /**
  * Set Endpoint dan CURL Request untuk push
  * 
  */
-function set_gcm_push($message, $device_token){ 
-	$endpoint_push = "https://gcm-http.googleapis.com/gcm/send"; //endpoint dari API Push GCM
+
+function set_telegram_push($message, $chat_id){ 
+	$bot_token 		= "202889585:AAH51XJeUkXBtkbhcY7dLAvfYN6mAOiJSM4";
+
+	$endpoint_push 	= "https://api.telegram.org/bot$bot_token/sendMessage"; //endpoint dari API Push Bot Telegram
 
 	global $curlHandle;
 	$curlHandle = curl_init($endpoint_push);
 
 	//inisialisasi header untuk Curl Request
 	$headers = array(
-	    'Content-type: application/json',
-	    'Authorization: key=AIzaSyDfgdUt3tK3XBVn_Q4VTYMUuP4D8MiycfU'
+	    'Content-type: application/json'
 	);
 
 	//inisialisasi body request untuk Curl Request
 	$post_fields = array(
-	    'data'	=> array('message'	=>$message),	//kirim pesan tertentu
-	    'to' 	=> "$device_token"					//devais android target secara spesifik
+	    'text'		=> $message,	//kirim pesan tertentu
+	    'chat_id' 	=> $chat_id		//pengguna target
 	);
 
 	curl_setopt($curlHandle, CURLOPT_PROXY, "152.118.24.99"); 	//url proxy keluar dari server Nebeng
@@ -63,13 +65,14 @@ function exec_push(){
 	// Print the date from the response
 	echo $responseData['published'];
 }
+
 /**
- * Mengambil Token GCM dari devais pengguna yang tersimpan di database Nebeng
+ * Mengambil Telegram Id dari pengguna yang tersimpan di database Nebeng
  * 
  */
-function getToken($username){
-	//ambil token gcm
-	$query_search 	= mysql_query("SELECT gcm_token FROM nebeng_user WHERE username = '$username'") or die(mysql_error());
+function getTelegramId($username){
+	//ambil id telegram
+	$query_search 	= mysql_query("SELECT telegram_id FROM nebeng_user WHERE username = '$username'") or die(mysql_error());
 	$result 		= mysql_fetch_row($query_search);
 	return $result[0];
 }
@@ -87,13 +90,11 @@ function getToken($username){
 		$message_accepted = $_POST['message'];
 	}
 	else{
-		$message_accepted = 'Default GCM Message';
+		$message_accepted = 'Default Telegram Bot Message';
 	}
 
-	$token = getToken($user);
-
 	//init and call the push
-	set_gcm_push($message_accepted,$token);
+	set_telegram_push($message_accepted,getTelegramId($user));
 	exec_push();
 //=====Main====//
 
