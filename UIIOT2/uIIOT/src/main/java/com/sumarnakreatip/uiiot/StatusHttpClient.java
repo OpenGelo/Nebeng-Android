@@ -40,7 +40,6 @@ public class StatusHttpClient {
     }
 
     public void get_all_products(final Function<List<Product>, Void> callback) {
-        System.out.println("masuk");
         RequestParams params = new RequestParams();
         params.put("username", et);
         client.post("http://" + HOST + "/nebeng/back-system/nebeng_status.php", params, new AsyncHttpResponseHandler() {
@@ -50,7 +49,6 @@ public class StatusHttpClient {
                 final GetAllProducts r = g.fromJson(response, GetAllProducts.class);
                 final List<Product> list = Arrays.asList(r.hasil);
                 callback.call(list);
-                System.out.println(Arrays.asList(r.hasil));
             }
         });
     }

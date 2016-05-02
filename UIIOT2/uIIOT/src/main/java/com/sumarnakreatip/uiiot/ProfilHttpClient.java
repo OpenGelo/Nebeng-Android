@@ -38,7 +38,6 @@ public class ProfilHttpClient {
     }
 
     public void get_all_products(final Function<List<Product>, Void> callback) {
-        System.out.println("masuk");
         RequestParams params = new RequestParams("username", et);
         client.post("http://" + HOST + "/nebeng/back-system/get_user_data.php", params, new AsyncHttpResponseHandler() {
             @Override
@@ -47,7 +46,6 @@ public class ProfilHttpClient {
                 final GetAllProducts r = g.fromJson(response, GetAllProducts.class);
                 final List<Product> list = Arrays.asList(r.result);
                 callback.call(list);
-                System.out.println(Arrays.asList(r.result));
             }
         });
 

@@ -44,12 +44,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\layout\\nebeng.xml"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\layout\\alert_input.xml",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\layout\\alert_input.xml"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-location\\8.4.0\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\layout\\alert_input.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\layout\\alert_input.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\layout\\kontak.xml",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\layout\\kontak.xml"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\layout\\actionbar_custom_view_home.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\layout\\actionbar_custom_view_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\layout\\kontak.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\layout\\kontak.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",

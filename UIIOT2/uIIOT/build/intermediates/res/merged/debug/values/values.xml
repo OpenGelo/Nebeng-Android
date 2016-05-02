@@ -395,7 +395,6 @@
         send downstream messages to this app.</string>
     <string name="gmaps">GM</string>
     <string name="google_app_id" translatable="false">1:706908736717:android:c3da4f7f427c9367</string>
-    <string name="hello_world">Hello world!</string>
     <string name="id">Id Tebengan :</string>
     <string name="j_b">Jam Berangkat</string>
     <string name="j_k">Keterangan</string>
@@ -410,7 +409,6 @@
     <string name="login">Silakan masukkan username dan password sesuai dengan akun UI Anda.</string>
     <string name="login1"/>
     <string name="login2">Silahkan masukkan data kontak anda</string>
-    <string name="menu_settings">Settings</string>
     <string name="mr_media_route_button_content_description">Cast</string>
     <string name="mr_media_route_chooser_searching">Searching for devices\u2026</string>
     <string name="mr_media_route_chooser_title">Connect to device</string>
@@ -449,7 +447,6 @@
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
     <string name="submit">MASUKAN</string>
-    <string name="title_activity_map">MapActivity</string>
     <string name="token_error_message">An error occurred while either fetching the InstanceID token,
         sending the fetched token to the server or subscribing to the PubSub topic. Please try
         running the sample again.</string>

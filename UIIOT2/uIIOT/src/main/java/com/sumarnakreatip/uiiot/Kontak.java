@@ -116,7 +116,6 @@ public class Kontak extends Activity {
         } catch (Exception e) {
             dialog.dismiss();
             Toast.makeText(Kontak.this, "Exception : " + e.getMessage(), Toast.LENGTH_LONG).show();
-            System.out.println("Exception : " + e.getMessage());
         }
     }
 

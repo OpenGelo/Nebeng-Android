@@ -50,7 +50,6 @@ public class RoomHttpClient extends Activity {
 
     //method untuk pengambilan data dari server
     public void get_all_products(final Function<List<Product>, String, Void> callback) {
-        System.out.println("masuk");
         RequestParams params = new RequestParams("kode", "1");
         client.post("http://" + HOST + "/nebeng/back-system/get_all_tebengan.php", params, new AsyncHttpResponseHandler() {
 
@@ -64,14 +63,12 @@ public class RoomHttpClient extends Activity {
                 final List<Product> list = Arrays.asList(r.result);
                 final String sukses = r.success;
                 callback.call(list, sukses);
-                System.out.println(Arrays.asList(r.result));
             }
 
             @Override
             public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
                 // TODO Auto-generated method stub
                 super.onFailure(arg0, arg1, arg2, arg3);
-                System.out.println("gagal " + arg0);
                 arg3.printStackTrace();
             }
 
@@ -79,14 +76,12 @@ public class RoomHttpClient extends Activity {
             public void onFinish() {
                 // TODO Auto-generated method stub
                 super.onFinish();
-                System.out.println("selesai");
             }
 
             @Override
             public void onStart() {
                 // TODO Auto-generated method stub
                 super.onStart();
-                System.out.println("start");
             }
 
         });

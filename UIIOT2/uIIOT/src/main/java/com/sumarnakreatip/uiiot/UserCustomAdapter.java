@@ -174,11 +174,10 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
             if (respon.equalsIgnoreCase("Nebeng Sukses")) {
                 //setstatus(1);
                 Toast.makeText(context, "Nebeng Sukses", Toast.LENGTH_LONG).show();
-                int value = 0;
                 String nama = SaveSharedPreference.getNama(context);
-                PostRequest sendNotif = new PostRequest("send_push_notification_basedOn_username.php");
+                PostRequest sendNotif = new PostRequest("gcm/sendGCMPush.php");
                 sendNotif.setPostValues("username", usernameTujuan);
-                sendNotif.setPostValues("message", nama + " hendak menebeng");
+                sendNotif.setPostValues("message", capitalizeName(nama) + " hendak menebeng");
                 sendNotif.executePost();
                 Intent intent = new Intent(context, Home.class);
                 context.startActivity(intent);
@@ -219,9 +218,25 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
             return response;
         } catch (Exception e) {
             response = "Catch";
-            System.out.println("Exception : " + e.getMessage());
             return response;
         }
     }
 
+    //for capitalize first letter in each of word components in the string name
+    public String capitalizeName(String name){
+
+        int pos = 0;
+        boolean capitalize = true;
+        StringBuilder sb = new StringBuilder(name.toLowerCase());
+        while (pos < sb.length()) {
+            if (sb.charAt(pos) == '.' || Character.isWhitespace(sb.charAt(pos))) {
+                capitalize = true;
+            } else if (capitalize && !Character.isWhitespace(sb.charAt(pos))) {
+                sb.setCharAt(pos, Character.toUpperCase(sb.charAt(pos)));
+                capitalize = false;
+            }
+            pos++;
+        }
+        return sb.toString();
+    }
 }

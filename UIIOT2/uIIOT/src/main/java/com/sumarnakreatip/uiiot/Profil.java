@@ -180,11 +180,9 @@ public class Profil extends Fragment {
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
             final String response = httpclient.execute(httppost, responseHandler);
-            System.out.println("Response : " + response);
             return response;
         } catch (Exception e) {
             String response = "Catch";
-            System.out.println("Exception : " + e.getMessage());
             return response;
         }
     }

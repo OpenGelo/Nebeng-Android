@@ -66,28 +66,9 @@
                     "startLine": 7,
                     "startColumn": 4,
                     "startOffset": 320,
-                    "endColumn": 76,
-                    "endOffset": 392
-                },
-                "from": {
-                    "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\values-v14\\values-v14.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 76,
-                        "endOffset": 127
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 397,
-                    "endLine": 12,
+                    "endLine": 11,
                     "endColumn": 12,
-                    "endOffset": 668
+                    "endOffset": 591
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -103,11 +84,11 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 673,
+                    "startOffset": 596,
                     "endColumn": 70,
-                    "endOffset": 739
+                    "endOffset": 662
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -122,11 +103,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 744,
+                    "startOffset": 667,
                     "endColumn": 82,
-                    "endOffset": 822
+                    "endOffset": 745
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -141,12 +122,12 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 827,
-                    "endLine": 20,
+                    "startOffset": 750,
+                    "endLine": 19,
                     "endColumn": 12,
-                    "endOffset": 1232
+                    "endOffset": 1155
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -162,12 +143,12 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1237,
-                    "endLine": 26,
+                    "startOffset": 1160,
+                    "endLine": 25,
                     "endColumn": 12,
-                    "endOffset": 1654
+                    "endOffset": 1577
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -183,11 +164,11 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1659,
+                    "startOffset": 1582,
                     "endColumn": 119,
-                    "endOffset": 1774
+                    "endOffset": 1697
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -202,11 +183,11 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1779,
+                    "startOffset": 1702,
                     "endColumn": 62,
-                    "endOffset": 1837
+                    "endOffset": 1760
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -221,12 +202,12 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1842,
-                    "endLine": 31,
+                    "startOffset": 1765,
+                    "endLine": 30,
                     "endColumn": 12,
-                    "endOffset": 1991
+                    "endOffset": 1914
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -242,11 +223,11 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 1996,
+                    "startOffset": 1919,
                     "endColumn": 62,
-                    "endOffset": 2054
+                    "endOffset": 1977
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",
@@ -261,11 +242,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 2059,
+                    "startOffset": 1982,
                     "endColumn": 131,
-                    "endOffset": 2186
+                    "endOffset": 2109
                 },
                 "from": {
                     "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\values-v14\\values-v14.xml",

@@ -5,12 +5,17 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -21,15 +26,8 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.ibm.mobilefirstplatform.clientsdk.android.core.api.BMSClient;
-import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPush;
-import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPPushNotificationListener;
-import com.ibm.mobilefirstplatform.clientsdk.android.push.api.MFPSimplePushNotification;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -50,14 +48,42 @@ public class Home extends Activity {
 
     List<DrawerItem> dataList;
 
-    private MFPPush push; // Push client
-    private MFPPushNotificationListener notificationListener; // Notification listener to handle a push sent to the phone
+    private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
+    private static final String TAG = "Home_GCM_Regis";
+
+    private BroadcastReceiver mRegistrationBroadcastReceiver;
+    private MyGcmListenerService mMyGcmListenerService;
+    private boolean isReceiverRegistered;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR); // Add action bar again
         setContentView(R.layout.home);
+
+        mRegistrationBroadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                SharedPreferences sharedPreferences =
+                        PreferenceManager.getDefaultSharedPreferences(context);
+                boolean sentToken = sharedPreferences
+                        .getBoolean(SaveSharedPreference.SENT_TOKEN_TO_SERVER, false);
+                if (sentToken) {
+                    Log.i("Token","True");
+                } else {
+                    Log.i("Token","False");
+                }
+            }
+        };
+
+        // Registering BroadcastReceiver
+        registerReceiver();
+
+        if (checkPlayServices()) {
+            // Start IntentService to register this application with GCM.
+            Intent intent = new Intent(this, RegistrationIntentService.class);
+            startService(intent);
+        }
 
         user    = SaveSharedPreference.getUserName(Home.this);
         regid   = SaveSharedPreference.getUserID(Home.this);
@@ -67,43 +93,6 @@ public class Home extends Activity {
         actionBar.show();
         actionBar.setCustomView(R.layout.actionbar_custom_view_home);
         actionBar.setDisplayShowCustomEnabled(true);
-
-        try {
-            // initialize SDK with IBM Bluemix application ID and route
-            // You can find your backendRoute and backendGUID in the Mobile Options section on top of your Bluemix application dashboard
-            // TODO: Please replace <APPLICATION_ROUTE> with a valid ApplicationRoute and <APPLICATION_ID> with a valid ApplicationId
-            BMSClient.getInstance().initialize(this, "http://nebeng-app.mybluemix.net", "ff11fc50-a005-4c05-838b-74df51da0768");
-        } catch (MalformedURLException mue) {
-            Log.i("Initialize", "Fails");
-        }
-
-        // Initialize Push client
-        MFPPush.getInstance().initialize(this);
-
-        // Create notification listener and enable pop up notification when a message is received
-        notificationListener = new MFPPushNotificationListener() {
-            @Override
-            public void onReceive(final MFPSimplePushNotification message) {
-                Log.i("ReceivePush", "Received a Push Notification: " + message.toString());
-                runOnUiThread(new Runnable() {
-                    public void run() {
-                        new AlertDialog.Builder(Home.this)
-                                .setTitle("Nebengers Notification")
-                                .setIcon(R.drawable.nebeng_icon_notif)
-                                .setMessage(message.getAlert())
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int whichButton) {
-                                    }
-                                })
-                                .show();
-                    }
-                });
-            }
-        };
-
-        // Grabs push client sdk instance
-        push = MFPPush.getInstance();
-        push.listen(notificationListener);
 
         dataList = new ArrayList<DrawerItem>();
         mTitle = mDrawerTitle = getTitle();
@@ -149,25 +138,6 @@ public class Home extends Activity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         SelectItem(0);
-    }
-
-    // If the device has been registered previously, hold push notifications when the app is paused
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        if (push != null) {
-            push.hold();
-        }
-    }
-
-    // If the device has been registered previously, ensure the client sdk is still using the notification listener from onCreate when app is resumed
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (push != null) {
-            push.listen(notificationListener);
-        }
     }
 
     @Override
@@ -309,7 +279,77 @@ public class Home extends Activity {
         }
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver();
+        getApplicationContext().registerReceiver(mMessageReceiver, new IntentFilter("unique_name"));
+    }
+
+    @Override
+    protected void onPause() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
+        isReceiverRegistered = false;
+        getApplicationContext().unregisterReceiver(mMessageReceiver);
+        super.onPause();
+    }
+
     public void onDestroy() {
         super.onDestroy();
     }
+
+    private void registerReceiver(){
+        if(!isReceiverRegistered) {
+            LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
+                    new IntentFilter(SaveSharedPreference.REGISTRATION_COMPLETE));
+            isReceiverRegistered = true;
+        }
+    }
+    /**
+     * Check the device to make sure it has the Google Play Services APK. If
+     * it doesn't, display a dialog that allows users to download the APK from
+     * the Google Play Store or enable it in the device's system settings.
+     */
+    private boolean checkPlayServices() {
+        GoogleApiAvailability apiAvailability = GoogleApiAvailability.getInstance();
+        int resultCode = apiAvailability.isGooglePlayServicesAvailable(this);
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (apiAvailability.isUserResolvableError(resultCode)) {
+                apiAvailability.getErrorDialog(this, resultCode, PLAY_SERVICES_RESOLUTION_REQUEST)
+                        .show();
+            } else {
+                Log.i(TAG, "This device is not supported.");
+                finish();
+            }
+            return false;
+        }
+        return true;
+    }
+
+    //This is the handler that will manager to process the broadcast intent
+    private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            // Extract data included in the Intent
+            final String message = intent.getStringExtra("message");
+
+            //creating pop-up alert when application is active
+            Log.i("ReceivePush", "Received a Push Notification: " + message.toString());
+            runOnUiThread(new Runnable() {
+                public void run() {
+                    new AlertDialog.Builder(Home.this)
+                            .setTitle("Nebengers Notification")
+                            .setIcon(R.drawable.nebeng_icon_notif)
+                            .setMessage(message)
+                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int whichButton) {
+                                }
+                            })
+                            .show();
+                }
+            });
+        }
+    };
 }

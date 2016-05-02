@@ -134,15 +134,6 @@ public final class BeriTebengan extends Fragment {
                 } else {
                     ket = keterangan.getText().toString().trim();
                 }
-
-                Intent gmaps = new Intent(getActivity(), MapActivity.class);
-                gmaps.putExtra("username", username.toString().trim());
-                gmaps.putExtra("kapasitas", type.toString().trim());
-                gmaps.putExtra("waktu_berangkat", w_b.toString().trim());
-                gmaps.putExtra("keterangan", ket.toString().trim());
-                gmaps.putExtra("regid", regid);
-                startActivity(gmaps);
-                getActivity().finish();
             }
         });
 
