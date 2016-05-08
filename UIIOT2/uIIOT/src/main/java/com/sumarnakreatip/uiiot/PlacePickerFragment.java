@@ -23,20 +23,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.sumarnakreatip.uiiot.cardstream.Card;
-import com.sumarnakreatip.uiiot.cardstream.CardStream;
-import com.sumarnakreatip.uiiot.cardstream.CardStreamFragment;
-import com.sumarnakreatip.uiiot.cardstream.OnCardClickListener;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlacePicker;
+import com.sumarnakreatip.uiiot.cardstream.Card;
+import com.sumarnakreatip.uiiot.cardstream.CardStream;
+import com.sumarnakreatip.uiiot.cardstream.CardStreamFragment;
+import com.sumarnakreatip.uiiot.cardstream.OnCardClickListener;
 
 /**
  * Sample demonstrating the use of {@link PlacePicker}.

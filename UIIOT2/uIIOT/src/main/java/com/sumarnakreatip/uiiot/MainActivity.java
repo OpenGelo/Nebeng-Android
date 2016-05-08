@@ -1,40 +1,14 @@
 package com.sumarnakreatip.uiiot;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceManager;
-import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 import android.view.Window;
 import android.widget.ProgressBar;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-
-import java.util.List;
-
 public class MainActivity extends Activity {
-
-    //Variabel koneksi
-    HttpPost httppost;
-    StringBuffer buffer;
-    HttpResponse response;
-    HttpClient httpclient;
-    List<NameValuePair> nameValuePairs;
-    ProgressDialog dialog = null;
-    private String respon;
 
     private ProgressBar mProgress;
     private int mProgressStatus = 0;

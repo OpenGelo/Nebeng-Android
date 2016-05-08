@@ -237,7 +237,6 @@ org/apache/http/message/BasicLineFormatter.class
 org/apache/http/cookie/CookiePathComparator.class
 com/google/android/gms/appinvite/PreviewActivity.class
 android/support/annotation/AttrRes.class
-com/google/android/gms/location/places/ui/PlaceSelectionListener.class
 com/sumarnakreatip/android/common/activities/SampleActivityBase.class
 com/google/android/gms/internal/zzdv.class
 com/google/android/gms/internal/zzbn.class
@@ -431,6 +430,7 @@ android/support/v7/widget/RecyclerView$SimpleOnItemTouchListener.class
 com/google/android/gms/games/Player.class
 android/support/v4/content/PermissionChecker$PermissionResult.class
 android/support/annotation/RequiresPermission$Write.class
+com/sumarnakreatip/uiiot/CustomPlaceSelectionListener.class
 com/sumarnakreatip/uiiot/Kontak$4.class
 com/google/android/gms/ads/internal/formats/zzf.class
 org/apache/http/client/params/AuthPolicy.class

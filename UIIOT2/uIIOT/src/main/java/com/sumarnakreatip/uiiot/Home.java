@@ -29,7 +29,6 @@ import android.widget.ListView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,7 +51,6 @@ public class Home extends Activity {
     private static final String TAG = "Home_GCM_Regis";
 
     private BroadcastReceiver mRegistrationBroadcastReceiver;
-    private MyGcmListenerService mMyGcmListenerService;
     private boolean isReceiverRegistered;
 
     @Override

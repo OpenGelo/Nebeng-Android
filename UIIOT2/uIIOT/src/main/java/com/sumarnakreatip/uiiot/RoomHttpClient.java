@@ -1,9 +1,6 @@
 package com.sumarnakreatip.uiiot;
 
 import android.app.Activity;
-import android.app.ProgressDialog;
-import android.os.Handler;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -59,10 +56,15 @@ public class RoomHttpClient extends Activity {
 
             public void onSuccess(String response) {
                 Gson g = new Gson();
-                final GetAllProducts r = g.fromJson(response, GetAllProducts.class);
-                final List<Product> list = Arrays.asList(r.result);
-                final String sukses = r.success;
-                callback.call(list, sukses);
+                try{
+                    final GetAllProducts r = g.fromJson(response, GetAllProducts.class);
+                    final List<Product> list = Arrays.asList(r.result);
+                    final String sukses = r.success;
+                    callback.call(list, sukses);
+                }
+                catch (Exception e){
+                    Toast.makeText(getApplication(), "Koneksi Internet Buruk", Toast.LENGTH_LONG).show();
+                }
             }
 
             @Override

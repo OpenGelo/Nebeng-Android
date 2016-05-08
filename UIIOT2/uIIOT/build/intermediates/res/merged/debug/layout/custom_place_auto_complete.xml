@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/place_autocomplete_search_button"
+        android:src="@drawable/place"/>
 
     <EditText
         android:id="@+id/place_autocomplete_search_input"
@@ -9,18 +16,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="3"
         android:editable="false"
-        android:hint="@string/casal"/>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/place_autocomplete_search_button"
-        android:src="@drawable/nebeng_icon_notif"/>
+        android:text=""
+        android:hint="@string/hint"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/place_autocomplete_clear_button"
-        android:src="@drawable/nebeng_icon_notif"/>
+        android:src="@drawable/close"/>
 
 </LinearLayout>

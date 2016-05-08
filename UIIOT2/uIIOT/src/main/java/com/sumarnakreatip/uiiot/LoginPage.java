@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,7 +26,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
-import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +40,9 @@ public class LoginPage extends Activity {
     String username = "";
     String nama="";
     String role="";
+
+    //variable input
+    String usernameInput, passInput;
 
     //variabel koneksi
     HttpPost httppost;
@@ -64,16 +65,31 @@ public class LoginPage extends Activity {
         b = (Button) findViewById(R.id.button1);
         et = (EditText) findViewById(R.id.username);
         pass = (EditText) findViewById(R.id.password);
+
         b.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog = ProgressDialog.show(LoginPage.this, "",
-                        "Processing...", true);
-                new Thread(new Runnable() {
-                    public void run() {
-                        login();
+
+                usernameInput = et.getText().toString();
+                passInput = pass.getText().toString();
+
+                try{
+                    if(!usernameInput.isEmpty() && !passInput.isEmpty()){
+                        dialog = ProgressDialog.show(LoginPage.this, "",
+                                "Processing...", true);
+                        new Thread(new Runnable() {
+                            public void run() {
+                                login();
+                            }
+                        }).start();
                     }
-                }).start();
+                    else{
+                        Toast.makeText(LoginPage.this, "Cek Input Anda!",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                catch (Exception e){
+                    Toast.makeText(LoginPage.this, "Cek Input Anda!",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -111,7 +127,6 @@ public class LoginPage extends Activity {
             }
             if (jsonObject.has("username")) {
                 username = jsonObject.getString("username");
-                SaveSharedPreference.setUserName(LoginPage.this, username.toString().trim());
             }
             if (jsonObject.has("role")) {
                 role = jsonObject.getString("role");
@@ -137,7 +152,7 @@ public class LoginPage extends Activity {
                     }
                 });
                 Intent datalogin = new Intent(LoginPage.this, Home.class);
-                datalogin.putExtra("username", et.getText().toString().trim());
+                datalogin.putExtra("username", username.trim());
                 startActivity(datalogin);
                 finish();
             } else if (response.equalsIgnoreCase("User New")) {
@@ -147,7 +162,7 @@ public class LoginPage extends Activity {
                     }
                 });
                 Intent datalogin = new Intent(LoginPage.this, Kontak.class);
-                datalogin.putExtra("username", et.getText().toString().trim());
+                datalogin.putExtra("username", username.trim());
                 startActivity(datalogin);
                 finish();
             } else {

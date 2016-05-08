@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="capacities_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -384,7 +394,6 @@
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="back">Kembali</string>
     <string name="batal">Batal</string>
-    <string name="casal">Contoh: Balairung</string>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns1:g id="name">%1$s</ns1:g></string>
     <string name="cast_notification_disconnect">Disconnect</string>
@@ -420,7 +429,6 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
-    <string name="ctujuan">Contoh: Kelapa dua</string>
     <string name="decline">Decline</string>
     <string name="drawer_close">Close drawer</string>
     <string name="drawer_open">Open drawer</string>
@@ -431,6 +439,7 @@
         send downstream messages to this app.</string>
     <string name="gmaps">Peta</string>
     <string name="google_app_id" translatable="false">1:706908736717:android:c3da4f7f427c9367</string>
+    <string name="hint">Ketik Lokasi</string>
     <string name="id">Id Tebengan :</string>
     <string name="j_b">Jam Berangkat</string>
     <string name="j_k">Keterangan</string>
@@ -496,7 +505,8 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
     <string name="store_picture_title">Save image</string>
-    <string name="submit">MASUKAN</string>
+    <string name="submit">Buat Tebengan</string>
+    <string name="submit_contact">Daftarkan Kontak</string>
     <string name="token_error_message">An error occurred while either fetching the InstanceID token,
         sending the fetched token to the server or subscribing to the PubSub topic. Please try
         running the sample again.</string>

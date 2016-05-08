@@ -22,12 +22,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sumarnakreatip.uiiot.R;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
-
-import com.sumarnakreatip.uiiot.R;
 
 /**
  * A Fragment that handles a stream of cards.

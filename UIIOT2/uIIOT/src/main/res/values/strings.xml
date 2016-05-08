@@ -31,8 +31,7 @@
     
     <string name="w_s">13:45</string>
     <string name="setting">Jam</string>
-    <string name="casal">Contoh: Balairung</string>
-    <string name="ctujuan">Contoh: Kelapa dua</string>
+    <string name="hint">Ketik Lokasi</string>
     <string name="id">Id Tebengan :</string>
     <string name="drop">Hapus</string>
     <string name="no_1">1</string>
@@ -41,7 +40,8 @@
     <string name="no_4">4</string>
     <string name="no_5">5</string>
     <string name="no_6">6</string>
-    <string name="submit">MASUKAN</string>
+    <string name="submit">Buat Tebengan</string>
+    <string name="submit_contact">Daftarkan Kontak</string>
     <string name="refresh">MuatUlang</string>
     
     <string name="jekel">Jenis Kelamin</string>
@@ -86,5 +86,16 @@
         Website: %5$s
     ]]>
     </string>
+
+    <string-array name="capacities_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
 
 </resources>

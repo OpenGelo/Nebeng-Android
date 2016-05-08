@@ -1,7 +1,6 @@
 package com.sumarnakreatip.uiiot;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;

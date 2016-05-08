@@ -26,7 +26,6 @@ import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.AutocompleteFilter;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
-import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 
@@ -35,12 +34,13 @@ public class PlaceAutoComplete extends Fragment {
     private View zzaRh;
     private View zzaRi;
     private EditText zzaRj;
+    private int opCode;
     @Nullable
     private LatLngBounds zzaRk;
     @Nullable
     private AutocompleteFilter zzaRl;
     @Nullable
-    private PlaceSelectionListener zzaRm;
+    private CustomPlaceSelectionListener zzaRm;
 
     public PlaceAutoComplete() {
     }
@@ -86,13 +86,18 @@ public class PlaceAutoComplete extends Fragment {
         this.zzzF();
     }
 
+    public String getText(){
+        return this.zzaRj.getText().toString();
+    }
+
     public void setHint(CharSequence hint) {
         this.zzaRj.setHint(hint);
         this.zzaRh.setContentDescription(hint);
     }
 
-    public void setOnPlaceSelectedListener(PlaceSelectionListener listener) {
+    public void setOnPlaceSelectedListener(CustomPlaceSelectionListener listener, int code) {
         this.zzaRm = listener;
+        opCode = code;
     }
 
     private void zzzF() {
@@ -126,7 +131,7 @@ public class PlaceAutoComplete extends Fragment {
             if(resultCode == -1) {
                 Place var4 = PlaceAutocomplete.getPlace(this.getActivity(), data);
                 if(this.zzaRm != null) {
-                    this.zzaRm.onPlaceSelected(var4);
+                    this.zzaRm.onPlaceSelected(var4, opCode);
                 }
 
                 this.setText(var4.getName().toString());

@@ -3,11 +3,8 @@ package com.sumarnakreatip.uiiot;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 
 import com.sumarnakreatip.android.common.activities.SampleActivityBase;
-import com.sumarnakreatip.android.common.logger.Log;
-
 import com.sumarnakreatip.uiiot.cardstream.CardStream;
 import com.sumarnakreatip.uiiot.cardstream.CardStreamFragment;
 import com.sumarnakreatip.uiiot.cardstream.CardStreamState;
