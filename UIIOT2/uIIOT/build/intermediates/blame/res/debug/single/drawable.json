@@ -16,6 +16,10 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
     },
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_separator.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_separator.xml"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
@@ -42,6 +46,10 @@
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\activated_background.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\activated_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_text.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_text.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
@@ -120,10 +128,6 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_play_light.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_play_light.xml"
     },
@@ -132,8 +136,8 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\tab_indicator_ab_uiiot.xml"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\apptheme_item_background_holo_light.xml",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\apptheme_item_background_holo_light.xml"
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_icon_positive.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_icon_positive.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
@@ -144,12 +148,36 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\button_text.xml"
     },
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_bg_negative.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_bg_negative.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_light.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\apptheme_item_background_holo_light.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\apptheme_item_background_holo_light.xml"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\apptheme_activated_background_holo_light.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\apptheme_activated_background_holo_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_bg.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_bg.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
@@ -160,12 +188,8 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_mono_light.xml",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_mono_light.xml"
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_text_positive.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_text_positive.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
@@ -178,6 +202,10 @@
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_bg_positive.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_bg_positive.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
@@ -200,6 +228,10 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_media_route_connecting_mono_dark.xml"
     },
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_icon_neutral.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_icon_neutral.xml"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_cast_dark.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_cast_dark.xml"
     },
@@ -212,6 +244,10 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable\\mr_ic_pause_dark.xml"
     },
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_icon_negative.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_icon_negative.xml"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
@@ -220,12 +256,20 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
     },
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_overlay_focused.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_overlay_focused.xml"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.1.1\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\card_action_text_negative.xml",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable\\card_action_text_negative.xml"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_ic_media_route_connecting_mono_light.xml",

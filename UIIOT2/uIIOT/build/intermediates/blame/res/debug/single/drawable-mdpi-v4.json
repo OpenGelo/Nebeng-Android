@@ -44,12 +44,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-plus\\8.4.0\\res\\drawable-mdpi\\ic_plusone_small_off_client.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_create.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-mdpi\\ic_action_create.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\apptheme_list_selector_disabled_holo_light.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-mdpi\\apptheme_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_create.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-mdpi\\ic_action_create.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_cast_on_2_light.png",
@@ -162,6 +162,10 @@
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\nebeng.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-mdpi\\nebeng.png"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_action_cancel.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-mdpi\\ic_action_cancel.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_pause_light.png",

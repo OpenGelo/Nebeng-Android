@@ -167,7 +167,9 @@ public class Home extends Activity {
                         .getImgResID());
                 break;
             case 2:
-                fragment = new BeriTebengan();
+                fragment = new Room();
+                Intent intent2 = new Intent(this, BeriTebengan.class);
+                startActivity(intent2);
                 map = false;
                 break;
             case 3:

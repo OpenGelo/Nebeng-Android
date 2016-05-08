@@ -1,16 +1,27 @@
 package com.sumarnakreatip.uiiot;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.text.Html;
+import android.text.Spanned;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -33,7 +44,23 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public final class BeriTebengan extends Fragment {
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.Places;
+
+import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
+import com.google.android.gms.location.places.ui.PlaceSelectionListener;
+import com.sumarnakreatip.android.common.activities.SampleActivityBase;
+import com.sumarnakreatip.uiiot.cardstream.CardStream;
+import com.sumarnakreatip.uiiot.cardstream.CardStreamFragment;
+import com.sumarnakreatip.uiiot.cardstream.CardStreamState;
+import com.sumarnakreatip.uiiot.cardstream.OnCardClickListener;
+import com.sumarnakreatip.uiiot.cardstream.StreamRetentionFragment;
+
+public final class BeriTebengan extends Activity implements PlaceSelectionListener {
 
     Context layout;
 
@@ -59,23 +86,61 @@ public final class BeriTebengan extends Fragment {
     private int minute;
 
     static final int TIME_DIALOG_ID = 999;
+    private GoogleApiClient mGoogleApiClient;
+
+    public static final String TAG = "MainActivity";
+    public static final String FRAGTAG = "PlacePickerFragment";
+
+    private CardStreamFragment mCardStreamFragment;
+
+    private StreamRetentionFragment mRetentionFragment;
+    private static final String RETENTION_TAG = "retention";
+    private FragmentActivity myContext;
+
+    private TextView mPlaceDetailsText;
+
+    private TextView mPlaceAttribution;
 
     //@Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.beritebengan_layout, container,
-                false);
-        layout = getActivity();
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.beritebengan_layout);
 
-        username = SaveSharedPreference.getUserName(getActivity());
+        // Retrieve the PlaceAutocompleteFragment.
+        PlaceAutoComplete autocompleteFragment = (PlaceAutoComplete)
+                getFragmentManager().findFragmentById(R.id.autocomplete_fragment);
 
-        asal = (EditText) view.findViewById(R.id.asal);
-        tujuan = (EditText) view.findViewById(R.id.tujuan);
-        jl = (RadioGroup) view.findViewById(R.id.kuota);
-        tv = (TextView) view.findViewById(R.id.w_b);
-        btnChangeTime = (Button) view.findViewById(R.id.button2);
-        keterangan = (EditText) view.findViewById(R.id.j_k);
+        // Register a listener to receive callbacks when a place has been selected or an error has
+        // occurred.
+        autocompleteFragment.setOnPlaceSelectedListener(this);
+
+        // Retrieve the TextViews that will display details about the selected place.
+        mPlaceDetailsText = (TextView) findViewById(R.id.place_details);
+        mPlaceAttribution = (TextView) findViewById(R.id.place_attribution);
+
+        String asalMap = getIntent().getStringExtra("asal");
+        String tujuanMap = getIntent().getStringExtra("tujuan");
+
+        layout= getApplicationContext();
+        username = SaveSharedPreference.getUserName(getApplicationContext());
+
+        asal = (EditText) findViewById(R.id.asal);
+        tujuan = (EditText) findViewById(R.id.tujuan);
+        jl = (RadioGroup) findViewById(R.id.kuota);
+        tv = (TextView) findViewById(R.id.w_b);
+        btnChangeTime = (Button) findViewById(R.id.button2);
+        keterangan = (EditText) findViewById(R.id.j_k);
+
+        try{
+            if(!asalMap.isEmpty() && !tujuanMap.isEmpty()) {
+                asal.setText(asalMap);
+                tujuan.setText(tujuanMap);
+            }
+        }
+        catch (NullPointerException e){
+            Log.e("String","not found");
+        }
 
         setCurrentTimeOnView(setbefore);
         if (setbefore) {
@@ -97,10 +162,7 @@ public final class BeriTebengan extends Fragment {
             }
         }
 
-        submit = (Button) view.findViewById(R.id.button1);
-
-        gmaps = (Button) view.findViewById(R.id.button4);
-
+        submit = (Button) findViewById(R.id.button1);
 
         btnChangeTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,31 +171,14 @@ public final class BeriTebengan extends Fragment {
 
             }
         });
-        gmaps.setOnClickListener(new View.OnClickListener() {
 
+        gmaps = (Button) findViewById(R.id.button4);
+
+        gmaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int checkedRadioButtonId = jl.getCheckedRadioButtonId();
-                if (checkedRadioButtonId == R.id.no_1) {
-                    type = "1";
-                } else if (checkedRadioButtonId == R.id.no_2) {
-                    type = "2";
-                } else if (checkedRadioButtonId == R.id.no_3) {
-                    type = "3";
-                } else if (checkedRadioButtonId == R.id.no_4) {
-                    type = "4";
-                } else if (checkedRadioButtonId == R.id.no_5) {
-                    type = "5";
-                } else if (checkedRadioButtonId == R.id.no_6) {
-                    type = "6";
-                } else {
-                    type = "";
-                }
-                if (keterangan.getText().toString().trim().equalsIgnoreCase("")) {
-                    ket = " ";
-                } else {
-                    ket = keterangan.getText().toString().trim();
-                }
+                Intent peta = new Intent(getApplicationContext(),Map.class);
+                startActivity(peta);
             }
         });
 
@@ -172,8 +217,6 @@ public final class BeriTebengan extends Fragment {
                 }
             }
         });
-
-        return view;
     }
 
 
@@ -205,13 +248,11 @@ public final class BeriTebengan extends Fragment {
         }
     }
 
-
     public class loggin extends AsyncTask<Void, String, String> {
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            dialog = ProgressDialog.show(layout, "", "Proccessing...", true);
         }
 
         @Override
@@ -223,7 +264,6 @@ public final class BeriTebengan extends Fragment {
         @Override
         protected void onPostExecute(String response) {
             String responseCheck = response;
-            dialog.dismiss();
             if (responseCheck.equalsIgnoreCase("Sukses")) {
                 Toast.makeText(layout, "Sukses Dimasukkan", Toast.LENGTH_LONG).show();
                 refresh();
@@ -234,9 +274,9 @@ public final class BeriTebengan extends Fragment {
     }
 
     void refresh() {
-        Intent intent = new Intent(getActivity(), Home.class);
+        Intent intent = new Intent(this, Home.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-        getActivity().finish();
     }
 
     // display current time
@@ -287,5 +327,47 @@ public final class BeriTebengan extends Fragment {
             return String.valueOf(c);
         else
             return "0" + String.valueOf(c);
+    }
+
+    /**
+     * Callback invoked when a place has been selected from the PlaceAutocompleteFragment.
+     */
+    @Override
+    public void onPlaceSelected(Place place) {
+        Log.i(TAG, "Place Selected: " + place.getName());
+
+        // Format the returned place's details and display them in the TextView.
+        mPlaceDetailsText.setText(formatPlaceDetails(getResources(), place.getName(), place.getId(),
+                place.getAddress(), place.getPhoneNumber(), place.getWebsiteUri()));
+
+        CharSequence attributions = place.getAttributions();
+        if (!TextUtils.isEmpty(attributions)) {
+            mPlaceAttribution.setText(Html.fromHtml(attributions.toString()));
+        } else {
+            mPlaceAttribution.setText("");
+        }
+    }
+
+    /**
+     * Callback invoked when PlaceAutocompleteFragment encounters an error.
+     */
+    @Override
+    public void onError(Status status) {
+        Log.e(TAG, "onError: Status = " + status.toString());
+
+        Toast.makeText(this, "Place selection failed: " + status.getStatusMessage(),
+                Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     * Helper method to format information about a place nicely.
+     */
+    private static Spanned formatPlaceDetails(Resources res, CharSequence name, String id,
+                                              CharSequence address, CharSequence phoneNumber, Uri websiteUri) {
+        Log.e(TAG, res.getString(R.string.place_details, name, id, address, phoneNumber,
+                websiteUri));
+        return Html.fromHtml(res.getString(R.string.place_details, name, id, address, phoneNumber,
+                websiteUri));
+
     }
 }

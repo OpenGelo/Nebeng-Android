@@ -8,7 +8,7 @@
     <string name="login">Silakan masukkan username dan password sesuai dengan akun UI Anda.</string>
     <string name="login1"></string>
     <string name="login2">Silahkan masukkan data kontak anda</string>
-    <string name="gmaps">GM</string>
+    <string name="gmaps">Peta</string>
     
     <string name="about1">Version 0.3</string>
     <string name="about4">Universitas Indonesia - Vehicle Sharing Platform</string>
@@ -70,5 +70,21 @@
     <string name="token_error_message">An error occurred while either fetching the InstanceID token,
         sending the fetched token to the server or subscribing to the PubSub topic. Please try
         running the sample again.</string>
+
+    <!--for AutoComplete Place-->
+    <string name="selected_place">Last Selected Place:</string>
+    <string name="place_details">
+    <![CDATA[
+        <b>%1$s</b>
+        <br/>
+        <i>Place Id: %2$s</i>
+        <br/>
+        Address: %3$s
+        <br/>
+        Phone: %4$s
+        <br/>
+        Website: %5$s
+    ]]>
+    </string>
 
 </resources>
