@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -58,8 +59,13 @@ public class Kontak extends Activity {
 
         pattern = Pattern.compile(EMAIL_PATTERN);
 
-        //inisialisasi variabel
-        user = getIntent().getExtras().getString("username");
+        try{
+            user = getIntent().getStringExtra("username");
+        }
+        catch (Exception e){
+            Log.e("Error", "Username doesn't exist");
+        }
+
         b = (Button) findViewById(R.id.button1);
         nomor = (EditText) findViewById(R.id.nomor);
         email = (EditText) findViewById(R.id.email);
@@ -126,8 +132,8 @@ public class Kontak extends Activity {
                         Toast.makeText(Kontak.this, "Data sukses dimasukkan", Toast.LENGTH_LONG).show();
                     }
                 });
-                SaveSharedPreference.setUserName(Kontak.this, user.toString().trim());
                 Intent datalogin = new Intent(Kontak.this, Home.class);
+                datalogin.putExtra("username", user.trim());
                 startActivity(datalogin);
                 finish();
             } else {

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\place.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\place.png"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_list_selector_disabled_holo_light.9.png"
     },
@@ -12,16 +16,16 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xhdpi\\ic_media_route_on_0_mono_dark.png"
     },
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_cardaction_positive.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\ic_cardaction_positive.png"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_plus_signin_btn_text_dark_normal.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xhdpi\\common_plus_signin_btn_text_dark_normal.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\start_red.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\start_red.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_list_pressed_holo_light.9.png",
@@ -56,6 +60,10 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_cardaction_negative.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\ic_cardaction_negative.png"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_btn_radio_to_on_mtrl_000.png"
     },
@@ -88,12 +96,8 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xhdpi\\common_google_signin_btn_text_dark_normal.9.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\end_blue.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\end_blue.png"
-    },
-    {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\end_purple.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\end_purple.png"
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_cardaction_positive_pressed.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\ic_cardaction_positive_pressed.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_disabled.9.png",
@@ -148,12 +152,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-cast\\8.4.0\\res\\drawable-xhdpi\\cast_ic_notification_1.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_popup_background_mtrl_mult.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_cardaction_neutral.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\ic_cardaction_neutral.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_cast_on_2_light.png",
@@ -172,8 +176,8 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xhdpi\\ic_media_route_on_2_mono_dark.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\end_orange.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\end_orange.png"
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\close.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\close.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_pressed.9.png",
@@ -284,10 +288,6 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\mediarouter-v7\\23.0.0\\res\\drawable-xhdpi\\ic_cast_on_light.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_action_search.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\ic_action_search.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_textfield_activated_mtrl_alpha.9.png"
     },
@@ -296,16 +296,20 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_btn_rating_star_off_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_cardaction_neutral_pressed.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\ic_cardaction_neutral_pressed.png"
+    },
+    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_disabled.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xhdpi\\common_google_signin_btn_icon_dark_disabled.9.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_plus_signin_btn_text_dark_pressed.9.png",
@@ -314,10 +318,6 @@
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_action_home.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\ic_action_home.png"
-    },
-    {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\end_red.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\end_red.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
@@ -388,10 +388,6 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\ic_action_profile.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\start_green.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\start_green.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_focused.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\8.4.0\\res\\drawable-xhdpi\\common_google_signin_btn_icon_dark_focused.9.png"
     },
@@ -452,12 +448,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\start_orange.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\start_orange.png"
-    },
-    {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\refresh.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\refresh.png"
+    },
+    {
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\card_bg.9.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\card_bg.9.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\common_plus_signin_btn_icon_light_pressed.9.png",
@@ -508,20 +504,12 @@
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_ic_voice_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\start_blue.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\start_blue.png"
-    },
-    {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\start_purple.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\start_purple.png"
+        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\ic_cardaction_negative_pressed.png",
+        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\drawable-xhdpi\\ic_cardaction_negative_pressed.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
         "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-xhdpi\\abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\end_green.png",
-        "source": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\exploded-aar\\UIIOT2\\map\\unspecified\\res\\drawable-xhdpi-v4\\end_green.png"
     },
     {
         "merged": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4\\places_ic_clear.png",

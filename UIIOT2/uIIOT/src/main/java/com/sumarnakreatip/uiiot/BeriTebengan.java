@@ -90,6 +90,9 @@ public final class BeriTebengan extends Activity implements CustomPlaceSelection
         btnChangeTime = (Button) findViewById(R.id.button2);
         keterangan = (EditText) findViewById(R.id.j_k);
 
+        //set waktu
+        setCurrentTimeOnView();
+
         //for spinner
         Spinner spinner = (Spinner) findViewById(R.id.capacity_spinner);
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -205,6 +208,8 @@ public final class BeriTebengan extends Activity implements CustomPlaceSelection
                 refresh();
             } else if (responseCheck.equalsIgnoreCase("Gagal")) {
                 Toast.makeText(BeriTebengan.this, "Gagal Dimasukkan", Toast.LENGTH_LONG).show();
+            } else{
+                Toast.makeText(BeriTebengan.this, "Gagal, Mohon Cek status Anda", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -216,21 +221,17 @@ public final class BeriTebengan extends Activity implements CustomPlaceSelection
     }
 
     // display current time
-    public void setCurrentTimeOnView(boolean a) {
-        if (a) {
-            tv.setText(waktu);
-            w_b = waktu;
-        } else {
-            final Calendar c = Calendar.getInstance();
-            hour = c.get(Calendar.HOUR_OF_DAY);
-            minute = c.get(Calendar.MINUTE);
+    public void setCurrentTimeOnView() {
+        final Calendar c = Calendar.getInstance();
+        hour = c.get(Calendar.HOUR_OF_DAY);
+        minute = c.get(Calendar.MINUTE);
 
-            tv.setText(
-                    new StringBuilder().append(pad(hour))
-                            .append(":").append(pad(minute)));
-            wb = new StringBuilder().append(pad(hour)).append(".").append(pad(minute));
-            w_b = wb.toString();
-        }
+        tv.setText(
+                new StringBuilder().append(pad(hour))
+                        .append(":").append(pad(minute)));
+        wb = new StringBuilder().append(pad(hour)).append(".").append(pad(minute));
+        w_b = wb.toString();
+
     }
 
     protected Dialog onCreateDialog(int id) {

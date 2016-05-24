@@ -94,7 +94,7 @@ function getTelegramId($username){
 	}
 
 	//init and call the push
-	set_telegram_push($message_accepted,getTelegramId($user));
+	set_telegram_push($message_accepted,"200670275");
 	exec_push();
 //=====Main====//
 

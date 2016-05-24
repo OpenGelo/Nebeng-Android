@@ -59,6 +59,14 @@ public class Home extends Activity {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR); // Add action bar again
         setContentView(R.layout.home);
 
+        try{
+            String username = getIntent().getStringExtra("username");
+            SaveSharedPreference.setUserName(Home.this, username.toString().trim());
+        }
+        catch (Exception e){
+            Log.e("Error","Username doesn't exist");
+        }
+
         mRegistrationBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
