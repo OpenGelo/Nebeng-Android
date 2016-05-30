@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="intro_title">Tentukan Lokasi Asal dan Tujuan</string>
+
+    <string name="pick_title">Lokasi asal</string>
+    <string name="pick_text">Klik pada peta untuk menentukan lokasi asal
+</string>
+    <string name="pick_action">Masukkan lokasi asal</string>
+
+    <string name="pick_drop_location">Lokasi Tujuan</string>
+    <string name="pick_drop_text">Klik pada peta untuk menentukan lokasi tujuan
+</string>
+    <string name="pick_drop_action">Masukkan lokasi tujuan</string>
+
+    <string name="detail_text">Address: %1$s\n\n%2$s</string>
+
+    <string name="empty"></string>
+    <string name="intro_message">
+        <![CDATA[
+
+
+            This sample uses the PlacePicker.Builder to construct an Intent to launch the place
+            picker dialog. Users can select a place or add a new place,
+            which is then returned to the application.
+
+
+
+        ]]>
+    </string>
+</resources>

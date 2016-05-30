@@ -5,7 +5,7 @@
  * Menyeleksi tebengan yang kadaluarsa. Tebengan yang sudah kadaluarsa tidak diambil dari database
  * Melakukan join antar dua tabel
  * 
- * @version 05 April 2016
+ * @version 25 Mei 2016
  * @author I Made Sanadhi Sutandi // 1206202394
  */
 
@@ -21,11 +21,14 @@ $dateExpiredToString  = $date_expired->format('Y/m/d');
 $time_expired         = date_create(date('H:i:s'));
 $timeExpiredToString  = $time_expired->format('H:i:s');
 
+//waktu saat ini
+$nowDate = date('Y-m-d H:i:s');
+
     //ambil data dari tabel nebeng_user dan nebeng_beri_tebengan menggunakan join, ambil yang waktu kadaluarsanya sehabis waktu sekarang
     $query_join = mysql_query("SELECT user_id, id_tebengan, nebeng_user.nama, nebeng_user.npm, nebeng_user.username, asal, tujuan, sisa_kapasitas,waktu_berangkat, jam_berangkat, jam_kadaluarsa,keterangan
     				      FROM nebeng_beri_tebengan 
     				      INNER JOIN nebeng_user ON nebeng_beri_tebengan.user_id = nebeng_user.id 
-                  		  WHERE (waktu_berangkat >= '$dateExpiredToString' AND jam_kadaluarsa >= '$timeExpiredToString')
+                  		  WHERE (nebeng_beri_tebengan.detail_waktu_kadaluarsa >= '$nowDate')
     				      ORDER BY waktu_berangkat, jam_berangkat; 
     				      ") or die(mysql_error());
 	

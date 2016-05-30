@@ -9,7 +9,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/map" />
+            <option value="$PROJECT_DIR$/uIIOT" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/uIIOT" />
           </set>
         </option>

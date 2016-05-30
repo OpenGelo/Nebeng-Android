@@ -1,7 +1,6 @@
 package com.sumarnakreatip.uiiot;
 
 import android.annotation.SuppressLint;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
@@ -10,6 +9,15 @@ import com.loopj.android.http.RequestParams;
 
 import java.util.Arrays;
 import java.util.List;
+
+/**
+ * Class StatusHttpClient Merupakan Class untuk
+ * melakukan callback status pengguna
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
 
 @SuppressLint("Instantiatable")
 public class StatusHttpClient {
@@ -40,7 +48,6 @@ public class StatusHttpClient {
     }
 
     public void get_all_products(final Function<List<Product>, Void> callback) {
-        System.out.println("masuk");
         RequestParams params = new RequestParams();
         params.put("username", et);
         client.post("http://" + HOST + "/nebeng/back-system/nebeng_status.php", params, new AsyncHttpResponseHandler() {
@@ -50,7 +57,6 @@ public class StatusHttpClient {
                 final GetAllProducts r = g.fromJson(response, GetAllProducts.class);
                 final List<Product> list = Arrays.asList(r.hasil);
                 callback.call(list);
-                System.out.println(Arrays.asList(r.hasil));
             }
         });
     }

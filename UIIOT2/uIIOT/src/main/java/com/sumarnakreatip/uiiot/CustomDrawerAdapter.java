@@ -11,6 +11,14 @@ import android.widget.TextView;
 
 import java.util.List;
 
+/**
+ * Class ArrayAdapter
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
 
     Context context;

@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     android:background="#fff"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="56dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/contact" />
 
     <TextView
         android:id="@+id/textView4"
@@ -12,29 +23,17 @@
         android:layout_gravity="center"
         android:text="@string/login2" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/no_hp"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <EditText
         android:id="@+id/nomor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:inputType="text"></EditText>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/email"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_marginTop="10dp"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:inputType="text"
+        android:hint="Nomor Handphone" />
 
     <EditText
         android:id="@+id/email"
@@ -42,12 +41,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:layout_marginTop="10dp"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:inputType="textEmailAddress"
+        android:hint="Alamat E-mail" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:text="@string/submit" />
+        android:text="@string/submit_contact" />
 
 </LinearLayout>

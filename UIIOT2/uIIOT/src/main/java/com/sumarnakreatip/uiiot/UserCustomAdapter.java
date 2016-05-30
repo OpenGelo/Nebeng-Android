@@ -15,7 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
@@ -29,17 +28,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class UserCustomAdapter Merupakan ArrayAdapter untuk pemberi tumpangan
+ * Menentukan layout dari card tumpangan
+ * menentukan reaksi click dan request permintaan tumpangan
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class UserCustomAdapter extends ArrayAdapter<User> {
 
     HttpPost httppost;
-    StringBuffer buffer;
-    HttpResponse response;
     HttpClient httpclient;
     List<NameValuePair> nameValuePairs;
     ProgressDialog dialog = null;
-    String usernameTujuan, x, y, z, s;
-    CharSequence text;
-    int w;
+    String usernameTujuan;
     Context context;
     int layoutResourceId;
     ArrayList<User> a = new ArrayList<User>();
@@ -59,7 +64,7 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
                         String jam_berangkat, String keterangan, String reg) {
         this.et = username;
         this.regid = reg;
-        a.add(new User(user_id, id_tebengan, npm, nama, username, asal, tujuan, kapasitas,
+        a.add(new User(user_id, id_tebengan, npm, nama, usernameTujuan, asal, tujuan, kapasitas,
                 waktu_berangkat, jam_berangkat, keterangan));
         notifyDataSetChanged();
     }
@@ -74,37 +79,28 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
             holder = new UserHolder();
-            //holder.user_id = (TextView) row.findViewById(R.id.user_id);
-            //holder.npm = (TextView) row.findViewById(R.id.npm);
+
             holder.nama = (TextView) row.findViewById(R.id.nama);
             holder.asal = (TextView) row.findViewById(R.id.asal);
             holder.tujuan = (TextView) row.findViewById(R.id.tujuan);
-            //holder.kapasitas = (TextView) row.findViewById(R.id.kapasitas);
-            //holder.waktu_berangkat = (TextView) row.findViewById(R.id.w_b);
-            //holder.jam_berangkat = (TextView) row.findViewById(R.id.j_b);
-            //holder.keterangan = (TextView) row.findViewById(R.id.k);
+
             row.setTag(holder);
         } else {
             holder = (UserHolder) row.getTag();
         }
         User user = a.get(position);
-        //holder.user_id.setText(user.getuser_id());
-        //holder.npm.setText(user.getnpm());
+
         holder.nama.setText(user.getnama());
         holder.asal.setText(user.getasal());
         holder.tujuan.setText(user.gettujuan());
-        //holder.kapasitas.setText(user.getkapasitas());
-        //holder.waktu_berangkat.setText(user.getwaktu_berangkat());
-        //holder.jam_berangkat.setText(user.getjam_berangkat());
-        //holder.keterangan.setText(user.getketerangan());
+
+        id = SaveSharedPreference.getUserID(getContext());
 
         row.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                //Toast.makeText(context, "Row Click " + a.get(position).user_id, Toast.LENGTH_LONG).show();
-                //Log.d("MyDebug", "Row Click " + position);
-                id = a.get(position).user_id;
+
                 id_tebengan = a.get(position).id_tebengan;
                 usernameTujuan = a.get(position).username;
                 AlertDialog.Builder alert = new AlertDialog.Builder(context);
@@ -146,8 +142,6 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
     static class UserHolder {
         TextView user_id, id_penebeng, npm, nama, asal, tujuan, kapasitas, waktu_berangkat,
                 jam_berangkat, keterangan;
-
-        // Button nebeng,konfirmasi,batal;
     }
 
     private class loggin extends AsyncTask<Void, String, String> {
@@ -168,17 +162,15 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
 
         @Override
         protected void onPostExecute(String rate) {
-            // Do whatever you need with the string, you can update your UI from
-            // here
+
             respon = rate;
             if (respon.equalsIgnoreCase("Nebeng Sukses")) {
                 //setstatus(1);
                 Toast.makeText(context, "Nebeng Sukses", Toast.LENGTH_LONG).show();
-                int value = 0;
                 String nama = SaveSharedPreference.getNama(context);
-                PostRequest sendNotif = new PostRequest("send_push_notification_basedOn_username.php");
+                PostRequest sendNotif = new PostRequest("gcm/sendGCMPush.php");
                 sendNotif.setPostValues("username", usernameTujuan);
-                sendNotif.setPostValues("message", nama + " hendak menebeng");
+                sendNotif.setPostValues("message", capitalizeName(nama) + " hendak menebeng");
                 sendNotif.executePost();
                 Intent intent = new Intent(context, Home.class);
                 context.startActivity(intent);
@@ -219,9 +211,25 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
             return response;
         } catch (Exception e) {
             response = "Catch";
-            System.out.println("Exception : " + e.getMessage());
             return response;
         }
     }
 
+    //for capitalize first letter in each of word components in the string name
+    public String capitalizeName(String name){
+
+        int pos = 0;
+        boolean capitalize = true;
+        StringBuilder sb = new StringBuilder(name.toLowerCase());
+        while (pos < sb.length()) {
+            if (sb.charAt(pos) == '.' || Character.isWhitespace(sb.charAt(pos))) {
+                capitalize = true;
+            } else if (capitalize && !Character.isWhitespace(sb.charAt(pos))) {
+                sb.setCharAt(pos, Character.toUpperCase(sb.charAt(pos)));
+                capitalize = false;
+            }
+            pos++;
+        }
+        return sb.toString();
+    }
 }
