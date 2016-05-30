@@ -25,7 +25,7 @@ INSTALLATION
 3. Import the project to Android Studio
 4. Start to code!
 
-```
+
 ## History
 
 May 2016, version v0.3
