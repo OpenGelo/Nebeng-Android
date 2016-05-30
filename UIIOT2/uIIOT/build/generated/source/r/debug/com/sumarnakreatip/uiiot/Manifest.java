@@ -9,6 +9,9 @@ package com.sumarnakreatip.uiiot;
 
 public final class Manifest {
     public static final class permission {
+        /**  Necessary Permissions for Receiving GCM Push Notifications 
+         */
+        public static final String C2D_MESSAGE="com.sumarnakreatip.uiiot.permission.C2D_MESSAGE";
         public static final String MAPS_RECEIVE="com.sumarnakreatip.uiiot.maps.googlev2.permission.MAPS_RECEIVE";
     }
 }

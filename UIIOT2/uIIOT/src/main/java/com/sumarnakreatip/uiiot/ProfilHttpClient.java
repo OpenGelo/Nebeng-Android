@@ -10,6 +10,14 @@ import com.loopj.android.http.RequestParams;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class ProfilHttpClient Merupakan Callback untuk mendapat user data
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 @SuppressLint("Instantiatable")
 public class ProfilHttpClient {
     String et;
@@ -38,7 +46,6 @@ public class ProfilHttpClient {
     }
 
     public void get_all_products(final Function<List<Product>, Void> callback) {
-        System.out.println("masuk");
         RequestParams params = new RequestParams("username", et);
         client.post("http://" + HOST + "/nebeng/back-system/get_user_data.php", params, new AsyncHttpResponseHandler() {
             @Override
@@ -47,7 +54,6 @@ public class ProfilHttpClient {
                 final GetAllProducts r = g.fromJson(response, GetAllProducts.class);
                 final List<Product> list = Arrays.asList(r.result);
                 callback.call(list);
-                System.out.println(Arrays.asList(r.result));
             }
         });
 

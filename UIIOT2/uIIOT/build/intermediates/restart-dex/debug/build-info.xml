@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="22"
+    density="xhdpi"
+    format="7"
+    timestamp="17398991147350" >
+
+    <task
+        name="javac"
+        duration="2581" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="2757" />
+    <task
+        name="verifier"
+        duration="2869" />
+
+    <artifact
+        location="C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\outputs\apk\uIIOT-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="17398991147350" >
+        <artifact
+            location="C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\outputs\apk\uIIOT-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

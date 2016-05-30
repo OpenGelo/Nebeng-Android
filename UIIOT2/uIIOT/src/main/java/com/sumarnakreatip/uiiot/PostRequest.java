@@ -9,8 +9,14 @@ import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 
 /**
- * Created by Sanadhi on 04/04/2016.
+ * Class PostRequest Merupakan AppCompatActivity
+ * Class dipanggil untuk melakukan post request
+ *
+ * @author  Sanadhi Sutandi
+ * @version 0.3
+ * @since   2016-05
  */
+
 public class PostRequest extends AppCompatActivity {
 
     private static final String BASE_URL = "http://green.ui.ac.id/nebeng/back-system/";

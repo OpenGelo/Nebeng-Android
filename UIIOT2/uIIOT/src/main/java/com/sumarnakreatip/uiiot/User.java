@@ -1,5 +1,14 @@
 package com.sumarnakreatip.uiiot;
 
+/**
+ * Class User Merupakan Entitas untuk objek pemberi tumpangan
+ * berisi field-field informasi
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class User{
     String user_id;
     String id_tebengan;

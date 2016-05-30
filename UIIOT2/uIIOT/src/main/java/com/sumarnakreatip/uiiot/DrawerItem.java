@@ -1,5 +1,13 @@
 package com.sumarnakreatip.uiiot;
 
+/**
+ * Class DrawerItem
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class DrawerItem {
 
     String ItemName;

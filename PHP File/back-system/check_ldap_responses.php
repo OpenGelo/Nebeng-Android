@@ -3,7 +3,7 @@
  * Pengecekan LDAP
  * Melakukan cetak respon dari server LDAP UI
  * 
- * @version 26 Maret 2016
+ * @version 24 April 2016
  * @author I Made Sanadhi Sutandi // 1206202394
  */
 
@@ -13,7 +13,6 @@ require_once("ldap.php");		//load modul autentikasi SSO ke ldap UI
 	//inisialisasi variabel
 	$user 		= trim($_POST['username']);
 	$password 	= $_POST['password'];
-	$reg_id		= $_POST['regid'];
 	$response 	= array();					//variable respon
 
 	if(empty($user) && empty($password)){								//pengecekan kosong atau tidaknya input nama dan password pengguna

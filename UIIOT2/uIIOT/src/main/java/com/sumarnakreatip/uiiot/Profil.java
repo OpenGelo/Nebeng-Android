@@ -5,22 +5,15 @@ import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.sumarnakreatip.uiiot.ProfilHttpClient.Function;
-import com.sumarnakreatip.uiiot.ProfilHttpClient.Product;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -35,6 +28,14 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class Profil Merupakan Fragment
+ * untuk render halaman profil
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
 
 @SuppressLint("InflateParams")
 public class Profil extends Fragment {
@@ -180,11 +181,9 @@ public class Profil extends Fragment {
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
             final String response = httpclient.execute(httppost, responseHandler);
-            System.out.println("Response : " + response);
             return response;
         } catch (Exception e) {
             String response = "Catch";
-            System.out.println("Exception : " + e.getMessage());
             return response;
         }
     }

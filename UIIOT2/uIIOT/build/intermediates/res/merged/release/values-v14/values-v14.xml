@@ -2,10 +2,32 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="detail_text">Address: %1$s\n\n%2$s</string>
+    <string name="empty"/>
+    <string name="intro_message">
+        
+
+
+            This sample uses the PlacePicker.Builder to construct an Intent to launch the place
+            picker dialog. Users can select a place or add a new place,
+            which is then returned to the application.
+
+
+
+        
+    </string>
+    <string name="intro_title">Tentukan Lokasi Asal dan Tujuan</string>
+    <string name="pick_action">Masukkan lokasi asal</string>
+    <string name="pick_drop_action">Masukkan lokasi tujuan</string>
+    <string name="pick_drop_location">Lokasi Tujuan</string>
+    <string name="pick_drop_text">Klik pada peta untuk menentukan lokasi tujuan
+</string>
+    <string name="pick_text">Klik pada peta untuk menentukan lokasi asal
+</string>
+    <string name="pick_title">Lokasi asal</string>
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- API 14 theme customizations can go here. -->
     </style>
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar"/>
     <style name="Base.TextAppearance.AppCompat.Button">
         <item name="android:textSize">@dimen/abc_text_size_button_material</item>
         <item name="android:textAllCaps">true</item>
