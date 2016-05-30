@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\values-v16\\values-v16.xml",
+        "outputFile": "C:\\Users\\Sanadhi\\Documents\\GitHub\\bachelor-thesis\\UIIOT2\\uIIOT\\build\\intermediates\\res\\merged\\debug\\values-v16\\values-v16.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 190
                 },
                 "from": {
-                    "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\values-v16\\styles.xml",
+                    "file": "C:\\Users\\Sanadhi\\Documents\\GitHub\\bachelor-thesis\\UIIOT2\\uIIOT\\src\\main\\res\\values-v16\\styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 330
                 },
                 "from": {
-                    "file": "C:\\Users\\Sanadhi\\Desktop\\Skripsi\\UIIOT2\\uIIOT\\src\\main\\res\\values-v16\\styles.xml",
+                    "file": "C:\\Users\\Sanadhi\\Documents\\GitHub\\bachelor-thesis\\UIIOT2\\uIIOT\\src\\main\\res\\values-v16\\styles.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,

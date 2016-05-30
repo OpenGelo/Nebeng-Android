@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <string name="detail_text">Address: %1$s\n\n%2$s</string>
     <string name="empty"/>
     <string name="intro_message">

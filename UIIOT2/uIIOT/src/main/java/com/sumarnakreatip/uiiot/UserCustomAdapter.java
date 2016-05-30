@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -59,7 +60,7 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
                         String jam_berangkat, String keterangan, String reg) {
         this.et = username;
         this.regid = reg;
-        a.add(new User(user_id, id_tebengan, npm, nama, username, asal, tujuan, kapasitas,
+        a.add(new User(user_id, id_tebengan, npm, nama, usernameTujuan, asal, tujuan, kapasitas,
                 waktu_berangkat, jam_berangkat, keterangan));
         notifyDataSetChanged();
     }
@@ -93,18 +94,15 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
         holder.nama.setText(user.getnama());
         holder.asal.setText(user.getasal());
         holder.tujuan.setText(user.gettujuan());
-        //holder.kapasitas.setText(user.getkapasitas());
-        //holder.waktu_berangkat.setText(user.getwaktu_berangkat());
-        //holder.jam_berangkat.setText(user.getjam_berangkat());
-        //holder.keterangan.setText(user.getketerangan());
+
+        id = SaveSharedPreference.getUserID(getContext());
 
         row.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 //Toast.makeText(context, "Row Click " + a.get(position).user_id, Toast.LENGTH_LONG).show();
-                //Log.d("MyDebug", "Row Click " + position);
-                id = a.get(position).user_id;
+                //Log.d("MyDebug", "Row Click " + position)
                 id_tebengan = a.get(position).id_tebengan;
                 usernameTujuan = a.get(position).username;
                 AlertDialog.Builder alert = new AlertDialog.Builder(context);

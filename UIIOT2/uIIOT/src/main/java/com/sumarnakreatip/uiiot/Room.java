@@ -80,6 +80,7 @@ public class Room extends Fragment {
                 if (sukses.equalsIgnoreCase("2")) {
                     note.setText("Belum Ada Tebengan");
                 } else {
+                    note.setText("Daftar Tumpangan:");
                     for (Product p : input) {
                         userAdapter.addUser(
                                 et,
