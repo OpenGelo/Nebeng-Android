@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
@@ -28,17 +27,24 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Class Kontak Merupakan Acivity
+ * Untuk render halaman input email dan no.handphone
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class Kontak extends Activity {
 
     //variabel layout
-    Button b, c;
+    Button b;
     EditText nomor, email;
-    String regid, user;
+    String user;
 
     //variabel koneksi
     HttpPost httppost;
-    StringBuffer buffer;
-    HttpResponse response;
     HttpClient httpclient;
     List<NameValuePair> nameValuePairs;
     ProgressDialog dialog = null;

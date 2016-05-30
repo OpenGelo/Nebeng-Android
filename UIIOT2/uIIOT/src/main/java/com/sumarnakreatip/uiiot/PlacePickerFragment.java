@@ -36,17 +36,14 @@ import com.sumarnakreatip.uiiot.cardstream.CardStreamFragment;
 import com.sumarnakreatip.uiiot.cardstream.OnCardClickListener;
 
 /**
- * Sample demonstrating the use of {@link PlacePicker}.
- * This sample shows the construction of an {@link Intent} to open the PlacePicker from the
- * Google Places API for Android and select a {@link Place}.
- * <p/>
- * This sample uses the CardStream sample template to create the UI for this demo, which is not
- * required to use the PlacePicker API. (Please see the Readme-CardStream.txt file for details.)
+ * Class PlacePickerFragment Merupakan Fragment untuk
+ * fitur pemilihan lokasi pada peta
  *
- * @see com.google.android.gms.location.places.ui.PlacePicker.IntentBuilder
- * @see com.google.android.gms.location.places.ui.PlacePicker
- * @see com.google.android.gms.location.places.Place
+ * @author  Sanadhi Sutandi
+ * @version 0.3
+ * @since   2016-05
  */
+
 public class PlacePickerFragment extends Fragment implements OnCardClickListener {
 
     private static final String TAG = "PlacePickerSample";

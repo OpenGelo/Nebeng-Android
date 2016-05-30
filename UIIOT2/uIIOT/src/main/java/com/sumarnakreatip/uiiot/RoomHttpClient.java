@@ -13,6 +13,14 @@ import org.apache.http.Header;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class MyInstanceIDListenerService Merupakan Callback untuk mendapat seluruh tebengan
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class RoomHttpClient extends Activity {
 
     private static final String HOST = "green.ui.ac.id";

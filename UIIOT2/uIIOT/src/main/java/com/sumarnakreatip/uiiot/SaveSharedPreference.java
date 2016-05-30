@@ -5,6 +5,15 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 
+/**
+ * Class SaveSharedPreference Merupakan static class
+ * untuk menyimpan informasi aplikasi pengguna (login, dll)
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class SaveSharedPreference {
 
     static final String PREF_USER_NAME = "username";

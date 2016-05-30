@@ -8,10 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
-public class LogOut extends Fragment {
+/**
+ * Class LogOut Merupakan Fragment
+ * Untuk melakukan fungsi logout dan clear data SaveSharedPreferences
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
 
-    public static final String IMAGE_RESOURCE_ID = "iconResourceID";
-    public static final String ITEM_NAME = "itemName";
+public class LogOut extends Fragment {
 
     private ProgressBar mProgress;
     private int mProgressStatus = 0;

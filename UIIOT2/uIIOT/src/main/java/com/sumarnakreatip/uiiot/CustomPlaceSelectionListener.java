@@ -1,7 +1,12 @@
 package com.sumarnakreatip.uiiot;
 
 /**
- * Created by Sanadhi on 09/05/2016.
+ * Interface CustomPlaceSelectionListener
+ * Untuk custom place selection
+ *
+ * @author  Sanadhi Sutandi
+ * @version 0.3
+ * @since   2016-05
  */
 
 import com.google.android.gms.common.api.Status;

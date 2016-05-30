@@ -2,14 +2,11 @@ package com.sumarnakreatip.uiiot;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
-import android.app.ProgressDialog;
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,21 +14,23 @@ import android.widget.TextView;
 import com.sumarnakreatip.uiiot.RoomHttpClient.Function;
 import com.sumarnakreatip.uiiot.RoomHttpClient.Product;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Class Room Merupakan Fragment
+ * untuk render halaman utama berisi list tumpangan
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
 
 public class Room extends Fragment {
 
     public static final String IMAGE_RESOURCE_ID = "iconResourceID";
     public static final String ITEM_NAME = "itemName";
-    String update;
     EditText e;
-    Button b;
 
     //variabel bawaan
     Context layout;
@@ -42,17 +41,8 @@ public class Room extends Fragment {
 
     TextView note;
 
-    //variabel koneksi
-    HttpPost httppost;
-    StringBuffer buffer;
-    HttpResponse response;
-    HttpClient httpclient;
-    List<NameValuePair> nameValuePairs;
-    ProgressDialog dialog = null;
-
     //variabel tampilan list
     ArrayList<User> a = new ArrayList<User>();
-    ListView userList;
     UserCustomAdapter userAdapter;
 
     @SuppressLint("InflateParams")

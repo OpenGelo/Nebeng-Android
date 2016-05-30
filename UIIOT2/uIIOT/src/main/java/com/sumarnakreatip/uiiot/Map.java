@@ -12,8 +12,14 @@ import com.sumarnakreatip.uiiot.cardstream.OnCardClickListener;
 import com.sumarnakreatip.uiiot.cardstream.StreamRetentionFragment;
 
 /**
- * Created by Sanadhi on 03/05/2016.
+ * Class Map Merupakan SampleActivityBase
+ * Untuk render halaman menuju ke PlacePicker
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
  */
+
 public class Map extends SampleActivityBase implements CardStream {
     public static final String TAG = "MainActivity";
     public static final String FRAGTAG = "PlacePickerFragment";

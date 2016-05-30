@@ -1,0 +1,35 @@
+-keep class android.support.multidex.MultiDexApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class com.sumarnakreatip.uiiot.MainActivity { <init>(); }
+-keep class com.sumarnakreatip.uiiot.LoginPage { <init>(); }
+-keep class com.sumarnakreatip.uiiot.Kontak { <init>(); }
+-keep class com.sumarnakreatip.uiiot.Home { <init>(); }
+-keep class com.sumarnakreatip.uiiot.RoomHttpClient { <init>(); }
+-keep class com.sumarnakreatip.uiiot.BeriTebengan { <init>(); }
+-keep class com.sumarnakreatip.uiiot.Map { <init>(); }
+-keep class com.sumarnakreatip.uiiot.ProfilHttpClient { <init>(); }
+-keep class com.sumarnakreatip.uiiot.StatusHttpClient { <init>(); }
+-keep class com.google.android.gms.gcm.GcmReceiver { <init>(); }
+-keep class com.sumarnakreatip.uiiot.MyGcmListenerService { <init>(); }
+-keep class com.sumarnakreatip.uiiot.MyInstanceIDListenerService { <init>(); }
+-keep class com.sumarnakreatip.uiiot.RegistrationIntentService { <init>(); }
+-keep class com.google.android.gms.ads.AdActivity { <init>(); }
+-keep class com.google.android.gms.ads.purchase.InAppPurchaseActivity { <init>(); }
+-keep class com.google.android.gms.appinvite.PreviewActivity { <init>(); }
+-keep class com.google.android.gms.auth.api.signin.internal.SignInHubActivity { <init>(); }
+-keep class com.google.android.gms.auth.api.signin.RevocationBoundService { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementContentProvider { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(); }
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}
+-keep class com.android.tools.fd.** {
+    *;
+}
+-dontnote com.android.tools.fd.**,android.support.multidex.MultiDexExtractor

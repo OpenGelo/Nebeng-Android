@@ -38,23 +38,30 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+/**
+ * Class BeriTebengan Merupakan Activity
+ * Untuk render halaman membuat tebengan
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public final class BeriTebengan extends Activity implements CustomPlaceSelectionListener, AdapterView.OnItemSelectedListener {
 
     Context layout;
 
     Button submit, gmaps;
     EditText keterangan;
-    String type, username, kuota, waktu, w_b, ket;
+    String type, username, kuota, w_b, ket;
     private String lokasiAsal, lokasiTujuan;
     StringBuilder wb;
 
     private TextView tv;
 
     HttpPost httppost;
-    HttpResponse response;
     HttpClient httpclient;
     List<NameValuePair> nameValuePairs;
-    ProgressDialog dialog = null;
 
     //private TimePicker timePicker1;
     private Button btnChangeTime;

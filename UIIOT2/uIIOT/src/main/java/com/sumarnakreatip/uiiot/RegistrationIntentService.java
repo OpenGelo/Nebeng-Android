@@ -14,8 +14,14 @@ import com.google.android.gms.iid.InstanceID;
 import java.io.IOException;
 
 /**
- * Created by Sanadhi on 24/04/2016.
+ * Class RegistrationIntentService Merupakan IntentService
+ * Untuk layanan GCM
+ *
+ * @author  Sanadhi Sutandi
+ * @version 0.3
+ * @since   2016-05
  */
+
 
 public class RegistrationIntentService extends IntentService {
 

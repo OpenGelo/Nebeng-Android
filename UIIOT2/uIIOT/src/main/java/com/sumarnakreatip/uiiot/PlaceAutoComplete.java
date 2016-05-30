@@ -28,6 +28,13 @@ import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
 import com.google.android.gms.maps.model.LatLngBounds;
 
+/**
+ * Class PlaceAutoComplete Merupakan Fragment untuk fitur autocomplete pada pemilihan lokasi
+ *
+ * @author  Sanadhi Sutandi
+ * @version 0.3
+ * @since   2016-05
+ */
 
 @TargetApi(12)
 public class PlaceAutoComplete extends Fragment {

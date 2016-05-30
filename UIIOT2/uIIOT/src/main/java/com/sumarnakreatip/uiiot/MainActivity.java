@@ -8,6 +8,15 @@ import android.os.Handler;
 import android.view.Window;
 import android.widget.ProgressBar;
 
+/**
+ * Class MainActivity Merupakan Activity utama
+ * Menentukan render halaman aplikasi
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class MainActivity extends Activity {
 
     private ProgressBar mProgress;

@@ -32,6 +32,15 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class Home Merupakan Activity
+ * Untuk render halaman home beserta layoutnya
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class Home extends Activity {
 
     private DrawerLayout mDrawerLayout;

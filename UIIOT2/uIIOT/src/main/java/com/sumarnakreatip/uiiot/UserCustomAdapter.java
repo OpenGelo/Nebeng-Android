@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -16,7 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
@@ -30,17 +28,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class UserCustomAdapter Merupakan ArrayAdapter untuk pemberi tumpangan
+ * Menentukan layout dari card tumpangan
+ * menentukan reaksi click dan request permintaan tumpangan
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class UserCustomAdapter extends ArrayAdapter<User> {
 
     HttpPost httppost;
-    StringBuffer buffer;
-    HttpResponse response;
     HttpClient httpclient;
     List<NameValuePair> nameValuePairs;
     ProgressDialog dialog = null;
-    String usernameTujuan, x, y, z, s;
-    CharSequence text;
-    int w;
+    String usernameTujuan;
     Context context;
     int layoutResourceId;
     ArrayList<User> a = new ArrayList<User>();
@@ -75,22 +79,17 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
             holder = new UserHolder();
-            //holder.user_id = (TextView) row.findViewById(R.id.user_id);
-            //holder.npm = (TextView) row.findViewById(R.id.npm);
+
             holder.nama = (TextView) row.findViewById(R.id.nama);
             holder.asal = (TextView) row.findViewById(R.id.asal);
             holder.tujuan = (TextView) row.findViewById(R.id.tujuan);
-            //holder.kapasitas = (TextView) row.findViewById(R.id.kapasitas);
-            //holder.waktu_berangkat = (TextView) row.findViewById(R.id.w_b);
-            //holder.jam_berangkat = (TextView) row.findViewById(R.id.j_b);
-            //holder.keterangan = (TextView) row.findViewById(R.id.k);
+
             row.setTag(holder);
         } else {
             holder = (UserHolder) row.getTag();
         }
         User user = a.get(position);
-        //holder.user_id.setText(user.getuser_id());
-        //holder.npm.setText(user.getnpm());
+
         holder.nama.setText(user.getnama());
         holder.asal.setText(user.getasal());
         holder.tujuan.setText(user.gettujuan());
@@ -101,8 +100,7 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
 
             @Override
             public void onClick(View v) {
-                //Toast.makeText(context, "Row Click " + a.get(position).user_id, Toast.LENGTH_LONG).show();
-                //Log.d("MyDebug", "Row Click " + position)
+
                 id_tebengan = a.get(position).id_tebengan;
                 usernameTujuan = a.get(position).username;
                 AlertDialog.Builder alert = new AlertDialog.Builder(context);
@@ -144,8 +142,6 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
     static class UserHolder {
         TextView user_id, id_penebeng, npm, nama, asal, tujuan, kapasitas, waktu_berangkat,
                 jam_berangkat, keterangan;
-
-        // Button nebeng,konfirmasi,batal;
     }
 
     private class loggin extends AsyncTask<Void, String, String> {
@@ -166,8 +162,7 @@ public class UserCustomAdapter extends ArrayAdapter<User> {
 
         @Override
         protected void onPostExecute(String rate) {
-            // Do whatever you need with the string, you can update your UI from
-            // here
+
             respon = rate;
             if (respon.equalsIgnoreCase("Nebeng Sukses")) {
                 //setstatus(1);

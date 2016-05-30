@@ -28,6 +28,14 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class Profil Merupakan Fragment
+ * untuk render halaman profil
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
 
 @SuppressLint("InflateParams")
 public class Profil extends Fragment {

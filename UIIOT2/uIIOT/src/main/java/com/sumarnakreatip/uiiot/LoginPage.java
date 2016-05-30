@@ -29,6 +29,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class LoginPage Merupakan Activity
+ * Untuk render halaman login via sso
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 public class LoginPage extends Activity {
 
     //variabel layout
@@ -46,7 +55,6 @@ public class LoginPage extends Activity {
 
     //variabel koneksi
     HttpPost httppost;
-    StringBuffer buffer;
     HttpClient httpclient;
     List<NameValuePair> nameValuePairs;
     ProgressDialog dialog = null;

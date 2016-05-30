@@ -10,6 +10,14 @@ import com.loopj.android.http.RequestParams;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class ProfilHttpClient Merupakan Callback untuk mendapat user data
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 @SuppressLint("Instantiatable")
 public class ProfilHttpClient {
     String et;

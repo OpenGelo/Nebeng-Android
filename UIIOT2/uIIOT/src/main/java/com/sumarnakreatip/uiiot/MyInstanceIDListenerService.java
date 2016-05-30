@@ -5,8 +5,13 @@ import android.content.Intent;
 import com.google.android.gms.iid.InstanceIDListenerService;
 
 /**
- * Created by Sanadhi on 24/04/2016.
+ * Class MyInstanceIDListenerService Merupakan Instance Listener Pesan GCM
+ *
+ * @author  Sanadhi Sutandi
+ * @version 0.3
+ * @since   2016-05
  */
+
 public class MyInstanceIDListenerService extends InstanceIDListenerService {
     @Override
     public void onTokenRefresh() {

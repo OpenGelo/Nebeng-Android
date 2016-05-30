@@ -13,7 +13,12 @@ import android.util.Log;
 import com.google.android.gms.gcm.GcmListenerService;
 
 /**
- * Created by Sanadhi on 24/04/2016.
+ * Class MyGcmListenerService Merupakan Listener Pesan GCM
+ * Custom Listener
+ *
+ * @author  Sanadhi Sutandi
+ * @version 0.3
+ * @since   2016-05
  */
 
 public class MyGcmListenerService extends GcmListenerService {

@@ -10,6 +10,15 @@ import com.loopj.android.http.RequestParams;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class StatusHttpClient Merupakan Class untuk
+ * melakukan callback status pengguna
+ *
+ * @author  Sanadhi Sutandi, Suryo
+ * @version 0.3
+ * @since   2016-03
+ */
+
 @SuppressLint("Instantiatable")
 public class StatusHttpClient {
     String et;
