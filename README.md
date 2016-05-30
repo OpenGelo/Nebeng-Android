@@ -21,7 +21,7 @@ INSTALLATION
 ### Install from an Archive File
 
 1. Download or pull this repository
-2. Make sure you are downloadng the "testing-version-gcm" branch
+2. Make sure you are downloadng the "development" branch
 3. Import the project to Android Studio
 4. Start to code!
 
