@@ -7,10 +7,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +44,7 @@ public class Profil extends Fragment {
 
     TextView tvItemName;
 
-    ImageButton b, c;
+    Button b, c;
 
     Context layout;
 
@@ -57,6 +59,8 @@ public class Profil extends Fragment {
 
     StatusHttpClient m;
     View view;
+
+    private int checkStatus;
 
     public static final String IMAGE_RESOURCE_ID = "iconResourceID";
     public static final String ITEM_NAME = "itemName";
@@ -80,6 +84,8 @@ public class Profil extends Fragment {
 
         this.layout = getActivity();
 
+        checkStatus = 0;
+
         m = new StatusHttpClient(username);
         m.get_all_products(new StatusHttpClient.Function<List<StatusHttpClient.Product>, Void>() {
 
@@ -92,14 +98,15 @@ public class Profil extends Fragment {
                     ((TextView) row.findViewById(R.id.no_hp)).setText(p.no_hp);
                     ((TextView) row.findViewById(R.id.email)).setText(p.email);
                     ((TextView) row.findViewById(R.id.status)).setText(p.status);
+                    checkStatus++;
                     rows.addView(row);
                 }
                 return null;
             }
         });
 
-        b = (ImageButton) view.findViewById(R.id.batal);
-        c = (ImageButton) view.findViewById(R.id.drop);
+        b = (Button) view.findViewById(R.id.batal);
+        c = (Button) view.findViewById(R.id.reset);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,7 +157,16 @@ public class Profil extends Fragment {
                 //setstatus(3);
                 Toast.makeText(layout, "Tebengan berhasil dibatalkan", Toast.LENGTH_LONG).show();
                 segarkan();
-            } else {
+            } else if (respon.equalsIgnoreCase("anda tidak sedang memberi tebengan")) {
+                //setstatus(3);
+                Toast.makeText(layout, "Anda tidak sedang memberi tumpangan", Toast.LENGTH_LONG).show();
+                segarkan();
+            } else if (respon.equalsIgnoreCase("Anda tidak sedang menebeng")) {
+                //setstatus(3);
+                Toast.makeText(layout, "Anda tidak sedang menumpang", Toast.LENGTH_LONG).show();
+                segarkan();
+            }
+            else {
                 //setstatus(2);
                 Toast.makeText(layout, "Proses tidak berhasil. Cek status anda.", Toast.LENGTH_LONG).show();
             }
@@ -170,7 +186,7 @@ public class Profil extends Fragment {
 
     String login() {
         try {
-
+            String response="default";
             httpclient = new DefaultHttpClient();
             httppost = new HttpPost("http://green.ui.ac.id/nebeng/back-system/nebeng_cancel.php");
             //add your data
@@ -180,7 +196,13 @@ public class Profil extends Fragment {
             nameValuePairs.add(new BasicNameValuePair("update", update.toString().trim()));
             httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
-            final String response = httpclient.execute(httppost, responseHandler);
+            final String httpResponse = httpclient.execute(httppost, responseHandler);
+            JSONObject jsonObject = new JSONObject(httpResponse);
+
+            if (jsonObject.has("result")) {
+                response = jsonObject.optString("result");
+                Log.i("Respon",response);
+            }
             return response;
         } catch (Exception e) {
             String response = "Catch";

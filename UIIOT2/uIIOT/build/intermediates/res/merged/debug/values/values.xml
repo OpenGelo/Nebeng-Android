@@ -30,6 +30,11 @@
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
+    <color name="NiceButtonBorderColor">#254117</color>
+    <color name="NiceButtonDisabledEndColor">#736F6E</color>
+    <color name="NiceButtonDisabledStartColor">#565051</color>
+    <color name="NiceButtonEndColor">#c0392b</color>
+    <color name="NiceButtonStartColor">#ea6153</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>

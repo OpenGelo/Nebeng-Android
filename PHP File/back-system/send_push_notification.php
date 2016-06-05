@@ -59,12 +59,18 @@ function exec_push(){
 	if($execResult === FALSE){
 	    die(curl_error($curlHandle));
 	}
+	else{
+  		$info = curl_getinfo($curlHandle);
+  		echo 'Took ', $info['total_time'], ' seconds to send a request to ', $info['url'], "\n";
+	}
 
 	// Decode the response
 	$responseData = json_decode($execResult, TRUE);
 
 	// Print the date from the response
 	echo $responseData['published'];
+
+	curl_close($curlHandle);
 }
 
 //=====Main====//

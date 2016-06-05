@@ -54,7 +54,6 @@
 
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -65,21 +64,18 @@
 
         <activity
             android:name=".LoginPage"
-            android:screenOrientation="portrait"
             android:label="@string/app_name">
 
         </activity>
 
         <activity
             android:name=".Kontak"
-            android:screenOrientation="portrait"
             android:label="@string/app_name">
         </activity>
 
         <activity
             android:name=".Home"
             android:icon="@drawable/nebeng"
-            android:screenOrientation="portrait"
             android:label="@string/app_name">
             <!--Notification Intent -->
             <intent-filter>
@@ -90,18 +86,15 @@
 
         <activity
             android:name=".RoomHttpClient"
-            android:screenOrientation="portrait"
             android:label="@string/app_name">
         </activity>
 
         <activity
             android:name=".BeriTebengan"
-            android:screenOrientation="portrait"
             android:label="@string/app_name"></activity>
 
         <activity
             android:name=".Map"
-            android:screenOrientation="portrait"
             android:label="@string/app_name">
         </activity>
 
@@ -111,11 +104,9 @@
 
         <activity
             android:name=".ProfilHttpClient"
-            android:screenOrientation="portrait"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".StatusHttpClient"
-            android:screenOrientation="portrait"
             android:label="@string/app_name"></activity>
 
         <!-- [START gcm_receiver] -->

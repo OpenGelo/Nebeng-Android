@@ -80,7 +80,7 @@ public class Kontak extends Activity {
             @Override
             public void onClick(View v) {
                 inputEmail = email.getText().toString();
-                noHP = email.getText().toString();
+                noHP = nomor.getText().toString();
 
                 try{
                     if(validate(inputEmail) && !noHP.isEmpty()){

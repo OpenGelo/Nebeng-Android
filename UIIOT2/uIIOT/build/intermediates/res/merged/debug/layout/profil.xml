@@ -133,29 +133,47 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/TextView01"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:paddingBottom="1.0dip"
                     android:paddingLeft="4.0dip"
                     android:paddingRight="4.0dip"
                     android:paddingTop="5.0dip">
 
-                    <ImageButton
+                    <Button
                         android:id="@+id/batal"
-                        android:layout_width="0.0dip"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:background="@null"
-                        android:contentDescription="@string/batal"
-                        android:src="@drawable/deletemark" />
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="3dp"
+                        android:gravity="center"
 
-                    <ImageButton
-                        android:id="@+id/drop"
-                        android:layout_width="0.0dip"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1.0"
-                        android:background="@null"
-                        android:contentDescription="@string/drop"
-                        android:src="@drawable/checkmark" />
+                        android:background="@drawable/nice_button"
+
+                        android:text="Batal Menumpang!"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:shadowRadius="1"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowColor="@android:color/black"
+                        ></Button>
+
+                    <Button
+                        android:id="@+id/reset"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="3dp"
+                        android:gravity="center"
+
+                        android:background="@drawable/nice_button"
+                        android:text="Hapus Tumpangan yang saya Buat!"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        android:shadowRadius="1"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowColor="@android:color/black"
+                        >
+                    </Button>
 
                 </LinearLayout>
 

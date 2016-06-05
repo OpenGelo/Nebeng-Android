@@ -4,25 +4,36 @@
     api-level="22"
     density="xhdpi"
     format="7"
-    timestamp="17398991147350" >
+    timestamp="11881661697708"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="2581" />
+        duration="3547" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="1249" />
     <task
         name="instant-run-transform"
-        duration="2757" />
+        duration="34" />
     <task
         name="verifier"
-        duration="2869" />
+        duration="5" />
 
     <artifact
-        location="C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\outputs\apk\uIIOT-debug.apk"
-        type="MAIN" />
+        location="C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
+    <build timestamp="11005299072326" >
+        <artifact
+            location="C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\outputs\apk\uIIOT-debug.apk"
+            type="MAIN" />
+    </build>
+    <build timestamp="11706453010810" >
+        <artifact
+            location="C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+    </build>
     <build timestamp="17398991147350" >
         <artifact
             location="C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\outputs\apk\uIIOT-debug.apk"

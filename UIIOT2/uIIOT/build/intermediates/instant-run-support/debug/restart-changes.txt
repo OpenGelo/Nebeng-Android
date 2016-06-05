@@ -1,0 +1,1 @@
+CHANGED,C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\sumarnakreatip\uiiot\Profil$loggin.class

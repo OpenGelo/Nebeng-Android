@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:2:1-165:12
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:2:1-156:12
 	xmlns:tools
 		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:3:5-51
 	xmlns:android
@@ -257,7 +257,7 @@ MERGED from [com.google.android.gms:play-services-maps:8.4.0] C:\Users\Sanadhi\D
 	android:glEsVersion
 		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:43:9-41
 application
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:46:5-163:19
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:46:5-154:19
 MERGED from [com.android.support:cardview-v7:23.1.1] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
@@ -376,151 +376,133 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\Users\Sanadhi\Documents\G
 	android:name
 		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:50:9-68
 activity#com.sumarnakreatip.uiiot.MainActivity
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:55:9-64:20
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:57:13-49
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:55:9-63:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:58:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:57:13-45
 	android:name
 		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:56:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:59:13-63:29
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:58:13-62:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:60:17-69
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:59:17-69
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:60:25-66
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:59:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:62:17-77
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:61:17-77
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:62:27-74
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:61:27-74
 activity#com.sumarnakreatip.uiiot.LoginPage
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:66:9-71:20
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:68:13-49
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:65:9-69:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:69:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:67:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:67:13-38
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:66:13-38
 activity#com.sumarnakreatip.uiiot.Kontak
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:73:9-77:20
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:75:13-49
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:71:9-74:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:76:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:73:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:74:13-35
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:72:13-35
 activity#com.sumarnakreatip.uiiot.Home
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:79:9-89:20
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:82:13-49
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:76:9-85:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:83:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:79:13-45
 	android:icon
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:81:13-44
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:78:13-44
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:80:13-33
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:77:13-33
 intent-filter#android.intent.category.DEFAULT+com.sumarnakreatip.uiiot.IBMPushNotification
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:85:13-88:29
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:81:13-84:29
 action#com.sumarnakreatip.uiiot.IBMPushNotification
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:86:17-87
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:82:17-87
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:86:25-84
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:82:25-84
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:87:17-76
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:83:17-76
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:87:27-73
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:83:27-73
 activity#com.sumarnakreatip.uiiot.RoomHttpClient
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:91:9-95:20
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:93:13-49
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:87:9-90:20
+	android:label
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:89:13-45
+	android:name
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:88:13-43
+activity#com.sumarnakreatip.uiiot.BeriTebengan
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:92:9-94:57
 	android:label
 		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:94:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:92:13-43
-activity#com.sumarnakreatip.uiiot.BeriTebengan
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:97:9-100:57
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:99:13-49
-	android:label
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:100:13-45
-	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:98:13-41
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:93:13-41
 activity#com.sumarnakreatip.uiiot.Map
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:102:9-106:20
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:104:13-49
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:96:9-99:20
 	android:label
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:105:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:98:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:103:13-32
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:97:13-32
 meta-data#com.google.android.maps.v2.API_KEY
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:108:9-110:71
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:101:9-103:71
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:109:13-62
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:102:13-62
 	android:value
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:110:13-68
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:103:13-68
 activity#com.sumarnakreatip.uiiot.ProfilHttpClient
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:112:9-115:57
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:114:13-49
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:105:9-107:57
 	android:label
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:115:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:107:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:113:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:106:13-45
 activity#com.sumarnakreatip.uiiot.StatusHttpClient
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:116:9-119:57
-	android:screenOrientation
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:118:13-49
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:108:9-110:57
 	android:label
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:119:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:110:13-45
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:117:13-45
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:109:13-45
 receiver#com.google.android.gms.gcm.GcmReceiver
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:122:9-130:20
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:113:9-121:20
 	android:exported
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:124:13-36
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:115:13-36
 	android:permission
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:125:13-73
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:116:13-73
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:123:13-66
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:114:13-66
 intent-filter#com.google.android.c2dm.intent.RECEIVE+gcm.play.android.samples.com.gcmquickstart
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:126:13-129:29
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:117:13-120:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:127:17-81
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:118:17-81
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:127:25-78
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:118:25-78
 category#gcm.play.android.samples.com.gcmquickstart
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:128:17-87
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:119:17-87
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:128:27-84
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:119:27-84
 service#com.sumarnakreatip.uiiot.MyGcmListenerService
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:125:9-131:19
+	android:exported
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:127:13-37
+	android:name
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:126:13-49
+intent-filter#com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:128:13-130:29
+service#com.sumarnakreatip.uiiot.MyInstanceIDListenerService
 ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:134:9-140:19
 	android:exported
 		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:136:13-37
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:135:13-49
-intent-filter#com.google.android.c2dm.intent.RECEIVE
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:137:13-139:29
-service#com.sumarnakreatip.uiiot.MyInstanceIDListenerService
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:143:9-149:19
-	android:exported
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:145:13-37
-	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:144:13-56
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:135:13-56
 intent-filter#com.google.android.gms.iid.InstanceID
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:146:13-148:29
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:137:13-139:29
 action#com.google.android.gms.iid.InstanceID
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:147:17-79
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:138:17-79
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:147:25-77
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:138:25-77
 service#com.sumarnakreatip.uiiot.RegistrationIntentService
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:151:9-154:19
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:142:9-145:19
 	android:exported
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:153:13-37
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:144:13-37
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:152:13-54
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:143:13-54
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:157:9-158:69
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:148:9-149:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
@@ -554,15 +536,15 @@ MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanad
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:8.4.0] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\AndroidManifest.xml:21:9-23:69
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:157:20-65
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:148:20-65
 	android:value
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:158:13-66
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:149:13-66
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:160:9-162:71
+ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:151:9-153:71
 	android:name
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:161:13-58
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:152:13-58
 	android:value
-		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:162:13-68
+		ADDED from C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\src\main\AndroidManifest.xml:153:13-68
 activity#com.google.android.gms.ads.AdActivity
 ADDED from [com.google.android.gms:play-services-ads:8.4.0] C:\Users\Sanadhi\Documents\GitHub\bachelor-thesis\UIIOT2\uIIOT\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.4.0\AndroidManifest.xml:26:9-29:64
 	android:configChanges
