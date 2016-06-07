@@ -198,7 +198,6 @@ public class Profil extends Fragment {
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
             final String httpResponse = httpclient.execute(httppost, responseHandler);
             JSONObject jsonObject = new JSONObject(httpResponse);
-
             if (jsonObject.has("result")) {
                 response = jsonObject.optString("result");
                 Log.i("Respon",response);

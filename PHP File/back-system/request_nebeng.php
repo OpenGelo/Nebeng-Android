@@ -3,12 +3,14 @@
 /**
  * Program untuk melakukan tebengan ke daftar tebengan yang tersedia
  * Param username, id_tebengan, dan update melalui POST
+ * Akan mengirimkan feedback push 
  * 
- * @version 30 Mei 2016
+ * @version 07 Juni 2016
  * @author I Made Sanadhi Sutandi // 1206202394
  */
 
 require_once("db_connect.php");
+require_once("gcm/module.php");
 
 //variable post
 $username 		= $_POST['username'];
@@ -38,7 +40,8 @@ $response 		= array();					//variable respon
 			$values 				= mysql_fetch_row($query_cek_kapasitas);
 			
 			if ($values[0] == '0'){ //jika kapasitas nya nol
-				$response["result"] = "Maaf kapasitas tidak cukup"; 
+				$response["result"] = "Maaf kapasitas tidak cukup";
+				sendPush($username,"Tumpangan penuh!"); 
 			}
 			
 			else{ //jika kapasitas cukup
@@ -53,15 +56,18 @@ $response 		= array();					//variable respon
 
 				if($result_cek1[0] != NULL){ //apabila si penebeng merupakan pemberi tebeng
 					$response["result"] = "Tolong cek status Anda terlebih dahulu";
+					sendPush($username,"Anda tidak dapat menumpang!");
 				}
 				else if($result_cek2[0] != NULL){ //apabila si penebeng sudah menebeng sebelumnya
 					$response["result"] = "Tolong cek status Anda terlebih dahulu";
+					sendPush($username,"Anda tidak dapat menumpang!");
 				}
 				else{ //jika status calon penebeng sudah dipastikan
 					$query_pengurangan_kapasitas 	= mysql_query("UPDATE nebeng_beri_tebengan SET sisa_kapasitas = sisa_kapasitas-1 WHERE id_tebengan = '$id_tebengan'") or die(mysql_error());
 					$query_write_nebeng		 		= mysql_query("INSERT INTO nebeng_nebeng VALUES ('$id_penebeng', '$id_tebengan', '$time')") or die(mysql_error());
 					if($query_pengurangan_kapasitas && $query_write_nebeng){
 						$response["result"] = "Nebeng Sukses";
+						sendPush($username,"Anda Sukses Menumpang Kendaraan");
 					}
 				}
 				
@@ -71,6 +77,7 @@ $response 		= array();					//variable respon
 
 	else{ //untuk request tanpa kode update yang ditentukan
 		$response["result"] = "Maaf ada kesalahan";
+		sendPush($username,"Maaf, permintaan anda gagal!");
 	}	
 
 //tampilkan respon dalam array json
