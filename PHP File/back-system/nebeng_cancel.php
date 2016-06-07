@@ -39,11 +39,11 @@ if($update=='reset'){ //request untuk reset tebengan
 	if($id_tebengan != NULL){ //apabila terdapat tebengan dari id user tersebut
 		
 		//get nama pemberi tumpangan
-		$query_nama 		= mysql_query("Select nama from nebeng_user where username = '$username'");
+		$query_nama 		= mysql_query("Select nama from nebeng_user where username = '$username'") or die(mysql_error());
 		$result 			= mysql_fetch_row($query_nama);
 		$nama				= $result[0];
 
-		$allPenumpang = mysql_query("Select id_penebeng from nebeng_nebeng");
+		$allPenumpang = mysql_query("Select id_penebeng from nebeng_nebeng") or die(mysql_error());
 
 		while($row = mysql_fetch_array($allPenumpang)){
 			//kirim push ke id tujuan
@@ -68,17 +68,17 @@ else if ($update=='batal') { //request untuk cancel menebeng
 	
 	if ($id_tebengan != NULL)
 	{
-		$query_delete 		= mysql_query("Delete from nebeng_nebeng WHERE id_penebeng = '$user_id'");
-		$query_update 		= mysql_query("Update nebeng_beri_tebengan set sisa_kapasitas=sisa_kapasitas+1 where id_tebengan = '$id_tebengan'");
+		$query_delete 		= mysql_query("Delete from nebeng_nebeng WHERE id_penebeng = '$user_id'") or die(mysql_error());
+		$query_update 		= mysql_query("Update nebeng_beri_tebengan set sisa_kapasitas=sisa_kapasitas+1 where id_tebengan = '$id_tebengan'") or die(mysql_error());
 		$response["result"] = "Tebengan berhasil dibatalkan";
 
 		//get id pemberi tumpangan
-		$query_user 		= mysql_query("Select user_id from nebeng_beri_tebengan where id_tebengan = '$id_tebengan'");
+		$query_user 		= mysql_query("Select user_id from nebeng_beri_tebengan where id_tebengan = '$id_tebengan'") or die(mysql_error());
 		$result 			= mysql_fetch_row($query_user);
 		$idTujuan			= $result[0];
 
 		//get nama penumpang
-		$query_nama 		= mysql_query("Select nama from nebeng_user where username = '$username'");
+		$query_nama 		= mysql_query("Select nama from nebeng_user where username = '$username'") or die(mysql_error());
 		$result 			= mysql_fetch_row($query_nama);
 		$nama				= $result[0];
 
